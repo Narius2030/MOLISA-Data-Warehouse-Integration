@@ -1,0 +1,44 @@
+[2024-08-07T06:23:55.088+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T06:23:55.141+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Integrate_Time_Location_Dimension.bronze_time manual__2024-08-07T06:23:40.921820+00:00 [queued]>
+[2024-08-07T06:23:55.163+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Integrate_Time_Location_Dimension.bronze_time manual__2024-08-07T06:23:40.921820+00:00 [queued]>
+[2024-08-07T06:23:55.164+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-07T06:23:55.203+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): bronze_time> on 2024-08-07 06:23:40.921820+00:00
+[2024-08-07T06:23:55.211+0000] {standard_task_runner.py:63} INFO - Started process 3813 to run task
+[2024-08-07T06:23:55.217+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Integrate_Time_Location_Dimension', 'bronze_time', 'manual__2024-08-07T06:23:40.921820+00:00', '--job-id', '166', '--raw', '--subdir', 'DAGS_FOLDER/etl_time_location_dag.py', '--cfg-path', '/tmp/tmpqvcevlc1']
+[2024-08-07T06:23:55.220+0000] {standard_task_runner.py:91} INFO - Job 166: Subtask bronze_time
+[2024-08-07T06:23:55.296+0000] {task_command.py:426} INFO - Running <TaskInstance: Integrate_Time_Location_Dimension.bronze_time manual__2024-08-07T06:23:40.921820+00:00 [running]> on host 45f7764b2bf2
+[2024-08-07T06:23:55.448+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='Integrate_Time_Location_Dimension' AIRFLOW_CTX_TASK_ID='bronze_time' AIRFLOW_CTX_EXECUTION_DATE='2024-08-07T06:23:40.921820+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-07T06:23:40.921820+00:00'
+[2024-08-07T06:23:55.449+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T06:24:05.483+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T06:24:05.484+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/plugins/timelocation/load_date.py", line 15, in readTimeExcel
+    time_df = read_excel('./data/SampleDateDim.xls', sheet_name='LoadDates')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pyspark/pandas/namespace.py", line 1184, in read_excel
+    pdf_or_psers = pd_read_excel(io_or_bin, sn=sheet_name, sq=squeeze)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pyspark/pandas/namespace.py", line 1147, in pd_read_excel
+    return pd.read_excel(
+           ^^^^^^^^^^^^^^
+TypeError: read_excel() got an unexpected keyword argument 'squeeze'
+[2024-08-07T06:24:05.510+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=Integrate_Time_Location_Dimension, task_id=bronze_time, run_id=manual__2024-08-07T06:23:40.921820+00:00, execution_date=20240807T062340, start_date=20240807T062355, end_date=20240807T062405
+[2024-08-07T06:24:05.711+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 166 for task bronze_time (read_excel() got an unexpected keyword argument 'squeeze'; 3813)
+[2024-08-07T06:24:05.767+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-08-07T06:24:05.806+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T06:24:05.847+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

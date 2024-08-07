@@ -1,0 +1,31 @@
+[2024-08-04T04:24:29.443+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-04T04:24:29.484+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: welcome_dag.query_postgres_database manual__2024-08-04T04:23:29.172838+00:00 [queued]>
+[2024-08-04T04:24:29.502+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: welcome_dag.query_postgres_database manual__2024-08-04T04:23:29.172838+00:00 [queued]>
+[2024-08-04T04:24:29.503+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-04T04:24:29.544+0000] {taskinstance.py:2330} INFO - Executing <Task(SQLExecuteQueryOperator): query_postgres_database> on 2024-08-04 04:23:29.172838+00:00
+[2024-08-04T04:24:29.550+0000] {standard_task_runner.py:63} INFO - Started process 393 to run task
+[2024-08-04T04:24:29.555+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'welcome_dag', 'query_postgres_database', 'manual__2024-08-04T04:23:29.172838+00:00', '--job-id', '116', '--raw', '--subdir', 'DAGS_FOLDER/welcome_dag.py', '--cfg-path', '/tmp/tmpahckmfg6']
+[2024-08-04T04:24:29.558+0000] {standard_task_runner.py:91} INFO - Job 116: Subtask query_postgres_database
+[2024-08-04T04:24:29.650+0000] {task_command.py:426} INFO - Running <TaskInstance: welcome_dag.query_postgres_database manual__2024-08-04T04:23:29.172838+00:00 [running]> on host 89077840545e
+[2024-08-04T04:24:29.809+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='welcome_dag' AIRFLOW_CTX_TASK_ID='query_postgres_database' AIRFLOW_CTX_EXECUTION_DATE='2024-08-04T04:23:29.172838+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-04T04:23:29.172838+00:00'
+[2024-08-04T04:24:29.810+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-04T04:24:29.826+0000] {sql.py:276} INFO - Executing: CREATE EXTENSION dblink;
+
+SELECT 
+	province_code, province_name
+FROM dblink('dbname=hongheovna password=nhanbui user=postgres port=5432', 'select province_code, province_name from locations.province') 
+     AS t1(province_code CHAR(5), province_name VARCHAR(50));
+[2024-08-04T04:24:29.840+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-08-04T04:24:29.966+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-08-04T04:24:30.047+0000] {sql.py:470} INFO - Running statement: CREATE EXTENSION dblink;
+
+SELECT 
+	province_code, province_name
+FROM dblink('dbname=hongheovna password=*** user=postgres port=5432', 'select province_code, province_name from locations.province') 
+     AS t1(province_code CHAR(5), province_name VARCHAR(50));, parameters: None
+[2024-08-04T04:24:30.169+0000] {sql.py:479} INFO - Rows affected: 0
+[2024-08-04T04:24:30.176+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-04T04:24:30.228+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=welcome_dag, task_id=query_postgres_database, run_id=manual__2024-08-04T04:23:29.172838+00:00, execution_date=20240804T042329, start_date=20240804T042429, end_date=20240804T042430
+[2024-08-04T04:24:30.291+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-04T04:24:30.359+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-04T04:24:30.369+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

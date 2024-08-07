@@ -1,0 +1,141 @@
+[2024-08-07T05:53:02.193+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T05:53:02.227+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Integrate_Time_Location_Dimension.bronze_time manual__2024-08-07T05:52:49.762283+00:00 [queued]>
+[2024-08-07T05:53:02.241+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Integrate_Time_Location_Dimension.bronze_time manual__2024-08-07T05:52:49.762283+00:00 [queued]>
+[2024-08-07T05:53:02.241+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-07T05:53:02.285+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): bronze_time> on 2024-08-07 05:52:49.762283+00:00
+[2024-08-07T05:53:02.291+0000] {standard_task_runner.py:63} INFO - Started process 2287 to run task
+[2024-08-07T05:53:02.295+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Integrate_Time_Location_Dimension', 'bronze_time', 'manual__2024-08-07T05:52:49.762283+00:00', '--job-id', '152', '--raw', '--subdir', 'DAGS_FOLDER/etl_time_location_dag.py', '--cfg-path', '/tmp/tmpq94q4tmy']
+[2024-08-07T05:53:02.300+0000] {standard_task_runner.py:91} INFO - Job 152: Subtask bronze_time
+[2024-08-07T05:53:02.377+0000] {task_command.py:426} INFO - Running <TaskInstance: Integrate_Time_Location_Dimension.bronze_time manual__2024-08-07T05:52:49.762283+00:00 [running]> on host 45f7764b2bf2
+[2024-08-07T05:53:02.511+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='Integrate_Time_Location_Dimension' AIRFLOW_CTX_TASK_ID='bronze_time' AIRFLOW_CTX_EXECUTION_DATE='2024-08-07T05:52:49.762283+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-07T05:52:49.762283+00:00'
+[2024-08-07T05:53:02.512+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T05:53:11.014+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T05:53:11.016+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/plugins/timelocation/load_date.py", line 14, in readTimeExcel
+    .load(file)
+     ^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pyspark/sql/readwriter.py", line 307, in load
+    return self._df(self._jreader.load(path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pyspark/errors/exceptions/captured.py", line 179, in deco
+    return f(*a, **kw)
+           ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/py4j/protocol.py", line 326, in get_return_value
+    raise Py4JJavaError(
+py4j.protocol.Py4JJavaError: An error occurred while calling o35.load.
+: java.io.FileNotFoundException: File data/SampleDateDim.xls does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:779)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:1100)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:769)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:462)
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSInputChecker.<init>(ChecksumFileSystem.java:160)
+	at org.apache.hadoop.fs.ChecksumFileSystem.open(ChecksumFileSystem.java:372)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:976)
+	at com.crealytics.spark.excel.WorkbookReader$.readFromHadoop$1(WorkbookReader.scala:36)
+	at com.crealytics.spark.excel.WorkbookReader$.$anonfun$apply$2(WorkbookReader.scala:42)
+	at com.crealytics.spark.excel.DefaultWorkbookReader.$anonfun$openWorkbook$1(WorkbookReader.scala:50)
+	at scala.Option.fold(Option.scala:251)
+	at com.crealytics.spark.excel.DefaultWorkbookReader.openWorkbook(WorkbookReader.scala:51)
+	at com.crealytics.spark.excel.WorkbookReader.withWorkbook(WorkbookReader.scala:14)
+	at com.crealytics.spark.excel.WorkbookReader.withWorkbook$(WorkbookReader.scala:13)
+	at com.crealytics.spark.excel.DefaultWorkbookReader.withWorkbook(WorkbookReader.scala:46)
+	at com.crealytics.spark.excel.ExcelRelation.excerpt$lzycompute(ExcelRelation.scala:30)
+	at com.crealytics.spark.excel.ExcelRelation.excerpt(ExcelRelation.scala:30)
+	at com.crealytics.spark.excel.ExcelRelation.headerColumns$lzycompute(ExcelRelation.scala:104)
+	at com.crealytics.spark.excel.ExcelRelation.headerColumns(ExcelRelation.scala:103)
+	at com.crealytics.spark.excel.ExcelRelation.$anonfun$inferSchema$1(ExcelRelation.scala:169)
+	at scala.Option.getOrElse(Option.scala:189)
+	at com.crealytics.spark.excel.ExcelRelation.inferSchema(ExcelRelation.scala:168)
+	at com.crealytics.spark.excel.ExcelRelation.<init>(ExcelRelation.scala:34)
+	at com.crealytics.spark.excel.DefaultSource.createRelation(DefaultSource.scala:40)
+	at com.crealytics.spark.excel.DefaultSource.createRelation(DefaultSource.scala:18)
+	at com.crealytics.spark.excel.DefaultSource.createRelation(DefaultSource.scala:12)
+	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:346)
+	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:186)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+[2024-08-07T05:53:11.040+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=Integrate_Time_Location_Dimension, task_id=bronze_time, run_id=manual__2024-08-07T05:52:49.762283+00:00, execution_date=20240807T055249, start_date=20240807T055302, end_date=20240807T055311
+[2024-08-07T05:53:11.094+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 152 for task bronze_time (An error occurred while calling o35.load.
+: java.io.FileNotFoundException: File data/SampleDateDim.xls does not exist
+	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:779)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:1100)
+	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:769)
+	at org.apache.hadoop.fs.FilterFileSystem.getFileStatus(FilterFileSystem.java:462)
+	at org.apache.hadoop.fs.ChecksumFileSystem$ChecksumFSInputChecker.<init>(ChecksumFileSystem.java:160)
+	at org.apache.hadoop.fs.ChecksumFileSystem.open(ChecksumFileSystem.java:372)
+	at org.apache.hadoop.fs.FileSystem.open(FileSystem.java:976)
+	at com.crealytics.spark.excel.WorkbookReader$.readFromHadoop$1(WorkbookReader.scala:36)
+	at com.crealytics.spark.excel.WorkbookReader$.$anonfun$apply$2(WorkbookReader.scala:42)
+	at com.crealytics.spark.excel.DefaultWorkbookReader.$anonfun$openWorkbook$1(WorkbookReader.scala:50)
+	at scala.Option.fold(Option.scala:251)
+	at com.crealytics.spark.excel.DefaultWorkbookReader.openWorkbook(WorkbookReader.scala:51)
+	at com.crealytics.spark.excel.WorkbookReader.withWorkbook(WorkbookReader.scala:14)
+	at com.crealytics.spark.excel.WorkbookReader.withWorkbook$(WorkbookReader.scala:13)
+	at com.crealytics.spark.excel.DefaultWorkbookReader.withWorkbook(WorkbookReader.scala:46)
+	at com.crealytics.spark.excel.ExcelRelation.excerpt$lzycompute(ExcelRelation.scala:30)
+	at com.crealytics.spark.excel.ExcelRelation.excerpt(ExcelRelation.scala:30)
+	at com.crealytics.spark.excel.ExcelRelation.headerColumns$lzycompute(ExcelRelation.scala:104)
+	at com.crealytics.spark.excel.ExcelRelation.headerColumns(ExcelRelation.scala:103)
+	at com.crealytics.spark.excel.ExcelRelation.$anonfun$inferSchema$1(ExcelRelation.scala:169)
+	at scala.Option.getOrElse(Option.scala:189)
+	at com.crealytics.spark.excel.ExcelRelation.inferSchema(ExcelRelation.scala:168)
+	at com.crealytics.spark.excel.ExcelRelation.<init>(ExcelRelation.scala:34)
+	at com.crealytics.spark.excel.DefaultSource.createRelation(DefaultSource.scala:40)
+	at com.crealytics.spark.excel.DefaultSource.createRelation(DefaultSource.scala:18)
+	at com.crealytics.spark.excel.DefaultSource.createRelation(DefaultSource.scala:12)
+	at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:346)
+	at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:229)
+	at org.apache.spark.sql.DataFrameReader.$anonfun$load$2(DataFrameReader.scala:211)
+	at scala.Option.getOrElse(Option.scala:189)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)
+	at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:186)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+; 2287)
+[2024-08-07T05:53:11.146+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-08-07T05:53:11.198+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T05:53:11.224+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

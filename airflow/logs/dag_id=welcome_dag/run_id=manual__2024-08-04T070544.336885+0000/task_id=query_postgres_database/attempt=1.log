@@ -1,0 +1,52 @@
+[2024-08-04T07:06:51.404+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-04T07:06:51.466+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: welcome_dag.query_postgres_database manual__2024-08-04T07:05:44.336885+00:00 [queued]>
+[2024-08-04T07:06:51.498+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: welcome_dag.query_postgres_database manual__2024-08-04T07:05:44.336885+00:00 [queued]>
+[2024-08-04T07:06:51.499+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-04T07:06:51.569+0000] {taskinstance.py:2330} INFO - Executing <Task(SQLExecuteQueryOperator): query_postgres_database> on 2024-08-04 07:05:44.336885+00:00
+[2024-08-04T07:06:51.577+0000] {standard_task_runner.py:63} INFO - Started process 393 to run task
+[2024-08-04T07:06:51.584+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'welcome_dag', 'query_postgres_database', 'manual__2024-08-04T07:05:44.336885+00:00', '--job-id', '123', '--raw', '--subdir', 'DAGS_FOLDER/welcome_dag.py', '--cfg-path', '/tmp/tmpfj31slti']
+[2024-08-04T07:06:51.587+0000] {standard_task_runner.py:91} INFO - Job 123: Subtask query_postgres_database
+[2024-08-04T07:06:51.723+0000] {task_command.py:426} INFO - Running <TaskInstance: welcome_dag.query_postgres_database manual__2024-08-04T07:05:44.336885+00:00 [running]> on host 89077840545e
+[2024-08-04T07:06:52.004+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='welcome_dag' AIRFLOW_CTX_TASK_ID='query_postgres_database' AIRFLOW_CTX_EXECUTION_DATE='2024-08-04T07:05:44.336885+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-04T07:05:44.336885+00:00'
+[2024-08-04T07:06:52.006+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-04T07:06:52.045+0000] {sql.py:276} INFO - Executing: CREATE EXTENSION dblink;
+
+SELECT 
+	province_code, province_name
+FROM dblink('dbname=hongheovna password=nhanbui user=postgres port=5432', 'select province_code, province_name from locations.province') 
+     AS t1(province_code CHAR(5), province_name VARCHAR(50));
+[2024-08-04T07:06:52.079+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-08-04T07:06:52.304+0000] {base.py:84} INFO - Using connection ID 'postgres_default' for task execution.
+[2024-08-04T07:06:52.421+0000] {sql.py:470} INFO - Running statement: CREATE EXTENSION dblink;
+
+SELECT 
+	province_code, province_name
+FROM dblink('dbname=hongheovna password=*** user=postgres port=5432', 'select province_code, province_name from locations.province') 
+     AS t1(province_code CHAR(5), province_name VARCHAR(50));, parameters: None
+[2024-08-04T07:06:52.430+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-04T07:06:52.432+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/common/sql/operators/sql.py", line 282, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/common/sql/hooks/sql.py", line 418, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/common/sql/hooks/sql.py", line 475, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.DuplicateObject: extension "dblink" already exists
+
+[2024-08-04T07:06:52.454+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=welcome_dag, task_id=query_postgres_database, run_id=manual__2024-08-04T07:05:44.336885+00:00, execution_date=20240804T070544, start_date=20240804T070651, end_date=20240804T070652
+[2024-08-04T07:06:52.507+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 123 for task query_postgres_database (extension "dblink" already exists
+; 393)
+[2024-08-04T07:06:52.526+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-08-04T07:06:52.581+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-04T07:06:52.613+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

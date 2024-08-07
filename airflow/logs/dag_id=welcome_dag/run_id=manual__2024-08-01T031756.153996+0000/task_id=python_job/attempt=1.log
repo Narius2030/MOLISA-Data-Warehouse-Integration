@@ -1,0 +1,76 @@
+[2024-08-01T03:18:09.602+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-01T03:18:09.644+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: welcome_dag.python_job manual__2024-08-01T03:17:56.153996+00:00 [queued]>
+[2024-08-01T03:18:09.658+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: welcome_dag.python_job manual__2024-08-01T03:17:56.153996+00:00 [queued]>
+[2024-08-01T03:18:09.659+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-01T03:18:09.699+0000] {taskinstance.py:2330} INFO - Executing <Task(SparkSubmitOperator): python_job> on 2024-08-01 03:17:56.153996+00:00
+[2024-08-01T03:18:09.708+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'welcome_dag', 'python_job', 'manual__2024-08-01T03:17:56.153996+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/welcome_dag.py', '--cfg-path', '/tmp/tmpzfw5bgrx']
+[2024-08-01T03:18:09.705+0000] {standard_task_runner.py:63} INFO - Started process 526 to run task
+[2024-08-01T03:18:09.711+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask python_job
+[2024-08-01T03:18:09.832+0000] {task_command.py:426} INFO - Running <TaskInstance: welcome_dag.python_job manual__2024-08-01T03:17:56.153996+00:00 [running]> on host 24fc876e8f70
+[2024-08-01T03:18:09.963+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='welcome_dag' AIRFLOW_CTX_TASK_ID='python_job' AIRFLOW_CTX_EXECUTION_DATE='2024-08-01T03:17:56.153996+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-01T03:17:56.153996+00:00'
+[2024-08-01T03:18:09.964+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-01T03:18:09.991+0000] {base.py:84} INFO - Using connection ID 'spark_conn' for task execution.
+[2024-08-01T03:18:09.992+0000] {spark_submit.py:401} INFO - Spark-Submit cmd: spark-submit --master spark://172.19.0.2:7077 --name arrow-spark --deploy-mode client jobs/word_count.py
+[2024-08-01T03:18:15.612+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:15 INFO SparkContext: Running Spark version 3.5.1
+[2024-08-01T03:18:15.619+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:15 INFO SparkContext: OS info Linux, 5.15.153.1-microsoft-standard-WSL2, amd64
+[2024-08-01T03:18:15.620+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:15 INFO SparkContext: Java version 17.0.11
+[2024-08-01T03:18:15.733+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:15 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2024-08-01T03:18:15.903+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:15 INFO ResourceUtils: ==============================================================
+[2024-08-01T03:18:15.911+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:15 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2024-08-01T03:18:15.914+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:15 INFO ResourceUtils: ==============================================================
+[2024-08-01T03:18:15.925+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:15 INFO SparkContext: Submitted application: PythonWordCount
+[2024-08-01T03:18:15.987+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:15 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2024-08-01T03:18:16.002+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO ResourceProfile: Limiting resource is cpu
+[2024-08-01T03:18:16.004+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2024-08-01T03:18:16.188+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO SecurityManager: Changing view acls to: airflow
+[2024-08-01T03:18:16.190+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO SecurityManager: Changing modify acls to: airflow
+[2024-08-01T03:18:16.191+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO SecurityManager: Changing view acls groups to:
+[2024-08-01T03:18:16.192+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO SecurityManager: Changing modify acls groups to:
+[2024-08-01T03:18:16.193+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: airflow; groups with view permissions: EMPTY; users with modify permissions: airflow; groups with modify permissions: EMPTY
+[2024-08-01T03:18:16.743+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO Utils: Successfully started service 'sparkDriver' on port 42423.
+[2024-08-01T03:18:16.804+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO SparkEnv: Registering MapOutputTracker
+[2024-08-01T03:18:16.903+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO SparkEnv: Registering BlockManagerMaster
+[2024-08-01T03:18:16.947+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2024-08-01T03:18:16.948+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2024-08-01T03:18:16.957+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:16 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2024-08-01T03:18:17.001+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:17 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-a8540eda-dfbc-480c-af35-489fff948410
+[2024-08-01T03:18:17.037+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:17 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2024-08-01T03:18:17.080+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:17 INFO SparkEnv: Registering OutputCommitCoordinator
+[2024-08-01T03:18:17.494+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:17 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[2024-08-01T03:18:17.656+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:17 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2024-08-01T03:18:18.040+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:18 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://172.19.0.2:7077...
+[2024-08-01T03:18:38.043+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:38 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://172.19.0.2:7077...
+[2024-08-01T03:18:58.042+0000] {spark_submit.py:571} INFO - 24/08/01 03:18:58 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://172.19.0.2:7077...
+[2024-08-01T03:19:18.046+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:18 ERROR StandaloneSchedulerBackend: Application has been killed. Reason: All masters are unresponsive! Giving up.
+[2024-08-01T03:19:18.050+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:18 WARN StandaloneSchedulerBackend: Application ID is not initialized yet.
+[2024-08-01T03:19:18.090+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:18 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36745.
+[2024-08-01T03:19:18.091+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:18 INFO NettyBlockTransferService: Server created on 24fc876e8f70:36745
+[2024-08-01T03:19:18.095+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:18 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2024-08-01T03:19:18.108+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:18 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 24fc876e8f70, 36745, None)
+[2024-08-01T03:19:18.114+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:18 INFO BlockManagerMasterEndpoint: Registering block manager 24fc876e8f70:36745 with 434.4 MiB RAM, BlockManagerId(driver, 24fc876e8f70, 36745, None)
+[2024-08-01T03:19:18.116+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:18 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 24fc876e8f70, 36745, None)
+[2024-08-01T03:19:18.118+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:18 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 24fc876e8f70, 36745, None)
+[2024-08-01T03:19:18.349+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:18 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+[2024-08-01T03:19:18.941+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:18 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2024-08-01T03:19:18.996+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:18 INFO SparkUI: Stopped Spark web UI at http://24fc876e8f70:4040
+[2024-08-01T03:19:19.015+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO StandaloneSchedulerBackend: Shutting down all executors
+[2024-08-01T03:19:19.027+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO StandaloneSchedulerBackend$StandaloneDriverEndpoint: Asking each executor to shut down
+[2024-08-01T03:19:19.038+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 WARN StandaloneAppClient$ClientEndpoint: Drop UnregisterApplication(null) because has not yet connected to master
+[2024-08-01T03:19:19.057+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2024-08-01T03:19:19.095+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO MemoryStore: MemoryStore cleared
+[2024-08-01T03:19:19.096+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO BlockManager: BlockManager stopped
+[2024-08-01T03:19:19.108+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO BlockManagerMaster: BlockManagerMaster stopped
+[2024-08-01T03:19:19.113+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2024-08-01T03:19:19.142+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO SparkContext: Successfully stopped SparkContext
+[2024-08-01T03:19:19.147+0000] {spark_submit.py:571} INFO - PythonRDD[5] at RDD at PythonRDD.scala:53 DITMEMAY
+[2024-08-01T03:19:19.148+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO SparkContext: SparkContext is stopping with exitCode 0.
+[2024-08-01T03:19:19.149+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO SparkContext: SparkContext already stopped.
+[2024-08-01T03:19:19.491+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO ShutdownHookManager: Shutdown hook called
+[2024-08-01T03:19:19.493+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO ShutdownHookManager: Deleting directory /tmp/spark-2022ebbe-1fff-4d3e-a12e-04574230d146
+[2024-08-01T03:19:19.497+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO ShutdownHookManager: Deleting directory /tmp/spark-8da3dcc9-9c12-4d83-a9eb-edab9d0976a9
+[2024-08-01T03:19:19.502+0000] {spark_submit.py:571} INFO - 24/08/01 03:19:19 INFO ShutdownHookManager: Deleting directory /tmp/spark-2022ebbe-1fff-4d3e-a12e-04574230d146/pyspark-affe8e90-32ea-4e7d-8783-79b9661639cc
+[2024-08-01T03:19:19.549+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-01T03:19:19.562+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=welcome_dag, task_id=python_job, run_id=manual__2024-08-01T03:17:56.153996+00:00, execution_date=20240801T031756, start_date=20240801T031809, end_date=20240801T031919
+[2024-08-01T03:19:19.626+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-01T03:19:19.709+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-01T03:19:19.723+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,49 @@
+[2024-08-07T06:18:11.976+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T06:18:12.014+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Integrate_Time_Location_Dimension.bronze_time manual__2024-08-07T06:17:58.239373+00:00 [queued]>
+[2024-08-07T06:18:12.031+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Integrate_Time_Location_Dimension.bronze_time manual__2024-08-07T06:17:58.239373+00:00 [queued]>
+[2024-08-07T06:18:12.031+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-07T06:18:12.072+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): bronze_time> on 2024-08-07 06:17:58.239373+00:00
+[2024-08-07T06:18:12.076+0000] {standard_task_runner.py:63} INFO - Started process 3354 to run task
+[2024-08-07T06:18:12.081+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Integrate_Time_Location_Dimension', 'bronze_time', 'manual__2024-08-07T06:17:58.239373+00:00', '--job-id', '160', '--raw', '--subdir', 'DAGS_FOLDER/etl_time_location_dag.py', '--cfg-path', '/tmp/tmp01y2t3du']
+[2024-08-07T06:18:12.083+0000] {standard_task_runner.py:91} INFO - Job 160: Subtask bronze_time
+[2024-08-07T06:18:12.191+0000] {task_command.py:426} INFO - Running <TaskInstance: Integrate_Time_Location_Dimension.bronze_time manual__2024-08-07T06:17:58.239373+00:00 [running]> on host 45f7764b2bf2
+[2024-08-07T06:18:12.330+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='Integrate_Time_Location_Dimension' AIRFLOW_CTX_TASK_ID='bronze_time' AIRFLOW_CTX_EXECUTION_DATE='2024-08-07T06:17:58.239373+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-07T06:17:58.239373+00:00'
+[2024-08-07T06:18:12.330+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T06:18:19.081+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T06:18:19.083+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/plugins/timelocation/load_date.py", line 16, in readTimeExcel
+    time_df = read_excel(io='./airflow/data/SampleDateDim.xls', sheet_name='LoadDates')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pyspark/pandas/namespace.py", line 1177, in read_excel
+    binaries = default_session().read.format("binaryFile").load(io).select("content").head(2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pyspark/sql/readwriter.py", line 307, in load
+    return self._df(self._jreader.load(path))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.AnalysisException: [PATH_NOT_FOUND] Path does not exist: file:/opt/airflow/airflow/data/SampleDateDim.xls.
+[2024-08-07T06:18:19.126+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=Integrate_Time_Location_Dimension, task_id=bronze_time, run_id=manual__2024-08-07T06:17:58.239373+00:00, execution_date=20240807T061758, start_date=20240807T061812, end_date=20240807T061819
+[2024-08-07T06:18:19.364+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 160 for task bronze_time ([PATH_NOT_FOUND] Path does not exist: file:/opt/airflow/airflow/data/SampleDateDim.xls.; 3354)
+[2024-08-07T06:18:19.423+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-08-07T06:18:19.466+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T06:18:19.494+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

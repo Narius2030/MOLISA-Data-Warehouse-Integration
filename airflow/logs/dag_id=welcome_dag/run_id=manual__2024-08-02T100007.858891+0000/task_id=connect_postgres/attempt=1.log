@@ -1,0 +1,29 @@
+[2024-08-02T10:00:37.414+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-02T10:00:37.453+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: welcome_dag.connect_postgres manual__2024-08-02T10:00:07.858891+00:00 [queued]>
+[2024-08-02T10:00:37.468+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: welcome_dag.connect_postgres manual__2024-08-02T10:00:07.858891+00:00 [queued]>
+[2024-08-02T10:00:37.469+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-02T10:00:37.505+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): connect_postgres> on 2024-08-02 10:00:07.858891+00:00
+[2024-08-02T10:00:37.511+0000] {standard_task_runner.py:63} INFO - Started process 1307 to run task
+[2024-08-02T10:00:37.515+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'welcome_dag', 'connect_postgres', 'manual__2024-08-02T10:00:07.858891+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/welcome_dag.py', '--cfg-path', '/tmp/tmpt1ysy5js']
+[2024-08-02T10:00:37.517+0000] {standard_task_runner.py:91} INFO - Job 95: Subtask connect_postgres
+[2024-08-02T10:00:37.618+0000] {task_command.py:426} INFO - Running <TaskInstance: welcome_dag.connect_postgres manual__2024-08-02T10:00:07.858891+00:00 [running]> on host 24fc876e8f70
+[2024-08-02T10:00:37.763+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='welcome_dag' AIRFLOW_CTX_TASK_ID='connect_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-08-02T10:00:07.858891+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-02T10:00:07.858891+00:00'
+[2024-08-02T10:00:37.764+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-02T10:00:48.710+0000] {logging_mixin.py:188} INFO - ============================
+[2024-08-02T10:00:48.742+0000] {logging_mixin.py:188} INFO - root
+ |-- province_code: string (nullable = true)
+ |-- province_name: string (nullable = true)
+ |-- region_code: string (nullable = true)
+[2024-08-02T10:00:48.743+0000] {logging_mixin.py:188} INFO - None
+[2024-08-02T10:00:51.527+0000] {logging_mixin.py:188} INFO - +-------------+-------------+-----------+
+|province_code|province_name|region_code|
++-------------+-------------+-----------+
++-------------+-------------+-----------+
+[2024-08-02T10:00:51.535+0000] {logging_mixin.py:188} INFO - None
+[2024-08-02T10:00:51.549+0000] {logging_mixin.py:188} INFO - ============================
+[2024-08-02T10:00:51.791+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-08-02T10:00:51.793+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-02T10:00:51.834+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=welcome_dag, task_id=connect_postgres, run_id=manual__2024-08-02T10:00:07.858891+00:00, execution_date=20240802T100007, start_date=20240802T100037, end_date=20240802T100051
+[2024-08-02T10:00:51.939+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-02T10:00:52.018+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-02T10:00:52.032+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

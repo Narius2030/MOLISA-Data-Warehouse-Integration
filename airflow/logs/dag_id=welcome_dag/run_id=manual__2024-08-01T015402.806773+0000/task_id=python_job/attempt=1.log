@@ -1,0 +1,37 @@
+[2024-08-01T01:54:14.712+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-01T01:54:14.756+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: welcome_dag.python_job manual__2024-08-01T01:54:02.806773+00:00 [queued]>
+[2024-08-01T01:54:14.771+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: welcome_dag.python_job manual__2024-08-01T01:54:02.806773+00:00 [queued]>
+[2024-08-01T01:54:14.771+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-01T01:54:14.804+0000] {taskinstance.py:2330} INFO - Executing <Task(SparkSubmitOperator): python_job> on 2024-08-01 01:54:02.806773+00:00
+[2024-08-01T01:54:14.808+0000] {standard_task_runner.py:64} INFO - Started process 65 to run task
+[2024-08-01T01:54:14.811+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'welcome_dag', 'python_job', 'manual__2024-08-01T01:54:02.806773+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/welcome_dag.py', '--cfg-path', '/tmp/tmpz7b7_v52']
+[2024-08-01T01:54:14.813+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask python_job
+[2024-08-01T01:54:14.909+0000] {task_command.py:426} INFO - Running <TaskInstance: welcome_dag.python_job manual__2024-08-01T01:54:02.806773+00:00 [running]> on host b328a0c6eacf
+[2024-08-01T01:54:15.043+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='welcome_dag' AIRFLOW_CTX_TASK_ID='python_job' AIRFLOW_CTX_EXECUTION_DATE='2024-08-01T01:54:02.806773+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-01T01:54:02.806773+00:00'
+[2024-08-01T01:54:15.044+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-01T01:54:15.071+0000] {spark_submit.py:273} INFO - Could not load connection string spark-default, defaulting to yarn
+[2024-08-01T01:54:15.072+0000] {spark_submit.py:403} INFO - Spark-Submit cmd: spark-submit --master yarn --name arrow-spark jobs/word_count.py
+[2024-08-01T01:54:15.177+0000] {spark_submit.py:579} INFO - /home/airflow/.local/lib/python3.12/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2024-08-01T01:54:15.178+0000] {spark_submit.py:579} INFO - JAVA_HOME is not set
+[2024-08-01T01:54:15.179+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-01T01:54:15.194+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 174, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 505, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master yarn --name arrow-spark jobs/word_count.py. Error code is: 1.
+[2024-08-01T01:54:15.202+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=welcome_dag, task_id=python_job, run_id=manual__2024-08-01T01:54:02.806773+00:00, execution_date=20240801T015402, start_date=20240801T015414, end_date=20240801T015415
+[2024-08-01T01:54:15.379+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 16 for task python_job (Cannot execute: spark-submit --master yarn --name arrow-spark jobs/word_count.py. Error code is: 1.; 65)
+[2024-08-01T01:54:15.425+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2024-08-01T01:54:15.458+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-01T01:54:15.478+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

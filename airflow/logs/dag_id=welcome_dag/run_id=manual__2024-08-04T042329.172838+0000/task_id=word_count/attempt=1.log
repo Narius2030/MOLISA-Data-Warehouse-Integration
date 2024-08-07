@@ -1,0 +1,26 @@
+[2024-08-04T04:23:42.909+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-04T04:23:42.945+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: welcome_dag.word_count manual__2024-08-04T04:23:29.172838+00:00 [queued]>
+[2024-08-04T04:23:42.963+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: welcome_dag.word_count manual__2024-08-04T04:23:29.172838+00:00 [queued]>
+[2024-08-04T04:23:42.963+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-04T04:23:42.999+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): word_count> on 2024-08-04 04:23:29.172838+00:00
+[2024-08-04T04:23:43.003+0000] {standard_task_runner.py:63} INFO - Started process 64 to run task
+[2024-08-04T04:23:43.009+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'welcome_dag', 'word_count', 'manual__2024-08-04T04:23:29.172838+00:00', '--job-id', '114', '--raw', '--subdir', 'DAGS_FOLDER/welcome_dag.py', '--cfg-path', '/tmp/tmpl9le662c']
+[2024-08-04T04:23:43.011+0000] {standard_task_runner.py:91} INFO - Job 114: Subtask word_count
+[2024-08-04T04:23:43.116+0000] {task_command.py:426} INFO - Running <TaskInstance: welcome_dag.word_count manual__2024-08-04T04:23:29.172838+00:00 [running]> on host 89077840545e
+[2024-08-04T04:23:43.301+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='welcome_dag' AIRFLOW_CTX_TASK_ID='word_count' AIRFLOW_CTX_EXECUTION_DATE='2024-08-04T04:23:29.172838+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-04T04:23:29.172838+00:00'
+[2024-08-04T04:23:43.303+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-04T04:23:51.492+0000] {logging_mixin.py:188} INFO - ============================
+[2024-08-04T04:23:56.690+0000] {logging_mixin.py:188} INFO - and 1
+[2024-08-04T04:23:56.691+0000] {logging_mixin.py:188} INFO - Hello 5
+[2024-08-04T04:23:56.691+0000] {logging_mixin.py:188} INFO - Python 1
+[2024-08-04T04:23:56.693+0000] {logging_mixin.py:188} INFO - Airflow 1
+[2024-08-04T04:23:56.693+0000] {logging_mixin.py:188} INFO - Docker 1
+[2024-08-04T04:23:56.694+0000] {logging_mixin.py:188} INFO - Yusuf 1
+[2024-08-04T04:23:56.695+0000] {logging_mixin.py:188} INFO - Spark 1
+[2024-08-04T04:23:56.696+0000] {logging_mixin.py:188} INFO - ============================
+[2024-08-04T04:23:57.669+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-08-04T04:23:57.671+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-04T04:23:57.695+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=welcome_dag, task_id=word_count, run_id=manual__2024-08-04T04:23:29.172838+00:00, execution_date=20240804T042329, start_date=20240804T042342, end_date=20240804T042357
+[2024-08-04T04:23:57.757+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-04T04:23:57.820+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-04T04:23:57.832+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
