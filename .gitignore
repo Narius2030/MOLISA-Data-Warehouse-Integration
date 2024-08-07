@@ -2,3 +2,4 @@
 ./airflow.db
 ./airflow-webserver.pid
 ./*.env
+./.vscode

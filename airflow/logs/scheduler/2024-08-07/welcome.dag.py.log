@@ -4003,3 +4003,18 @@ jinja2.exceptions.TemplateNotFound: ./sql/connect-other-db.sql
 [2024-08-07T09:49:21.207+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:21.207+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-08-07T09:49:21.237+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:21.236+0000] {dag.py:3954} INFO - Setting next_dagrun for welcome_dag to 2024-08-06 23:00:00+00:00, run_after=2024-08-07 23:00:00+00:00
 [2024-08-07T09:49:21.303+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/welcome.dag.py took 0.219 seconds
+[2024-08-07T09:49:52.426+0000] {processor.py:161} INFO - Started process (PID=5916) to work on /opt/airflow/dags/welcome.dag.py
+[2024-08-07T09:49:52.427+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/welcome.dag.py for tasks to queue
+[2024-08-07T09:49:52.429+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:52.428+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/welcome.dag.py
+[2024-08-07T09:49:52.503+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:52.502+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/connect-other-db.sql
+[2024-08-07T09:49:52.504+0000] {processor.py:840} INFO - DAG(s) 'welcome_dag' retrieved from /opt/airflow/dags/welcome.dag.py
+[2024-08-07T09:49:52.539+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:52.539+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-07T09:49:52.561+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:52.561+0000] {dag.py:3954} INFO - Setting next_dagrun for welcome_dag to 2024-08-06 23:00:00+00:00, run_after=2024-08-07 23:00:00+00:00
+[2024-08-07T09:49:52.625+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/welcome.dag.py took 0.215 seconds
