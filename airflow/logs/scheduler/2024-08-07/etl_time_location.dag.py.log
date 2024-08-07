@@ -4418,3 +4418,17 @@ jinja2.exceptions.TemplateNotFound: {{ var.value.timelocation_data_dir) }}/load_
 [2024-08-07T09:48:02.765+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:02.765+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-08-07T09:48:02.788+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:02.788+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Time_Location_Dimension to 2024-08-06 23:00:00+00:00, run_after=2024-08-07 23:00:00+00:00
 [2024-08-07T09:48:02.841+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_time_location.dag.py took 0.741 seconds
+[2024-08-07T09:48:33.224+0000] {processor.py:161} INFO - Started process (PID=5908) to work on /opt/airflow/dags/etl_time_location.dag.py
+[2024-08-07T09:48:33.226+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_time_location.dag.py for tasks to queue
+[2024-08-07T09:48:33.229+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:33.228+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_time_location.dag.py
+[2024-08-07T09:48:33.877+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Time_Location_Dimension' retrieved from /opt/airflow/dags/etl_time_location.dag.py
+[2024-08-07T09:48:33.899+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:33.899+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-07T09:48:33.926+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:33.926+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Time_Location_Dimension to 2024-08-06 23:00:00+00:00, run_after=2024-08-07 23:00:00+00:00
+[2024-08-07T09:48:33.989+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_time_location.dag.py took 0.784 seconds
+[2024-08-07T09:49:04.168+0000] {processor.py:161} INFO - Started process (PID=5911) to work on /opt/airflow/dags/etl_time_location.dag.py
+[2024-08-07T09:49:04.169+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_time_location.dag.py for tasks to queue
+[2024-08-07T09:49:04.170+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:04.169+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_time_location.dag.py
+[2024-08-07T09:49:04.714+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Time_Location_Dimension' retrieved from /opt/airflow/dags/etl_time_location.dag.py
+[2024-08-07T09:49:04.746+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:04.745+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-07T09:49:04.771+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:04.771+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Time_Location_Dimension to 2024-08-06 23:00:00+00:00, run_after=2024-08-07 23:00:00+00:00
+[2024-08-07T09:49:04.841+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_time_location.dag.py took 0.685 seconds

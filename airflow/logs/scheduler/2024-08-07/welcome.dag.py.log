@@ -3958,3 +3958,48 @@ jinja2.exceptions.TemplateNotFound: ./sql/connect-other-db.sql
 [2024-08-07T09:47:48.284+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:47:48.283+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-08-07T09:47:48.330+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:47:48.330+0000] {dag.py:3954} INFO - Setting next_dagrun for welcome_dag to 2024-08-06 23:00:00+00:00, run_after=2024-08-07 23:00:00+00:00
 [2024-08-07T09:47:48.419+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/welcome.dag.py took 0.351 seconds
+[2024-08-07T09:48:19.238+0000] {processor.py:161} INFO - Started process (PID=5907) to work on /opt/airflow/dags/welcome.dag.py
+[2024-08-07T09:48:19.239+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/welcome.dag.py for tasks to queue
+[2024-08-07T09:48:19.244+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:19.242+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/welcome.dag.py
+[2024-08-07T09:48:19.328+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:19.326+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/connect-other-db.sql
+[2024-08-07T09:48:19.329+0000] {processor.py:840} INFO - DAG(s) 'welcome_dag' retrieved from /opt/airflow/dags/welcome.dag.py
+[2024-08-07T09:48:19.361+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:19.360+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-07T09:48:19.384+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:19.383+0000] {dag.py:3954} INFO - Setting next_dagrun for welcome_dag to 2024-08-06 23:00:00+00:00, run_after=2024-08-07 23:00:00+00:00
+[2024-08-07T09:48:19.441+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/welcome.dag.py took 0.223 seconds
+[2024-08-07T09:48:50.325+0000] {processor.py:161} INFO - Started process (PID=5910) to work on /opt/airflow/dags/welcome.dag.py
+[2024-08-07T09:48:50.326+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/welcome.dag.py for tasks to queue
+[2024-08-07T09:48:50.328+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:50.327+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/welcome.dag.py
+[2024-08-07T09:48:50.400+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:50.399+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/connect-other-db.sql
+[2024-08-07T09:48:50.401+0000] {processor.py:840} INFO - DAG(s) 'welcome_dag' retrieved from /opt/airflow/dags/welcome.dag.py
+[2024-08-07T09:48:50.438+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:50.437+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-07T09:48:50.467+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:48:50.467+0000] {dag.py:3954} INFO - Setting next_dagrun for welcome_dag to 2024-08-06 23:00:00+00:00, run_after=2024-08-07 23:00:00+00:00
+[2024-08-07T09:48:50.523+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/welcome.dag.py took 0.210 seconds
+[2024-08-07T09:49:21.097+0000] {processor.py:161} INFO - Started process (PID=5913) to work on /opt/airflow/dags/welcome.dag.py
+[2024-08-07T09:49:21.098+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/welcome.dag.py for tasks to queue
+[2024-08-07T09:49:21.100+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:21.099+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/welcome.dag.py
+[2024-08-07T09:49:21.168+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:21.167+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/connect-other-db.sql
+[2024-08-07T09:49:21.169+0000] {processor.py:840} INFO - DAG(s) 'welcome_dag' retrieved from /opt/airflow/dags/welcome.dag.py
+[2024-08-07T09:49:21.207+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:21.207+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-07T09:49:21.237+0000] {logging_mixin.py:188} INFO - [2024-08-07T09:49:21.236+0000] {dag.py:3954} INFO - Setting next_dagrun for welcome_dag to 2024-08-06 23:00:00+00:00, run_after=2024-08-07 23:00:00+00:00
+[2024-08-07T09:49:21.303+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/welcome.dag.py took 0.219 seconds
