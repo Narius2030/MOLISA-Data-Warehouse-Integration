@@ -1,0 +1,246 @@
+[2024-08-07T15:30:53.921+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T15:30:53.956+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Integrate_Data_Warehouse.bronze_atvsld manual__2024-08-07T15:30:25.485161+00:00 [queued]>
+[2024-08-07T15:30:53.969+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Integrate_Data_Warehouse.bronze_atvsld manual__2024-08-07T15:30:25.485161+00:00 [queued]>
+[2024-08-07T15:30:53.970+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-07T15:30:54.001+0000] {taskinstance.py:2330} INFO - Executing <Task(SQLExecuteQueryOperator): bronze_atvsld> on 2024-08-07 15:30:25.485161+00:00
+[2024-08-07T15:30:54.006+0000] {standard_task_runner.py:63} INFO - Started process 851 to run task
+[2024-08-07T15:30:54.011+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Integrate_Data_Warehouse', 'bronze_atvsld', 'manual__2024-08-07T15:30:25.485161+00:00', '--job-id', '261', '--raw', '--subdir', 'DAGS_FOLDER/etl_ldtbxh.dag.py', '--cfg-path', '/tmp/tmp9zklszid']
+[2024-08-07T15:30:54.014+0000] {standard_task_runner.py:91} INFO - Job 261: Subtask bronze_atvsld
+[2024-08-07T15:30:54.114+0000] {task_command.py:426} INFO - Running <TaskInstance: Integrate_Data_Warehouse.bronze_atvsld manual__2024-08-07T15:30:25.485161+00:00 [running]> on host 45f7764b2bf2
+[2024-08-07T15:30:54.278+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='Integrate_Data_Warehouse' AIRFLOW_CTX_TASK_ID='bronze_atvsld' AIRFLOW_CTX_EXECUTION_DATE='2024-08-07T15:30:25.485161+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-07T15:30:25.485161+00:00'
+[2024-08-07T15:30:54.279+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T15:30:54.295+0000] {sql.py:276} INFO - Executing: /*** Load stage for dimensions ***/
+
+BEGIN TRANSACTION;
+    /***
+        Load Source to stgDimAccident (Bronze)
+    ***/
+    INSERT INTO "stgDimAccident"(accident_id, reason, factor, career,
+                                year, from_date, to_date, 
+                                period, report_type, has_support,
+                                total_people, total_hasdead, total_female,
+                                total_hard_case, total_not_managed, total_female_not_managed,
+                                total_dead_not_managed, total_hard_not_managed)
+    SELECT
+        *
+    FROM dblink('host=host.docker.internal dbname=atvsld password=nhanbui user=postgres port=5434', 
+                'select * from public.vw_stgdimaccident')
+    AS (
+        accident_id uuid,
+        reason VARCHAR(255),
+        factor VARCHAR(255),
+        career VARCHAR(255),
+        year CHAR(10),
+        from_date DATE,
+        to_date DATE,
+        period CHAR(10),
+        report_type VARCHAR(255),
+        has_support BOOL,
+        total_people INT,
+        total_hasdead INT,
+        total_female INT,
+        total_hard_case INT,
+        total_not_managed INT,
+        total_female_not_managed INT,
+        total_dead_not_managed INT,
+        total_hard_not_managed INT
+    );
+
+
+    /***
+        Load Source to stgDimCompany (Bronze)
+    ***/
+    INSERT INTO "stgDimCompany"(company_id, name, tax_number,
+                                unit, business_name, major_name, 
+                                ngaycap_GPKD, province_code, district_code, 
+                                ward_code, town_code, foreign_name, 
+                                email, contact_province, contact_district, 
+                                contact_ward, deputy)
+    SELECT
+        *
+    FROM dblink('host=host.docker.internal dbname=atvsld password=nhanbui user=postgres port=5434', 
+                'select * from public.vw_stgdimcompany')
+    AS (
+        company_id uuid,
+        name VARCHAR(35),
+        tax_number VARCHAR(15),
+        unit public.unit_type,
+        business_name VARCHAR(35),
+        major_name VARCHAR(35),
+        ngaycap_GPKD DATE,
+        province_code CHAR(5),
+        district_code CHAR(5),
+        ward_code CHAR(5),
+        town_code CHAR(5),
+        foreign_name VARCHAR(35),
+        email VARCHAR(255),
+        contact_province CHAR(5),
+        contact_district CHAR(5),
+        contact_ward CHAR(5),
+        deputy VARCHAR(255)
+    );
+
+
+    /***
+        Load Source to stgDimEuqipment (Bronze)
+    ***/
+    INSERT INTO "stgEquipment"(device_id, year, month,
+                            quality_info_id, company_id,
+                            device_name, hs_code, technical_feature, 
+                            origin, quantity, unit, contract_number, 
+                            contract_date, category, management_cerf,
+                            issuance_organize, issuance_date, issuance_place,
+                            profile_code, page_of_co, import_gate, import_date)
+    SELECT
+        *
+    FROM dblink('host=host.docker.internal dbname=atvsld password=nhanbui user=postgres port=5434', 
+                'select * from public.vw_stgdimequipment')
+    AS (
+        device_id uuid,	-- PK
+        year INT,
+        month INT,
+        quality_info_id uuid,	-- PK
+        company_id uuid,
+        device_name VARCHAR(35),
+        hs_code CHAR(15),
+        technical_feature VARCHAR(35),
+        origin VARCHAR(35),
+        quantity INT,
+        unit CHAR(10),
+        contract_number VARCHAR(15),
+        contract_date DATE,
+        category VARCHAR(10),
+        management_cerf VARCHAR(15),
+        issuance_organize VARCHAR(35),
+        issuance_date DATE,
+        issuance_place VARCHAR(255),
+        profile_code VARCHAR(15),
+        page_of_co INT,
+        import_gate VARCHAR(255),
+        import_date DATE
+    );
+COMMIT;
+
+
+/*** Load stage for facts ***/
+[2024-08-07T15:30:54.311+0000] {base.py:84} INFO - Using connection ID 'postgres_ldtbxh_stage' for task execution.
+[2024-08-07T15:30:54.415+0000] {base.py:84} INFO - Using connection ID 'postgres_ldtbxh_stage' for task execution.
+[2024-08-07T15:30:54.436+0000] {sql.py:470} INFO - Running statement: /*** Load stage for dimensions ***/
+
+BEGIN TRANSACTION;
+    /***
+        Load Source to stgDimAccident (Bronze)
+    ***/
+    INSERT INTO "stgDimAccident"(accident_id, reason, factor, career,
+                                year, from_date, to_date, 
+                                period, report_type, has_support,
+                                total_people, total_hasdead, total_female,
+                                total_hard_case, total_not_managed, total_female_not_managed,
+                                total_dead_not_managed, total_hard_not_managed)
+    SELECT
+        *
+    FROM dblink('host=host.docker.internal dbname=atvsld password=*** user=postgres port=5434', 
+                'select * from public.vw_stgdimaccident')
+    AS (
+        accident_id uuid,
+        reason VARCHAR(255),
+        factor VARCHAR(255),
+        career VARCHAR(255),
+        year CHAR(10),
+        from_date DATE,
+        to_date DATE,
+        period CHAR(10),
+        report_type VARCHAR(255),
+        has_support BOOL,
+        total_people INT,
+        total_hasdead INT,
+        total_female INT,
+        total_hard_case INT,
+        total_not_managed INT,
+        total_female_not_managed INT,
+        total_dead_not_managed INT,
+        total_hard_not_managed INT
+    );
+
+
+    /***
+        Load Source to stgDimCompany (Bronze)
+    ***/
+    INSERT INTO "stgDimCompany"(company_id, name, tax_number,
+                                unit, business_name, major_name, 
+                                ngaycap_GPKD, province_code, district_code, 
+                                ward_code, town_code, foreign_name, 
+                                email, contact_province, contact_district, 
+                                contact_ward, deputy)
+    SELECT
+        *
+    FROM dblink('host=host.docker.internal dbname=atvsld password=*** user=postgres port=5434', 
+                'select * from public.vw_stgdimcompany')
+    AS (
+        company_id uuid,
+        name VARCHAR(35),
+        tax_number VARCHAR(15),
+        unit public.unit_type,
+        business_name VARCHAR(35),
+        major_name VARCHAR(35),
+        ngaycap_GPKD DATE,
+        province_code CHAR(5),
+        district_code CHAR(5),
+        ward_code CHAR(5),
+        town_code CHAR(5),
+        foreign_name VARCHAR(35),
+        email VARCHAR(255),
+        contact_province CHAR(5),
+        contact_district CHAR(5),
+        contact_ward CHAR(5),
+        deputy VARCHAR(255)
+    );
+
+
+    /***
+        Load Source to stgDimEuqipment (Bronze)
+    ***/
+    INSERT INTO "stgEquipment"(device_id, year, month,
+                            quality_info_id, company_id,
+                            device_name, hs_code, technical_feature, 
+                            origin, quantity, unit, contract_number, 
+                            contract_date, category, management_cerf,
+                            issuance_organize, issuance_date, issuance_place,
+                            profile_code, page_of_co, import_gate, import_date)
+    SELECT
+        *
+    FROM dblink('host=host.docker.internal dbname=atvsld password=*** user=postgres port=5434', 
+                'select * from public.vw_stgdimequipment')
+    AS (
+        device_id uuid,	-- PK
+        year INT,
+        month INT,
+        quality_info_id uuid,	-- PK
+        company_id uuid,
+        device_name VARCHAR(35),
+        hs_code CHAR(15),
+        technical_feature VARCHAR(35),
+        origin VARCHAR(35),
+        quantity INT,
+        unit CHAR(10),
+        contract_number VARCHAR(15),
+        contract_date DATE,
+        category VARCHAR(10),
+        management_cerf VARCHAR(15),
+        issuance_organize VARCHAR(35),
+        issuance_date DATE,
+        issuance_place VARCHAR(255),
+        profile_code VARCHAR(15),
+        page_of_co INT,
+        import_gate VARCHAR(255),
+        import_date DATE
+    );
+COMMIT;
+
+
+/*** Load stage for facts ***/, parameters: None
+[2024-08-07T15:30:54.560+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T15:30:54.578+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Integrate_Data_Warehouse, task_id=bronze_atvsld, run_id=manual__2024-08-07T15:30:25.485161+00:00, execution_date=20240807T153025, start_date=20240807T153053, end_date=20240807T153054
+[2024-08-07T15:30:54.626+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-07T15:30:54.650+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T15:30:54.651+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

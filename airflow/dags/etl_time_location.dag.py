@@ -6,29 +6,29 @@ from airflow.utils.dates import days_ago
 from datetime import datetime
 from timelocation.load_date import readTimeExcel
 
-def print_welcome():
-    print('Starting to Integrate Time-Location data!')
+def start():
+    print('Starting to Integrate Time-Location data...')
 
-def print_date():
-    print('Finish at {}'.format(datetime.today().date()))
+def end():
+    print('Finish at {}!'.format(datetime.today().date()))
 
 
 with DAG(
-    'Integrate_Time_Location_Dimension',
+    'Integrate_Time_Location',
     default_args={'start_date': days_ago(1)},
     schedule_interval='0 23 * * *',
     catchup=False
 ) as dag:
-    print_welcome_task = PythonOperator(
-        task_id='print_welcome',
-        python_callable=print_welcome,
+    print_start_task = PythonOperator(
+        task_id='print_start',
+        python_callable=start,
         dag=dag
     )
 
     refresh = SQLExecuteQueryOperator(
         task_id='refresh_stages',
         conn_id = 'postgres_ldtbxh_stage',
-        sql=Variable.get('timelocation_data_dir')+"/refresh.stage.sql",
+        sql="./sql/refresh.stage.sql",
         dag=dag
     )
 
@@ -45,10 +45,10 @@ with DAG(
         dag=dag
     )
 
-    print_date_task = PythonOperator(
-        task_id='print_date',
-        python_callable=print_date,
+    print_end_task = PythonOperator(
+        task_id='print_end',
+        python_callable=end,
         dag=dag
     )
 
-print_welcome_task >> refresh >> [bronze_time, bronze_location] >> print_date_task
+print_start_task >> refresh >> [bronze_time, bronze_location] >> print_end_task
