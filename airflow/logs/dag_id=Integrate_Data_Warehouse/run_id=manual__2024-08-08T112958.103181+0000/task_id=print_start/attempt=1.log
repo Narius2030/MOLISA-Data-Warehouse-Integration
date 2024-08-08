@@ -1,0 +1,18 @@
+[2024-08-08T11:30:04.815+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-08T11:30:04.850+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Integrate_Data_Warehouse.print_start manual__2024-08-08T11:29:58.103181+00:00 [queued]>
+[2024-08-08T11:30:04.864+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Integrate_Data_Warehouse.print_start manual__2024-08-08T11:29:58.103181+00:00 [queued]>
+[2024-08-08T11:30:04.864+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-08T11:30:04.899+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): print_start> on 2024-08-08 11:29:58.103181+00:00
+[2024-08-08T11:30:04.903+0000] {standard_task_runner.py:63} INFO - Started process 1091 to run task
+[2024-08-08T11:30:04.907+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Integrate_Data_Warehouse', 'print_start', 'manual__2024-08-08T11:29:58.103181+00:00', '--job-id', '301', '--raw', '--subdir', 'DAGS_FOLDER/etl_ldtbxh.dag.py', '--cfg-path', '/tmp/tmpgr0z0cy7']
+[2024-08-08T11:30:04.909+0000] {standard_task_runner.py:91} INFO - Job 301: Subtask print_start
+[2024-08-08T11:30:04.998+0000] {task_command.py:426} INFO - Running <TaskInstance: Integrate_Data_Warehouse.print_start manual__2024-08-08T11:29:58.103181+00:00 [running]> on host 45f7764b2bf2
+[2024-08-08T11:30:05.159+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='Integrate_Data_Warehouse' AIRFLOW_CTX_TASK_ID='print_start' AIRFLOW_CTX_EXECUTION_DATE='2024-08-08T11:29:58.103181+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-08T11:29:58.103181+00:00'
+[2024-08-08T11:30:05.161+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-08T11:30:05.184+0000] {logging_mixin.py:188} INFO - Starting to Integrate Data Warehouse...
+[2024-08-08T11:30:05.184+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-08-08T11:30:05.185+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-08T11:30:05.198+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Integrate_Data_Warehouse, task_id=print_start, run_id=manual__2024-08-08T11:29:58.103181+00:00, execution_date=20240808T112958, start_date=20240808T113004, end_date=20240808T113005
+[2024-08-08T11:30:05.241+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-08T11:30:05.302+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-08T11:30:05.313+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

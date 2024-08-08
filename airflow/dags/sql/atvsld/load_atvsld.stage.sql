@@ -1,6 +1,7 @@
 /*** Load stage for dimensions ***/
-
-BEGIN TRANSACTION;
+DO
+$$
+BEGIN
     /***
         Load Source to stgDimAccident (Bronze)
     ***/
@@ -108,7 +109,77 @@ BEGIN TRANSACTION;
         import_gate VARCHAR(255),
         import_date DATE
     );
-COMMIT;
+    
+EXCEPTION
+	WHEN SQLSTATE '42703' THEN
+		UPDATE "DimAuditForeigned" 
+		SET 
+			information = 'Something went wrong with selected columns. HINT: Check on "SELECT" or "INSERT" statement',
+			status = 'ERROR',
+            finished_at = NOW()
+		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned");	
+-- 		RAISE EXCEPTION  'when wrong with selected columns' USING HINT = 'Check on "SELECT" or "INSERT" statement';
+
+END;
+$$;
 
 
 /*** Load stage for facts ***/
+DO
+$$
+BEGIN
+    /***
+        Load Source to stgPeriodicalAccidentFact (Bronze)
+    ***/
+    INSERT INTO "stgPeriodicalAccidentFact"(accident_id, year, month, company_name, compay_foreign_name,
+                                            major_name, reason, factor, career, 
+                                            total_people, total_hasdead, total_female,
+                                            medical_expense, treatment_expense,
+                                            indemnify_expense, total_expense,
+                                            day_off, assest_harm)
+    SELECT
+        accident_id, year, month, company_name, compay_foreign_name,
+        major_name, reason, factor, caree, 
+        total_people, total_hasdead, total_female,
+        medical_expense, treatment_expense,
+        indemnify_expense, total_expense,
+        day_off, assest_harm
+    FROM dblink('host=host.docker.internal dbname=atvsld password=nhanbui user=postgres port=5434', 
+                'select * from public.vw_stgperiodicalaccidentfact')
+    AS (
+        accident_id uuid,
+        year INT,
+        month INT,
+        company_name VARCHAR(35),
+        compay_foreign_name VARCHAR(35),
+        major_name VARCHAR(35),
+        reason VARCHAR(255),
+        factor VARCHAR(255),
+        career VARCHAR(255),
+        total_people INT,
+        total_hasdead INT,
+        total_female INT,
+        medical_expense FLOAT8,
+        treatment_expense FLOAT8,
+        indemnify_expense FLOAT8,
+        total_expense FLOAT8,
+        day_off INT,
+        assest_harm FLOAT8,
+        accident_created_date TIMESTAMP,
+        expense_created_date TIMESTAMP
+    )
+    WHERE (accident_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"))
+        OR (expense_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"));
+
+EXCEPTION
+	WHEN SQLSTATE '42703' THEN
+		UPDATE "DimAuditForeigned" 
+		SET 
+			information = 'Something went wrong with selected columns. HINT: Check on "SELECT" or "INSERT" statement',
+			status = 'ERROR',
+            finished_at = NOW()
+		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned");	
+-- 		RAISE EXCEPTION  'when wrong with selected columns' USING HINT = 'Check on "SELECT" or "INSERT" statement';
+
+END;
+$$;

@@ -126,3 +126,80 @@ BEGIN TRANSACTION;
 
 
 /*** Load stage for facts ***/
+
+BEGIN TRANSACTION;
+    /***
+        Load Source to stgPovertyStatusFact (Bronze)
+    ***/
+    INSERT INTO "stgPovertyStatusFact"(family_id, year, province_name, district_name,
+                                    family_code, owner_name, hard_reasons, 
+                                    get_policies, need_policies, 
+                                    a_grade, b1_grade, b2_grade, final_result)
+    SELECT
+        family_id, year, province_name, district_name,
+        family_code, owner_name, hard_reasons, 
+        get_policies, need_policies, 
+        a_grade, b1_grade, b2_grade, final_result
+    FROM dblink('host=host.docker.internal dbname=hongheovna password=nhanbui user=postgres port=5434', 
+                'select * from public.vw_stgpovertystatusfact')
+    AS (
+        family_id uuid,
+        year SMALLINT,
+        province_name VARCHAR(35),
+        district_name VARCHAR(35),
+        family_code VARCHAR(10),
+        owner_name VARCHAR(35),
+        hard_reasons VARCHAR(255)[],
+        get_policies VARCHAR(255)[],
+        need_policies VARCHAR(255)[],
+        a_grade BOOL,
+        b1_grade SMALLINT,
+        b2_grade SMALLINT,
+        final_result public.CLASSIFICATION,
+        a_created_date TIMESTAMP,
+        b1_created_date TIMESTAMP,
+        rs_created_date TIMESTAMP
+    )
+    WHERE (a_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"))
+        OR (b1_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"))
+        OR (rs_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"));
+
+
+
+    /***
+        Load Source to stgMemberSurveyFact (Bronze)
+    ***/
+    INSERT INTO "stgMemberSurveyFact"(member_id, family_id, year, month,
+                                    province_name, district_name,
+                                    member_name, owner_relationship,
+                                    year_of_birth, month_of_birth, day_of_birth,
+                                    identity_card_number, nation, final_result)
+    SELECT
+        member_id, family_id, year, month,
+        province_name, district_name,
+        full_name, owner_relationship,
+        year_of_birth, month_of_birth, day_of_birth,
+        identity_card_number, nation, final_result
+    FROM dblink('host=host.docker.internal dbname=hongheovna password=nhanbui user=postgres port=5434', 
+                'select * from public.vw_stgmembersurveyfact')
+    AS (
+        member_id uuid,
+        family_id uuid,
+        year INT,
+        month INT,
+        province_name VARCHAR(35),
+        district_name VARCHAR(35),
+        full_name VARCHAR(35),
+        owner_relationship VARCHAR(15),
+        year_of_birth SMALLINT,
+        month_of_birth SMALLINT,
+        day_of_birth SMALLINT,
+        identity_card_number VARCHAR(12),
+        nation VARCHAR(15),
+        final_result public.CLASSIFICATION,
+        member_created_date TIMESTAMP,
+        rs_created_date TIMESTAMP
+    )
+    WHERE (member_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"))
+        OR (rs_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"));
+COMMIT;
