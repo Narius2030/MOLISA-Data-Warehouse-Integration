@@ -2,7 +2,13 @@
 
 /*** Load stage for dimensions ***/
 
-BEGIN TRANSACTION;
+DO
+$$
+DECLARE
+	vinformation VARCHAR(255);
+	vfinished_at TIMESTAMP;
+	vstatus VARCHAR(10);
+BEGIN
     /***
         Load Source to stgDimFamily (Bronze)
     **/
@@ -11,7 +17,7 @@ BEGIN TRANSACTION;
                             district_name, ward_code, ward_name, 
                             family_number, nation_in_place)
     SELECT 
-        family_id, family_code, family_type, years, 
+        family_id, family_code, family_type, years,
 		province_code, province_name, district_code,
         district_name, ward_code, ward_name, 
         family_number, nation_in_place
@@ -32,7 +38,7 @@ BEGIN TRANSACTION;
         nation_in_place BOOL,
         created_date TIMESTAMP
     )
-    WHERE created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned");
+    WHERE created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS');
 
     /***
         Load Source to stgDimFamilyMember (Bronze)
@@ -75,7 +81,7 @@ BEGIN TRANSACTION;
         has_pension public.PENSION_TYPE,
         created_date TIMESTAMP
     )
-    WHERE created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned");
+    WHERE created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS');
 
 
     /***
@@ -120,14 +126,37 @@ BEGIN TRANSACTION;
         b1_created_date TIMESTAMP,
         rs_created_date TIMESTAMP
     )
-    WHERE (a_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"))
-        OR (b1_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"))
-        OR (rs_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"));
+    WHERE (a_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'))
+        OR (b1_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'))
+        OR (rs_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'));
+    
+    -- UPDATE "DimAuditForeigned" 
+    -- SET 
+    --     information = 'Hongheo Dimension: integrating succefully',
+    --     status = 'PENDING',
+    --     finished_at = NOW()
+    -- WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status IS NULL);
+
+EXCEPTION
+-- 	RAISE EXCEPTION 'Something went wrong with selected columns' USING HINT = 'Check on "SELECT" or "INSERT" statement';
+	WHEN OTHERS THEN
+		UPDATE "DimAuditForeigned" 
+		SET 
+			information = 'Hongheo Dimension: Something went wrong on running statements. 
+							HINT: Check carefully the syntax or selected columns at "SELECT" or "INSERT" clauses',
+			status = 'ERROR',
+			finished_at = NOW()
+		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status='ERROR');
+
+END;
+$$;
 
 
 /*** Load stage for facts ***/
 
-BEGIN TRANSACTION;
+DO
+$$
+BEGIN
     /***
         Load Source to stgPovertyStatusFact (Bronze)
     ***/
@@ -160,9 +189,9 @@ BEGIN TRANSACTION;
         b1_created_date TIMESTAMP,
         rs_created_date TIMESTAMP
     )
-    WHERE (a_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"))
-        OR (b1_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"))
-        OR (rs_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"));
+    WHERE (a_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'))
+        OR (b1_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'))
+        OR (rs_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'));
 
 
 
@@ -200,6 +229,18 @@ BEGIN TRANSACTION;
         member_created_date TIMESTAMP,
         rs_created_date TIMESTAMP
     )
-    WHERE (member_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"))
-        OR (rs_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"));
-COMMIT;
+    WHERE (member_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'))
+        OR (rs_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'));
+
+EXCEPTION
+	WHEN OTHERS THEN
+		UPDATE "DimAuditForeigned" 
+		SET 
+			information = 'Hongheo Fact: Something went wrong on running statements. 
+							HINT: Check carefully the syntax or selected columns at "SELECT" or "INSERT" clauses',
+			status = 'ERROR',
+			finished_at = NOW()
+		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status='ERROR');
+
+END;
+$$;

@@ -1,0 +1,63 @@
+[2024-08-08T13:44:54.829+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-08T13:44:54.865+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Integrate_Data_Warehouse.bronze_atvsld manual__2024-08-08T13:44:27.388899+00:00 [queued]>
+[2024-08-08T13:44:54.880+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Integrate_Data_Warehouse.bronze_atvsld manual__2024-08-08T13:44:27.388899+00:00 [queued]>
+[2024-08-08T13:44:54.880+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-08T13:44:54.924+0000] {taskinstance.py:2330} INFO - Executing <Task(SQLExecuteQueryOperator): bronze_atvsld> on 2024-08-08 13:44:27.388899+00:00
+[2024-08-08T13:44:54.930+0000] {standard_task_runner.py:63} INFO - Started process 90 to run task
+[2024-08-08T13:44:54.935+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Integrate_Data_Warehouse', 'bronze_atvsld', 'manual__2024-08-08T13:44:27.388899+00:00', '--job-id', '311', '--raw', '--subdir', 'DAGS_FOLDER/etl_ldtbxh.dag.py', '--cfg-path', '/tmp/tmpcskz35mr']
+[2024-08-08T13:44:54.938+0000] {standard_task_runner.py:91} INFO - Job 311: Subtask bronze_atvsld
+[2024-08-08T13:44:55.025+0000] {task_command.py:426} INFO - Running <TaskInstance: Integrate_Data_Warehouse.bronze_atvsld manual__2024-08-08T13:44:27.388899+00:00 [running]> on host 45f7764b2bf2
+[2024-08-08T13:44:55.111+0000] {abstractoperator.py:725} ERROR - Exception rendering Jinja template for task 'bronze_atvsld', field 'sql'. Template: './sql/atvsld/load_atvsld.stage.sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/abstractoperator.py", line 717, in _do_render_template_fields
+    rendered_content = self.render_template(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 166, in render_template
+    template = jinja_env.get_template(value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/atvsld/load_atvsld.stage.sql
+[2024-08-08T13:44:55.113+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2479, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode, session=session)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 2633, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context, jinja_env=jinja_env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 3094, in render_templates
+    original_task.render_template_fields(context, jinja_env)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 1336, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/abstractoperator.py", line 717, in _do_render_template_fields
+    rendered_content = self.render_template(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 166, in render_template
+    template = jinja_env.get_template(value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/atvsld/load_atvsld.stage.sql
+[2024-08-08T13:44:55.125+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=Integrate_Data_Warehouse, task_id=bronze_atvsld, run_id=manual__2024-08-08T13:44:27.388899+00:00, execution_date=20240808T134427, start_date=20240808T134454, end_date=20240808T134455
+[2024-08-08T13:44:55.169+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 311 for task bronze_atvsld (./sql/atvsld/load_atvsld.stage.sql; 90)
+[2024-08-08T13:44:55.188+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-08-08T13:44:55.212+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-08T13:44:55.213+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -2133,3 +2133,1231 @@
 [2024-08-08T11:34:03.460+0000] {logging_mixin.py:188} INFO - [2024-08-08T11:34:03.460+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2024-08-08T11:34:03.496+0000] {logging_mixin.py:188} INFO - [2024-08-08T11:34:03.496+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
 [2024-08-08T11:34:03.578+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.293 seconds
+[2024-08-08T13:43:09.913+0000] {processor.py:161} INFO - Started process (PID=42) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:43:09.915+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:43:09.918+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:43:09.917+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:43:10.029+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:43:10.028+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/hongheo/load_hongheo.stage.sql
+[2024-08-08T13:43:10.033+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:43:10.032+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/atvsld/load_atvsld.stage.sql
+[2024-08-08T13:43:10.044+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:43:10.065+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:43:10.065+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:43:10.116+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:43:10.115+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:43:10.212+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.307 seconds
+[2024-08-08T13:43:40.642+0000] {processor.py:161} INFO - Started process (PID=60) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:43:40.644+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:43:40.646+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:43:40.646+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:43:40.738+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:43:40.736+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/hongheo/load_hongheo.stage.sql
+[2024-08-08T13:43:40.741+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:43:40.740+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/atvsld/load_atvsld.stage.sql
+[2024-08-08T13:43:40.748+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:43:40.942+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:43:40.942+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:43:40.984+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:43:40.984+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:43:41.218+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.585 seconds
+[2024-08-08T13:44:11.439+0000] {processor.py:161} INFO - Started process (PID=63) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:44:11.442+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:44:11.445+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:44:11.445+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:44:11.528+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:44:11.527+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/hongheo/load_hongheo.stage.sql
+[2024-08-08T13:44:11.532+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:44:11.531+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/atvsld/load_atvsld.stage.sql
+[2024-08-08T13:44:11.539+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:44:11.569+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:44:11.569+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:44:11.599+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:44:11.599+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:44:11.660+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.229 seconds
+[2024-08-08T13:44:42.940+0000] {processor.py:161} INFO - Started process (PID=78) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:44:42.941+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:44:42.945+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:44:42.944+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:44:43.021+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:44:43.020+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/hongheo/load_hongheo.stage.sql
+[2024-08-08T13:44:43.023+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:44:43.023+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/atvsld/load_atvsld.stage.sql
+[2024-08-08T13:44:43.029+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:44:43.066+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:44:43.066+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:44:43.096+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:44:43.096+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:44:43.164+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.237 seconds
+[2024-08-08T13:45:14.127+0000] {processor.py:161} INFO - Started process (PID=93) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:45:14.129+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:45:14.132+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:45:14.131+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:45:14.219+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:45:14.218+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/hongheo/load_hongheo.stage.sql
+[2024-08-08T13:45:14.222+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:45:14.221+0000] {templater.py:93} ERROR - Failed to resolve template field 'sql'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/template/templater.py", line 91, in resolve_template_files
+    setattr(self, field, env.loader.get_source(env, content)[0])  # type: ignore
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/jinja2/loaders.py", line 204, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./sql/atvsld/load_atvsld.stage.sql
+[2024-08-08T13:45:14.226+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:45:14.256+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:45:14.256+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:45:14.284+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:45:14.284+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:45:14.344+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.225 seconds
+[2024-08-08T13:45:44.673+0000] {processor.py:161} INFO - Started process (PID=96) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:45:44.674+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:45:44.676+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:45:44.676+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:45:44.755+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:45:44.939+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:45:44.938+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:45:44.968+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:45:44.968+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:45:45.041+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.375 seconds
+[2024-08-08T13:46:23.662+0000] {processor.py:161} INFO - Started process (PID=123) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:46:23.663+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:46:23.668+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:46:23.668+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:46:23.816+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:46:23.851+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:46:23.851+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:46:23.884+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:46:23.883+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:46:23.951+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.298 seconds
+[2024-08-08T13:46:54.980+0000] {processor.py:161} INFO - Started process (PID=132) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:46:54.982+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:46:54.985+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:46:54.984+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:46:55.057+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:46:55.087+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:46:55.087+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:46:55.121+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:46:55.120+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:46:55.174+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.200 seconds
+[2024-08-08T13:47:25.674+0000] {processor.py:161} INFO - Started process (PID=135) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:47:25.675+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:47:25.677+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:47:25.677+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:47:25.757+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:47:25.786+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:47:25.786+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:47:25.816+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:47:25.815+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:47:25.873+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.205 seconds
+[2024-08-08T13:47:56.372+0000] {processor.py:161} INFO - Started process (PID=138) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:47:56.373+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:47:56.375+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:47:56.375+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:47:56.446+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:47:56.476+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:47:56.476+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:47:56.504+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:47:56.504+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:47:56.565+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.198 seconds
+[2024-08-08T13:48:27.238+0000] {processor.py:161} INFO - Started process (PID=141) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:48:27.240+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:48:27.242+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:48:27.241+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:48:27.340+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:48:27.498+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:48:27.498+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:48:27.540+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:48:27.540+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:48:27.632+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.400 seconds
+[2024-08-08T13:48:58.715+0000] {processor.py:161} INFO - Started process (PID=144) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:48:58.717+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:48:58.719+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:48:58.719+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:48:58.817+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:48:58.853+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:48:58.853+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:48:58.885+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:48:58.885+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:48:58.946+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.237 seconds
+[2024-08-08T13:49:29.518+0000] {processor.py:161} INFO - Started process (PID=147) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:49:29.519+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:49:29.522+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:49:29.521+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:49:29.647+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:49:29.688+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:49:29.687+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:49:29.719+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:49:29.718+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:49:29.775+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.265 seconds
+[2024-08-08T13:50:00.485+0000] {processor.py:161} INFO - Started process (PID=150) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:50:00.487+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:50:00.490+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:50:00.490+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:50:00.605+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:50:00.644+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:50:00.644+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:50:00.681+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:50:00.681+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:50:00.796+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.321 seconds
+[2024-08-08T13:50:31.410+0000] {processor.py:161} INFO - Started process (PID=153) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:50:31.413+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:50:31.415+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:50:31.415+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:50:31.513+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:50:31.556+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:50:31.556+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:50:31.611+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:50:31.611+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:50:31.701+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.306 seconds
+[2024-08-08T13:51:02.127+0000] {processor.py:161} INFO - Started process (PID=156) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:51:02.128+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:51:02.131+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:51:02.130+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:51:02.211+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:51:02.242+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:51:02.242+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:51:02.272+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:51:02.272+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:51:02.327+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.206 seconds
+[2024-08-08T13:51:32.864+0000] {processor.py:161} INFO - Started process (PID=159) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:51:32.865+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:51:32.868+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:51:32.868+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:51:32.944+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:51:32.973+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:51:32.973+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:51:33.002+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:51:33.002+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:51:33.072+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.214 seconds
+[2024-08-08T13:52:03.575+0000] {processor.py:161} INFO - Started process (PID=162) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:52:03.577+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:52:03.579+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:52:03.579+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:52:03.648+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:52:03.680+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:52:03.679+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:52:03.711+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:52:03.711+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:52:03.770+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.200 seconds
+[2024-08-08T13:52:34.306+0000] {processor.py:161} INFO - Started process (PID=165) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:52:34.308+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:52:34.312+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:52:34.311+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:52:34.470+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:52:34.512+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:52:34.512+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:52:34.552+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:52:34.552+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:52:34.635+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.340 seconds
+[2024-08-08T13:53:05.039+0000] {processor.py:161} INFO - Started process (PID=168) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:53:05.041+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:53:05.045+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:53:05.044+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:53:05.181+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:53:05.226+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:53:05.226+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:53:05.277+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:53:05.277+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:53:05.371+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.347 seconds
+[2024-08-08T13:53:35.957+0000] {processor.py:161} INFO - Started process (PID=171) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:53:35.958+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:53:35.961+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:53:35.961+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:53:36.064+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:53:36.097+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:53:36.096+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:53:36.127+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:53:36.126+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:53:36.182+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.234 seconds
+[2024-08-08T13:54:07.108+0000] {processor.py:161} INFO - Started process (PID=174) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:54:07.110+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:54:07.113+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:54:07.112+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:54:07.192+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:54:07.222+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:54:07.221+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:54:07.263+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:54:07.263+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:54:07.331+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.232 seconds
+[2024-08-08T13:54:37.752+0000] {processor.py:161} INFO - Started process (PID=177) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:54:37.753+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:54:37.756+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:54:37.755+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:54:37.836+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:54:37.866+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:54:37.866+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:54:37.897+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:54:37.897+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:54:37.986+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.240 seconds
+[2024-08-08T13:55:08.573+0000] {processor.py:161} INFO - Started process (PID=180) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:55:08.575+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:55:08.577+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:55:08.577+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:55:08.663+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:55:08.701+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:55:08.700+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:55:08.730+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:55:08.730+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:55:08.797+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.229 seconds
+[2024-08-08T13:55:39.432+0000] {processor.py:161} INFO - Started process (PID=183) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:55:39.433+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:55:39.435+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:55:39.435+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:55:39.508+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:55:39.541+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:55:39.541+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:55:39.571+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:55:39.571+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:55:39.636+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.210 seconds
+[2024-08-08T13:56:10.385+0000] {processor.py:161} INFO - Started process (PID=186) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:56:10.387+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:56:10.389+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:56:10.389+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:56:10.462+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:56:10.493+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:56:10.493+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:56:10.522+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:56:10.522+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:56:10.589+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.211 seconds
+[2024-08-08T13:56:40.819+0000] {processor.py:161} INFO - Started process (PID=189) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:56:40.821+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:56:40.823+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:56:40.823+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:56:40.904+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:56:40.934+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:56:40.934+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:56:40.964+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:56:40.963+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:56:41.029+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.217 seconds
+[2024-08-08T13:57:11.341+0000] {processor.py:161} INFO - Started process (PID=192) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:57:11.342+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:57:11.344+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:57:11.344+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:57:11.424+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:57:11.455+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:57:11.454+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:57:11.484+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:57:11.484+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:57:11.546+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.211 seconds
+[2024-08-08T13:57:42.040+0000] {processor.py:161} INFO - Started process (PID=195) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:57:42.041+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:57:42.044+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:57:42.043+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:57:42.124+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:57:42.156+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:57:42.156+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:57:42.186+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:57:42.186+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:57:42.252+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.220 seconds
+[2024-08-08T13:58:12.677+0000] {processor.py:161} INFO - Started process (PID=198) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:58:12.678+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:58:12.682+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:58:12.681+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:58:12.788+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:58:12.818+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:58:12.818+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:58:12.851+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:58:12.850+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:58:12.937+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.268 seconds
+[2024-08-08T13:58:43.730+0000] {processor.py:161} INFO - Started process (PID=201) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:58:43.731+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:58:43.734+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:58:43.733+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:58:43.823+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:58:43.855+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:58:43.854+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:58:43.887+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:58:43.887+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:58:43.953+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.229 seconds
+[2024-08-08T13:59:15.139+0000] {processor.py:161} INFO - Started process (PID=204) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:59:15.141+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:59:15.143+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:59:15.143+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:59:15.250+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:59:15.293+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:59:15.293+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:59:15.341+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:59:15.340+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:59:15.412+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.282 seconds
+[2024-08-08T13:59:45.711+0000] {processor.py:161} INFO - Started process (PID=207) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:59:45.717+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T13:59:45.733+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:59:45.732+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:59:45.816+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T13:59:45.849+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:59:45.848+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T13:59:45.879+0000] {logging_mixin.py:188} INFO - [2024-08-08T13:59:45.878+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T13:59:45.942+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.252 seconds
+[2024-08-08T14:00:16.309+0000] {processor.py:161} INFO - Started process (PID=210) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:00:16.310+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:00:16.312+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:00:16.312+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:00:16.390+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:00:16.420+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:00:16.420+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:00:16.449+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:00:16.449+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:00:16.513+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.210 seconds
+[2024-08-08T14:00:47.370+0000] {processor.py:161} INFO - Started process (PID=213) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:00:47.371+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:00:47.374+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:00:47.373+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:00:47.488+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:00:47.528+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:00:47.528+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:00:47.553+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:00:47.553+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:00:47.608+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.243 seconds
+[2024-08-08T14:01:18.159+0000] {processor.py:161} INFO - Started process (PID=216) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:01:18.161+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:01:18.163+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:01:18.162+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:01:18.237+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:01:18.271+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:01:18.271+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:01:18.301+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:01:18.301+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:01:18.374+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.222 seconds
+[2024-08-08T14:01:49.010+0000] {processor.py:161} INFO - Started process (PID=219) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:01:49.011+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:01:49.013+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:01:49.013+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:01:49.096+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:01:49.126+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:01:49.126+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:01:49.153+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:01:49.153+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:01:49.207+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.203 seconds
+[2024-08-08T14:02:19.860+0000] {processor.py:161} INFO - Started process (PID=222) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:02:19.861+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:02:19.864+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:02:19.864+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:02:19.968+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:02:19.996+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:02:19.996+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:02:20.021+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:02:20.021+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:02:20.076+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.222 seconds
+[2024-08-08T14:02:50.733+0000] {processor.py:161} INFO - Started process (PID=225) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:02:50.734+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:02:50.737+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:02:50.737+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:02:50.825+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:02:50.862+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:02:50.862+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:02:50.895+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:02:50.895+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:02:50.962+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.235 seconds
+[2024-08-08T14:03:21.992+0000] {processor.py:161} INFO - Started process (PID=228) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:03:21.993+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:03:21.996+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:03:21.995+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:03:22.080+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:03:22.111+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:03:22.111+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:03:22.141+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:03:22.141+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:03:22.197+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.211 seconds
+[2024-08-08T14:03:52.442+0000] {processor.py:161} INFO - Started process (PID=231) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:03:52.443+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:03:52.446+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:03:52.446+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:03:52.526+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:03:52.556+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:03:52.556+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:03:52.588+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:03:52.588+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:03:52.657+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.221 seconds
+[2024-08-08T14:04:22.944+0000] {processor.py:161} INFO - Started process (PID=234) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:04:22.945+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:04:22.948+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:04:22.947+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:04:23.022+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:04:23.055+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:04:23.055+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:04:23.090+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:04:23.089+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:04:23.152+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.215 seconds
+[2024-08-08T14:04:53.490+0000] {processor.py:161} INFO - Started process (PID=237) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:04:53.491+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:04:53.493+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:04:53.493+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:04:53.590+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:04:53.623+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:04:53.623+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:04:53.654+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:04:53.654+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:04:53.724+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.241 seconds
+[2024-08-08T14:05:24.044+0000] {processor.py:161} INFO - Started process (PID=240) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:05:24.045+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:05:24.047+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:05:24.047+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:05:24.132+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:05:24.162+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:05:24.161+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:05:24.190+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:05:24.190+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:05:24.246+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.208 seconds
+[2024-08-08T14:05:54.474+0000] {processor.py:161} INFO - Started process (PID=243) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:05:54.476+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:05:54.480+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:05:54.479+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:05:54.563+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:05:54.591+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:05:54.591+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:05:54.619+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:05:54.619+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:05:54.688+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.225 seconds
+[2024-08-08T14:06:25.048+0000] {processor.py:161} INFO - Started process (PID=246) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:06:25.049+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:06:25.051+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:06:25.051+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:06:25.133+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:06:25.166+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:06:25.166+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:06:25.194+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:06:25.194+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:06:25.263+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.225 seconds
+[2024-08-08T14:06:55.609+0000] {processor.py:161} INFO - Started process (PID=249) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:06:55.610+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:06:55.613+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:06:55.612+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:06:55.712+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:06:55.743+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:06:55.743+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:06:55.778+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:06:55.778+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:06:55.852+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.251 seconds
+[2024-08-08T14:07:25.975+0000] {processor.py:161} INFO - Started process (PID=252) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:07:25.977+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:07:25.979+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:07:25.979+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:07:26.077+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:07:26.109+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:07:26.109+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:07:26.138+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:07:26.137+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:07:26.215+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.245 seconds
+[2024-08-08T14:07:56.370+0000] {processor.py:161} INFO - Started process (PID=255) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:07:56.371+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:07:56.373+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:07:56.372+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:07:56.440+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:07:56.468+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:07:56.468+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:07:56.509+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:07:56.509+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:07:56.575+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.212 seconds
+[2024-08-08T14:08:26.952+0000] {processor.py:161} INFO - Started process (PID=258) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:08:26.953+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:08:26.957+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:08:26.956+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:08:27.058+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:08:27.086+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:08:27.085+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:08:27.113+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:08:27.113+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:08:27.174+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.229 seconds
+[2024-08-08T14:08:57.476+0000] {processor.py:161} INFO - Started process (PID=261) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:08:57.477+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:08:57.479+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:08:57.479+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:08:57.563+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:08:57.597+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:08:57.597+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:08:57.627+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:08:57.627+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:08:57.684+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.215 seconds
+[2024-08-08T14:09:28.031+0000] {processor.py:161} INFO - Started process (PID=264) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:09:28.032+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:09:28.035+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:09:28.035+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:09:28.116+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:09:28.155+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:09:28.154+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:09:28.198+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:09:28.197+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:09:28.270+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.245 seconds
+[2024-08-08T14:09:58.583+0000] {processor.py:161} INFO - Started process (PID=267) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:09:58.584+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:09:58.587+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:09:58.586+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:09:58.687+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:09:58.723+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:09:58.722+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:09:58.762+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:09:58.762+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:09:58.879+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.303 seconds
+[2024-08-08T14:10:29.242+0000] {processor.py:161} INFO - Started process (PID=270) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:10:29.243+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:10:29.246+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:10:29.245+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:10:29.324+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:10:29.358+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:10:29.357+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:10:29.390+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:10:29.389+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:10:29.458+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.223 seconds
+[2024-08-08T14:10:59.780+0000] {processor.py:161} INFO - Started process (PID=273) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:10:59.781+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:10:59.784+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:10:59.783+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:10:59.862+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:10:59.893+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:10:59.893+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:10:59.923+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:10:59.922+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:10:59.984+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.210 seconds
+[2024-08-08T14:11:30.320+0000] {processor.py:161} INFO - Started process (PID=276) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:11:30.322+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:11:30.324+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:11:30.324+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:11:30.404+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:11:30.434+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:11:30.433+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:11:30.469+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:11:30.468+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:11:30.540+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.227 seconds
+[2024-08-08T14:12:00.828+0000] {processor.py:161} INFO - Started process (PID=279) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:12:00.830+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:12:00.832+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:12:00.832+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:12:00.918+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:12:00.945+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:12:00.945+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:12:00.973+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:12:00.973+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:12:01.033+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.214 seconds
+[2024-08-08T14:12:31.347+0000] {processor.py:161} INFO - Started process (PID=282) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:12:31.348+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:12:31.350+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:12:31.350+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:12:31.431+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:12:31.464+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:12:31.463+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:12:31.493+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:12:31.493+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:12:31.551+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.211 seconds
+[2024-08-08T14:13:02.180+0000] {processor.py:161} INFO - Started process (PID=285) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:13:02.181+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:13:02.184+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:13:02.184+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:13:02.261+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:13:02.297+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:13:02.297+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:13:02.330+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:13:02.330+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:13:02.404+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.230 seconds
+[2024-08-08T14:13:32.941+0000] {processor.py:161} INFO - Started process (PID=288) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:13:32.942+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:13:32.945+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:13:32.945+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:13:33.069+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:13:33.104+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:13:33.104+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:13:33.132+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:13:33.132+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:13:33.189+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.258 seconds
+[2024-08-08T14:14:03.753+0000] {processor.py:161} INFO - Started process (PID=291) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:14:03.754+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:14:03.756+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:14:03.756+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:14:03.850+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:14:03.884+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:14:03.884+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:14:03.916+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:14:03.916+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:14:03.978+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.241 seconds
+[2024-08-08T14:14:34.533+0000] {processor.py:161} INFO - Started process (PID=294) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:14:34.534+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:14:34.537+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:14:34.537+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:14:34.622+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:14:34.660+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:14:34.659+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:14:34.688+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:14:34.688+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:14:34.743+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.217 seconds
+[2024-08-08T14:15:05.487+0000] {processor.py:161} INFO - Started process (PID=297) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:15:05.488+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:15:05.490+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:15:05.490+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:15:05.572+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:15:05.599+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:15:05.599+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:15:05.636+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:15:05.635+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:15:05.704+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.227 seconds
+[2024-08-08T14:15:36.343+0000] {processor.py:161} INFO - Started process (PID=300) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:15:36.345+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:15:36.347+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:15:36.347+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:15:36.426+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:15:36.455+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:15:36.455+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:15:36.485+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:15:36.484+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:15:36.545+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.208 seconds
+[2024-08-08T14:16:07.160+0000] {processor.py:161} INFO - Started process (PID=303) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:16:07.161+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:16:07.164+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:16:07.164+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:16:07.248+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:16:07.280+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:16:07.279+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:16:07.311+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:16:07.311+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:16:07.386+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.232 seconds
+[2024-08-08T14:16:37.970+0000] {processor.py:161} INFO - Started process (PID=306) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:16:37.971+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:16:37.973+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:16:37.973+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:16:38.063+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:16:38.105+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:16:38.105+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:16:38.163+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:16:38.163+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:16:38.247+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.283 seconds
+[2024-08-08T14:17:08.870+0000] {processor.py:161} INFO - Started process (PID=309) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:17:08.871+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:17:08.873+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:17:08.872+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:17:08.941+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:17:08.967+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:17:08.966+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:17:08.993+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:17:08.993+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:17:09.087+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.224 seconds
+[2024-08-08T14:17:39.773+0000] {processor.py:161} INFO - Started process (PID=312) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:17:39.774+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:17:39.777+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:17:39.776+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:17:39.852+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:17:39.882+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:17:39.882+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:17:39.912+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:17:39.912+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:17:39.995+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.228 seconds
+[2024-08-08T14:18:10.942+0000] {processor.py:161} INFO - Started process (PID=315) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:18:10.943+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:18:10.945+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:18:10.945+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:18:11.034+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:18:11.072+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:18:11.072+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:18:11.117+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:18:11.117+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:18:11.196+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.261 seconds
+[2024-08-08T14:18:41.644+0000] {processor.py:161} INFO - Started process (PID=318) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:18:41.646+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:18:41.648+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:18:41.648+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:18:41.732+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:18:41.764+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:18:41.763+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:18:41.794+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:18:41.794+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:18:41.852+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.214 seconds
+[2024-08-08T14:19:12.690+0000] {processor.py:161} INFO - Started process (PID=321) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:19:12.692+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:19:12.694+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:19:12.693+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:19:12.775+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:19:12.804+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:19:12.803+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:19:12.833+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:19:12.833+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:19:12.885+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.201 seconds
+[2024-08-08T14:19:43.357+0000] {processor.py:161} INFO - Started process (PID=324) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:19:43.359+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:19:43.362+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:19:43.362+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:19:43.445+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:19:43.474+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:19:43.473+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:19:43.504+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:19:43.503+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:19:43.569+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.218 seconds
+[2024-08-08T14:20:14.358+0000] {processor.py:161} INFO - Started process (PID=327) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:20:14.359+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:20:14.361+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:20:14.361+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:20:14.439+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:20:14.471+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:20:14.471+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:20:14.502+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:20:14.502+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:20:14.560+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.208 seconds
+[2024-08-08T14:20:44.873+0000] {processor.py:161} INFO - Started process (PID=330) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:20:44.874+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:20:44.876+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:20:44.876+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:20:44.956+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:20:44.988+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:20:44.988+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:20:45.017+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:20:45.017+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:20:45.082+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.214 seconds
+[2024-08-08T14:21:15.461+0000] {processor.py:161} INFO - Started process (PID=333) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:21:15.463+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:21:15.466+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:21:15.465+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:21:15.555+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:21:15.580+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:21:15.580+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:21:15.606+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:21:15.606+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:21:15.659+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.208 seconds
+[2024-08-08T14:21:46.370+0000] {processor.py:161} INFO - Started process (PID=336) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:21:46.371+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:21:46.373+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:21:46.373+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:21:46.448+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:21:46.476+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:21:46.475+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:21:46.507+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:21:46.507+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:21:46.569+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.206 seconds
+[2024-08-08T14:22:17.147+0000] {processor.py:161} INFO - Started process (PID=339) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:22:17.149+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:22:17.152+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:22:17.151+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:22:17.247+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:22:17.272+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:22:17.272+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:22:17.301+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:22:17.300+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:22:17.358+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.220 seconds
+[2024-08-08T14:22:47.621+0000] {processor.py:161} INFO - Started process (PID=342) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:22:47.623+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:22:47.625+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:22:47.624+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:22:47.696+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:22:47.728+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:22:47.728+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:22:47.758+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:22:47.758+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:22:47.821+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.206 seconds
+[2024-08-08T14:23:18.448+0000] {processor.py:161} INFO - Started process (PID=345) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:23:18.449+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:23:18.451+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:23:18.451+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:23:18.558+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:23:18.595+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:23:18.594+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:23:18.625+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:23:18.625+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:23:18.689+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.248 seconds
+[2024-08-08T14:23:49.261+0000] {processor.py:161} INFO - Started process (PID=348) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:23:49.262+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:23:49.264+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:23:49.264+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:23:49.340+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:23:49.371+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:23:49.370+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:23:49.399+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:23:49.398+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:23:49.464+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.209 seconds
+[2024-08-08T14:24:20.119+0000] {processor.py:161} INFO - Started process (PID=351) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:24:20.121+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:24:20.123+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:24:20.122+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:24:20.207+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:24:20.236+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:24:20.236+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:24:20.264+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:24:20.264+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:24:20.340+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.228 seconds
+[2024-08-08T14:24:50.703+0000] {processor.py:161} INFO - Started process (PID=354) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:24:50.705+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:24:50.708+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:24:50.707+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:24:50.792+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:24:50.819+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:24:50.819+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:24:50.845+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:24:50.845+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:24:50.902+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.205 seconds
+[2024-08-08T14:25:21.538+0000] {processor.py:161} INFO - Started process (PID=357) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:25:21.540+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:25:21.542+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:25:21.542+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:25:21.627+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:25:21.659+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:25:21.658+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:25:21.691+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:25:21.690+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:25:21.769+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.238 seconds
+[2024-08-08T14:25:52.769+0000] {processor.py:161} INFO - Started process (PID=360) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:25:52.799+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:25:52.840+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:25:52.840+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:25:53.004+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:25:53.044+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:25:53.044+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:25:53.076+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:25:53.076+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:25:53.128+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.378 seconds
+[2024-08-08T14:26:23.688+0000] {processor.py:161} INFO - Started process (PID=363) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:26:23.690+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:26:23.692+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:26:23.692+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:26:23.781+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:26:23.814+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:26:23.813+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:26:23.850+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:26:23.849+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:26:23.930+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.249 seconds
+[2024-08-08T14:26:54.179+0000] {processor.py:161} INFO - Started process (PID=366) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:26:54.180+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:26:54.183+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:26:54.183+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:26:54.272+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:26:54.416+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:26:54.416+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:26:54.445+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:26:54.445+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:26:54.519+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.347 seconds
+[2024-08-08T14:27:25.060+0000] {processor.py:161} INFO - Started process (PID=369) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:27:25.062+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:27:25.067+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:27:25.065+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:27:25.178+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:27:25.207+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:27:25.207+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:27:25.235+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:27:25.234+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:27:25.301+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.248 seconds
+[2024-08-08T14:27:55.470+0000] {processor.py:161} INFO - Started process (PID=372) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:27:55.471+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:27:55.474+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:27:55.473+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:27:55.563+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:27:55.700+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:27:55.700+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:27:55.739+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:27:55.738+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:27:55.828+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.365 seconds
+[2024-08-08T14:28:26.514+0000] {processor.py:161} INFO - Started process (PID=375) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:28:26.515+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:28:26.519+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:28:26.519+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:28:26.783+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:28:26.882+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:28:26.882+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:28:26.951+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:28:26.951+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:28:27.144+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.650 seconds
+[2024-08-08T14:28:59.861+0000] {processor.py:161} INFO - Started process (PID=402) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:28:59.863+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:28:59.867+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:28:59.866+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:28:59.976+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:29:00.004+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:29:00.004+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:29:00.049+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:29:00.048+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:29:00.121+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.277 seconds
+[2024-08-08T14:29:31.344+0000] {processor.py:161} INFO - Started process (PID=411) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:29:31.346+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:29:31.348+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:29:31.348+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:29:31.429+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:29:31.459+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:29:31.459+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:29:31.489+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:29:31.489+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:29:31.553+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.215 seconds
+[2024-08-08T14:30:02.048+0000] {processor.py:161} INFO - Started process (PID=414) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:30:02.051+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:30:02.058+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:30:02.057+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:30:02.216+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:30:02.290+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:30:02.289+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:30:02.341+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:30:02.340+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:30:02.434+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.398 seconds
+[2024-08-08T14:30:33.454+0000] {processor.py:161} INFO - Started process (PID=417) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:30:33.455+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:30:33.458+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:30:33.457+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:30:33.587+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:30:33.672+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:30:33.672+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:30:33.748+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:30:33.747+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:30:33.850+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.406 seconds
+[2024-08-08T14:31:04.212+0000] {processor.py:161} INFO - Started process (PID=420) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:31:04.214+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:31:04.217+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:31:04.216+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:31:04.314+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:31:04.453+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:31:04.452+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:31:04.482+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:31:04.482+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:31:04.563+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.358 seconds
+[2024-08-08T14:31:46.435+0000] {processor.py:161} INFO - Started process (PID=447) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:31:46.437+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:31:46.440+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:31:46.440+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:31:46.665+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:31:46.698+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:31:46.697+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:31:46.730+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:31:46.730+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:31:46.797+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.369 seconds
+[2024-08-08T14:32:17.880+0000] {processor.py:161} INFO - Started process (PID=456) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:32:17.883+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:32:17.886+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:32:17.885+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:32:17.950+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:32:17.978+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:32:17.978+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:32:18.006+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:32:18.005+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:32:18.059+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.197 seconds
+[2024-08-08T14:32:49.156+0000] {processor.py:161} INFO - Started process (PID=459) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:32:49.158+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:32:49.160+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:32:49.159+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:32:49.257+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:32:49.295+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:32:49.295+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:32:49.328+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:32:49.327+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:32:49.402+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.252 seconds
+[2024-08-08T14:33:19.580+0000] {processor.py:161} INFO - Started process (PID=462) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:33:19.581+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:33:19.584+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:33:19.583+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:33:19.644+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:33:19.672+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:33:19.671+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:33:19.699+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:33:19.699+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:33:19.764+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.190 seconds
+[2024-08-08T14:33:50.054+0000] {processor.py:161} INFO - Started process (PID=465) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:33:50.055+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:33:50.057+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:33:50.057+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:33:50.146+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:33:50.176+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:33:50.176+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:33:50.207+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:33:50.207+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:33:50.279+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.231 seconds
+[2024-08-08T14:34:20.594+0000] {processor.py:161} INFO - Started process (PID=468) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:34:20.595+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:34:20.598+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:34:20.597+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:34:20.673+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:34:20.700+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:34:20.700+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:34:20.733+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:34:20.732+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:34:20.819+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.231 seconds
+[2024-08-08T14:34:51.171+0000] {processor.py:161} INFO - Started process (PID=471) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:34:51.172+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:34:51.175+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:34:51.175+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:34:51.249+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:34:51.281+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:34:51.281+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:34:51.313+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:34:51.313+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:34:51.369+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.205 seconds
+[2024-08-08T14:35:21.814+0000] {processor.py:161} INFO - Started process (PID=474) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:35:21.815+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:35:21.817+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:35:21.817+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:35:21.904+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:35:21.936+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:35:21.936+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:35:21.965+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:35:21.965+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:35:22.039+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.230 seconds
+[2024-08-08T14:35:52.411+0000] {processor.py:161} INFO - Started process (PID=477) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:35:52.413+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:35:52.415+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:35:52.414+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:35:52.514+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:35:52.666+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:35:52.665+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:35:52.696+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:35:52.695+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:35:52.776+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.372 seconds
+[2024-08-08T14:36:23.401+0000] {processor.py:161} INFO - Started process (PID=480) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:36:23.402+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:36:23.405+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:36:23.405+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:36:23.484+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:36:23.540+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:36:23.540+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:36:23.594+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:36:23.594+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:36:23.681+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.287 seconds
+[2024-08-08T14:36:54.709+0000] {processor.py:161} INFO - Started process (PID=483) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:36:54.713+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:36:54.719+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:36:54.718+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:36:54.818+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:36:54.870+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:36:54.870+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:36:54.905+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:36:54.905+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:36:54.985+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.288 seconds
+[2024-08-08T14:37:25.952+0000] {processor.py:161} INFO - Started process (PID=486) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:37:25.953+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:37:25.955+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:37:25.955+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:37:26.056+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:37:26.201+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:37:26.201+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:37:26.238+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:37:26.237+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:37:26.302+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.357 seconds
+[2024-08-08T14:37:57.034+0000] {processor.py:161} INFO - Started process (PID=489) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:37:57.035+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:37:57.038+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:37:57.038+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:37:57.127+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:37:57.159+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:37:57.159+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:37:57.191+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:37:57.190+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:37:57.255+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.228 seconds
+[2024-08-08T14:38:27.780+0000] {processor.py:161} INFO - Started process (PID=492) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:38:27.783+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:38:27.791+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:38:27.788+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:38:27.982+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:38:28.031+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:38:28.030+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:38:28.100+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:38:28.099+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:38:28.190+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.428 seconds
+[2024-08-08T14:38:58.521+0000] {processor.py:161} INFO - Started process (PID=495) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:38:58.522+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:38:58.525+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:38:58.525+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:38:58.695+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:38:58.781+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:38:58.781+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:38:58.848+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:38:58.848+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:38:58.966+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.451 seconds
+[2024-08-08T14:39:29.149+0000] {processor.py:161} INFO - Started process (PID=498) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:39:29.150+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:39:29.153+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:39:29.153+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:39:29.245+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:39:29.276+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:39:29.276+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:39:29.309+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:39:29.308+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:39:29.368+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.226 seconds
+[2024-08-08T14:39:59.801+0000] {processor.py:161} INFO - Started process (PID=501) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:39:59.802+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:39:59.804+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:39:59.804+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:39:59.899+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:39:59.930+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:39:59.929+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:39:59.959+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:39:59.958+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:40:00.019+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.225 seconds
+[2024-08-08T14:40:30.984+0000] {processor.py:161} INFO - Started process (PID=504) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:40:30.985+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:40:30.987+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:40:30.987+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:40:31.060+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:40:31.086+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:40:31.086+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:40:31.114+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:40:31.113+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:40:31.169+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.193 seconds
+[2024-08-08T14:41:01.777+0000] {processor.py:161} INFO - Started process (PID=507) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:41:01.778+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:41:01.783+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:41:01.782+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:41:01.912+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:41:01.962+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:41:01.962+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:41:01.990+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:41:01.990+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:41:02.067+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.299 seconds
+[2024-08-08T14:41:32.722+0000] {processor.py:161} INFO - Started process (PID=510) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:41:32.723+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:41:32.726+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:41:32.726+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:41:32.876+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:41:32.949+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:41:32.949+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:41:32.993+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:41:32.993+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:41:33.055+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.347 seconds
+[2024-08-08T14:42:03.441+0000] {processor.py:161} INFO - Started process (PID=513) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:42:03.442+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:42:03.446+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:42:03.445+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:42:03.551+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:42:03.600+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:42:03.599+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:42:03.677+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:42:03.676+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:42:03.784+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.353 seconds
+[2024-08-08T14:42:34.829+0000] {processor.py:161} INFO - Started process (PID=516) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:42:34.830+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:42:34.832+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:42:34.831+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:42:34.915+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:42:34.946+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:42:34.945+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:42:34.976+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:42:34.976+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:42:35.038+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.216 seconds
+[2024-08-08T14:43:05.582+0000] {processor.py:161} INFO - Started process (PID=519) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:43:05.583+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:43:05.586+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:43:05.586+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:43:05.664+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:43:05.699+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:43:05.699+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:43:05.729+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:43:05.729+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:43:05.795+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.219 seconds
+[2024-08-08T14:43:36.800+0000] {processor.py:161} INFO - Started process (PID=522) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:43:36.802+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:43:36.804+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:43:36.803+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:43:36.893+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:43:36.924+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:43:36.924+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:43:36.954+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:43:36.953+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:43:37.013+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.219 seconds
+[2024-08-08T14:44:07.152+0000] {processor.py:161} INFO - Started process (PID=525) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:44:07.153+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:44:07.156+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:44:07.155+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:44:07.236+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:44:07.266+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:44:07.266+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:44:07.296+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:44:07.296+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:44:07.361+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.215 seconds
+[2024-08-08T14:44:37.800+0000] {processor.py:161} INFO - Started process (PID=528) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:44:37.801+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:44:37.804+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:44:37.804+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:44:37.868+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:44:37.893+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:44:37.893+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:44:37.921+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:44:37.921+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:44:37.984+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.191 seconds
+[2024-08-08T14:45:08.643+0000] {processor.py:161} INFO - Started process (PID=531) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:45:08.644+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:45:08.649+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:45:08.649+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:45:08.730+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:45:08.758+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:45:08.758+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:45:08.791+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:45:08.791+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:45:08.864+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.231 seconds
+[2024-08-08T14:45:39.699+0000] {processor.py:161} INFO - Started process (PID=534) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:45:39.700+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:45:39.702+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:45:39.701+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:45:39.776+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:45:39.806+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:45:39.805+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:45:39.834+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:45:39.834+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:45:39.898+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.207 seconds
+[2024-08-08T14:46:10.545+0000] {processor.py:161} INFO - Started process (PID=537) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:46:10.546+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:46:10.549+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:46:10.548+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:46:10.621+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:46:10.655+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:46:10.654+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:46:10.687+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:46:10.687+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:46:10.755+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.217 seconds
+[2024-08-08T14:46:41.493+0000] {processor.py:161} INFO - Started process (PID=540) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:46:41.495+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:46:41.497+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:46:41.497+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:46:41.579+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:46:41.735+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:46:41.734+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:46:41.812+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:46:41.812+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:46:41.866+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.378 seconds
+[2024-08-08T14:47:12.422+0000] {processor.py:161} INFO - Started process (PID=543) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:47:12.423+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:47:12.426+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:47:12.425+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:47:12.507+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:47:12.538+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:47:12.538+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:47:12.585+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:47:12.584+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:47:12.643+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.226 seconds
+[2024-08-08T14:47:43.587+0000] {processor.py:161} INFO - Started process (PID=546) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:47:43.589+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:47:43.591+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:47:43.591+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:47:43.675+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:47:43.710+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:47:43.710+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:47:43.742+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:47:43.741+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:47:43.803+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.222 seconds
+[2024-08-08T14:48:14.842+0000] {processor.py:161} INFO - Started process (PID=549) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:48:14.844+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:48:14.851+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:48:14.850+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:48:14.951+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:48:14.987+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:48:14.986+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:48:15.020+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:48:15.020+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:48:15.091+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.258 seconds
+[2024-08-08T14:48:45.197+0000] {processor.py:161} INFO - Started process (PID=552) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:48:45.198+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:48:45.203+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:48:45.203+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:48:45.304+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:48:45.332+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:48:45.332+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:48:45.368+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:48:45.368+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:48:45.446+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.256 seconds
+[2024-08-08T14:49:15.737+0000] {processor.py:161} INFO - Started process (PID=555) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:49:15.739+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:49:15.743+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:49:15.742+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:49:15.928+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:49:15.976+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:49:15.975+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:49:16.019+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:49:16.019+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:49:16.104+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.375 seconds
+[2024-08-08T14:49:46.393+0000] {processor.py:161} INFO - Started process (PID=558) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:49:46.395+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:49:46.398+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:49:46.397+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:49:46.467+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:49:46.503+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:49:46.503+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:49:46.552+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:49:46.551+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:49:46.640+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.257 seconds
+[2024-08-08T14:50:16.791+0000] {processor.py:161} INFO - Started process (PID=561) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:50:16.792+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:50:16.794+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:50:16.793+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:50:16.863+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:50:16.891+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:50:16.890+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:50:16.921+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:50:16.921+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:50:17.005+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.229 seconds
+[2024-08-08T14:50:47.311+0000] {processor.py:161} INFO - Started process (PID=564) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:50:47.312+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:50:47.314+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:50:47.314+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:50:47.417+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:50:47.461+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:50:47.460+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:50:47.503+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:50:47.502+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:50:47.557+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.253 seconds
+[2024-08-08T14:51:17.879+0000] {processor.py:161} INFO - Started process (PID=567) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:51:17.880+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:51:17.883+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:51:17.883+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:51:17.968+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:51:17.997+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:51:17.997+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:51:18.027+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:51:18.027+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:51:18.091+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.222 seconds
+[2024-08-08T14:51:48.456+0000] {processor.py:161} INFO - Started process (PID=570) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:51:48.458+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:51:48.460+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:51:48.459+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:51:48.541+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:51:48.709+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:51:48.709+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:51:48.736+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:51:48.735+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:51:48.833+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.383 seconds
+[2024-08-08T14:52:19.989+0000] {processor.py:161} INFO - Started process (PID=573) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:52:19.991+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:52:19.995+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:52:19.994+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:52:20.140+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:52:20.350+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:52:20.350+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:52:20.375+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:52:20.375+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:52:20.441+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.468 seconds
+[2024-08-08T14:52:50.820+0000] {processor.py:161} INFO - Started process (PID=576) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:52:50.822+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:52:50.824+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:52:50.824+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:52:50.907+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:52:50.939+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:52:50.939+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:52:50.974+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:52:50.974+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:52:51.041+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.227 seconds
+[2024-08-08T14:53:21.417+0000] {processor.py:161} INFO - Started process (PID=579) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:53:21.418+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:53:21.421+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:53:21.420+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:53:21.503+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:53:21.534+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:53:21.533+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:53:21.564+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:53:21.564+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:53:21.623+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.212 seconds
+[2024-08-08T14:53:51.990+0000] {processor.py:161} INFO - Started process (PID=582) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:53:51.991+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:53:51.994+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:53:51.994+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:53:52.086+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:53:52.114+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:53:52.113+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:53:52.140+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:53:52.140+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:53:52.200+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.216 seconds
+[2024-08-08T14:54:22.493+0000] {processor.py:161} INFO - Started process (PID=585) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:54:22.494+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:54:22.497+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:54:22.497+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:54:22.568+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:54:22.595+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:54:22.594+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:54:22.621+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:54:22.621+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:54:22.690+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.203 seconds
+[2024-08-08T14:54:53.790+0000] {processor.py:161} INFO - Started process (PID=612) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:54:53.792+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:54:53.795+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:54:53.794+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:54:53.888+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:54:53.916+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:54:53.916+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:54:53.945+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:54:53.945+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:54:54.010+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.231 seconds
+[2024-08-08T14:55:24.340+0000] {processor.py:161} INFO - Started process (PID=621) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:55:24.341+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:55:24.343+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:55:24.343+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:55:24.419+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:55:24.450+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:55:24.450+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:55:24.480+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:55:24.480+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:55:24.541+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.207 seconds
+[2024-08-08T14:55:54.948+0000] {processor.py:161} INFO - Started process (PID=624) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:55:54.949+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:55:54.951+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:55:54.951+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:55:55.032+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:55:55.061+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:55:55.061+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:55:55.091+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:55:55.091+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:55:55.155+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.214 seconds
+[2024-08-08T14:56:25.605+0000] {processor.py:161} INFO - Started process (PID=627) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:56:25.606+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:56:25.609+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:56:25.609+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:56:25.696+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:56:25.732+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:56:25.732+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:56:25.771+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:56:25.770+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:56:25.859+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.264 seconds
+[2024-08-08T14:56:56.231+0000] {processor.py:161} INFO - Started process (PID=630) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:56:56.233+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:56:56.236+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:56:56.236+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:56:56.320+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:56:56.353+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:56:56.353+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:56:56.383+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:56:56.382+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:56:56.441+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.219 seconds
+[2024-08-08T14:57:26.953+0000] {processor.py:161} INFO - Started process (PID=633) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:57:26.954+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:57:26.956+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:57:26.956+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:57:27.020+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:57:27.051+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:57:27.051+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:57:27.081+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:57:27.080+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:57:27.140+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.194 seconds
+[2024-08-08T14:57:57.284+0000] {processor.py:161} INFO - Started process (PID=636) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:57:57.286+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:57:57.288+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:57:57.288+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:57:57.384+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:57:57.424+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:57:57.424+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:57:57.455+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:57:57.455+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:57:57.518+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.239 seconds
+[2024-08-08T14:58:28.023+0000] {processor.py:161} INFO - Started process (PID=639) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:58:28.025+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:58:28.028+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:58:28.027+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:58:28.110+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:58:28.136+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:58:28.136+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:58:28.173+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:58:28.172+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:58:28.257+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.243 seconds
+[2024-08-08T14:58:58.790+0000] {processor.py:161} INFO - Started process (PID=642) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:58:58.791+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:58:58.794+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:58:58.793+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:58:58.876+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:58:58.909+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:58:58.909+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:58:58.938+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:58:58.937+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:58:58.997+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.214 seconds
+[2024-08-08T14:59:29.543+0000] {processor.py:161} INFO - Started process (PID=645) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:59:29.545+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T14:59:29.551+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:59:29.551+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:59:29.648+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T14:59:29.705+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:59:29.704+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T14:59:29.750+0000] {logging_mixin.py:188} INFO - [2024-08-08T14:59:29.749+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T14:59:29.841+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.307 seconds
+[2024-08-08T15:00:00.789+0000] {processor.py:161} INFO - Started process (PID=648) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:00:00.790+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:00:00.793+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:00:00.793+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:00:00.953+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:00:00.990+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:00:00.989+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:00:01.042+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:00:01.040+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:00:01.151+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.370 seconds
+[2024-08-08T15:00:31.606+0000] {processor.py:161} INFO - Started process (PID=651) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:00:31.607+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:00:31.609+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:00:31.609+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:00:31.706+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:00:31.739+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:00:31.739+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:00:31.768+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:00:31.768+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:00:31.828+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.228 seconds
+[2024-08-08T15:01:02.430+0000] {processor.py:161} INFO - Started process (PID=654) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:01:02.431+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:01:02.434+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:01:02.434+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:01:02.538+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:01:02.582+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:01:02.582+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:01:02.623+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:01:02.622+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:01:02.683+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.259 seconds
+[2024-08-08T15:01:33.347+0000] {processor.py:161} INFO - Started process (PID=657) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:01:33.349+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:01:33.351+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:01:33.351+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:01:33.426+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:01:33.461+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:01:33.461+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:01:33.502+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:01:33.502+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:01:33.562+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.221 seconds
+[2024-08-08T15:02:04.053+0000] {processor.py:161} INFO - Started process (PID=660) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:02:04.059+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:02:04.063+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:02:04.062+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:02:04.155+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:02:04.184+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:02:04.184+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:02:04.213+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:02:04.213+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:02:04.276+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.236 seconds
+[2024-08-08T15:02:35.073+0000] {processor.py:161} INFO - Started process (PID=663) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:02:35.075+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:02:35.078+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:02:35.077+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:02:35.146+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:02:35.181+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:02:35.180+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:02:35.221+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:02:35.220+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:02:35.277+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.212 seconds
+[2024-08-08T15:03:05.786+0000] {processor.py:161} INFO - Started process (PID=666) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:03:05.788+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:03:05.790+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:03:05.789+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:03:05.882+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:03:05.924+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:03:05.924+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:03:05.955+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:03:05.954+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:03:06.011+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.231 seconds
+[2024-08-08T15:03:36.800+0000] {processor.py:161} INFO - Started process (PID=669) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:03:36.802+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:03:36.804+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:03:36.804+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:03:36.882+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:03:36.913+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:03:36.913+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:03:36.944+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:03:36.943+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:03:37.004+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.210 seconds
+[2024-08-08T15:04:07.762+0000] {processor.py:161} INFO - Started process (PID=672) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:04:07.763+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:04:07.765+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:04:07.765+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:04:07.851+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:04:07.885+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:04:07.885+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:04:07.921+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:04:07.921+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:04:07.987+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.232 seconds
+[2024-08-08T15:04:38.645+0000] {processor.py:161} INFO - Started process (PID=675) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:04:38.646+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:04:38.649+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:04:38.648+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:04:38.951+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:04:38.977+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:04:38.977+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:04:39.003+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:04:39.002+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:04:39.067+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.431 seconds
+[2024-08-08T15:05:09.578+0000] {processor.py:161} INFO - Started process (PID=678) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:05:09.579+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:05:09.584+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:05:09.583+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:05:09.656+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:05:09.682+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:05:09.682+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:05:09.709+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:05:09.709+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:05:09.761+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.195 seconds
+[2024-08-08T15:05:40.394+0000] {processor.py:161} INFO - Started process (PID=681) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:05:40.395+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:05:40.397+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:05:40.397+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:05:40.473+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:05:40.505+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:05:40.505+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:05:40.537+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:05:40.537+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:05:40.609+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.221 seconds
+[2024-08-08T15:06:11.318+0000] {processor.py:161} INFO - Started process (PID=684) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:06:11.319+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:06:11.321+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:06:11.320+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:06:11.389+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:06:11.417+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:06:11.417+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:06:11.447+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:06:11.446+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:06:11.507+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.196 seconds
+[2024-08-08T15:06:42.149+0000] {processor.py:161} INFO - Started process (PID=687) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:06:42.150+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:06:42.153+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:06:42.152+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:06:42.235+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:06:42.266+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:06:42.266+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:06:42.297+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:06:42.297+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:06:42.364+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.222 seconds
+[2024-08-08T15:07:12.658+0000] {processor.py:161} INFO - Started process (PID=690) to work on /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:07:12.660+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/etl_ldtbxh.dag.py for tasks to queue
+[2024-08-08T15:07:12.662+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:07:12.662+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:07:12.748+0000] {processor.py:840} INFO - DAG(s) 'Integrate_Data_Warehouse' retrieved from /opt/airflow/dags/etl_ldtbxh.dag.py
+[2024-08-08T15:07:12.780+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:07:12.780+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-08T15:07:12.809+0000] {logging_mixin.py:188} INFO - [2024-08-08T15:07:12.808+0000] {dag.py:3954} INFO - Setting next_dagrun for Integrate_Data_Warehouse to 2024-08-07 23:00:00+00:00, run_after=2024-08-08 23:00:00+00:00
+[2024-08-08T15:07:12.870+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/etl_ldtbxh.dag.py took 0.217 seconds

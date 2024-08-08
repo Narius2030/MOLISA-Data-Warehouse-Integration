@@ -33,8 +33,10 @@ BEGIN
         total_not_managed INT,
         total_female_not_managed INT,
         total_dead_not_managed INT,
-        total_hard_not_managed INT
-    );
+        total_hard_not_managed INT,
+        created_date TIMESTAMP
+    ) 
+    WHERE (created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'));
 
 
     /***
@@ -67,8 +69,10 @@ BEGIN
         contact_province CHAR(5),
         contact_district CHAR(5),
         contact_ward CHAR(5),
-        deputy VARCHAR(255)
-    );
+        deputy VARCHAR(255),
+        created_date TIMESTAMP
+    ) 
+    WHERE (created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'));
 
 
     /***
@@ -107,17 +111,20 @@ BEGIN
         profile_code VARCHAR(15),
         page_of_co INT,
         import_gate VARCHAR(255),
-        import_date DATE
-    );
+        import_date DATE,
+        created_date TIMESTAMP
+    )
+    WHERE (created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'));
     
 EXCEPTION
-	WHEN SQLSTATE '42703' THEN
+	WHEN OTHERS THEN
 		UPDATE "DimAuditForeigned" 
 		SET 
-			information = 'Something went wrong with selected columns. HINT: Check on "SELECT" or "INSERT" statement',
+			information = 'ATVSLD Dimension: Something went wrong on running statements. 
+							HINT: Check carefully the syntax or selected columns at "SELECT" or "INSERT" clauses',
 			status = 'ERROR',
-            finished_at = NOW()
-		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned");	
+			finished_at = NOW()
+		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status='ERROR');
 -- 		RAISE EXCEPTION  'when wrong with selected columns' USING HINT = 'Check on "SELECT" or "INSERT" statement';
 
 END;
@@ -139,7 +146,7 @@ BEGIN
                                             day_off, assest_harm)
     SELECT
         accident_id, year, month, company_name, compay_foreign_name,
-        major_name, reason, factor, caree, 
+        major_name, reason, factor, career,
         total_people, total_hasdead, total_female,
         medical_expense, treatment_expense,
         indemnify_expense, total_expense,
@@ -168,18 +175,18 @@ BEGIN
         accident_created_date TIMESTAMP,
         expense_created_date TIMESTAMP
     )
-    WHERE (accident_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"))
-        OR (expense_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned"));
+    WHERE (accident_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'))
+        OR (expense_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'));
 
 EXCEPTION
-	WHEN SQLSTATE '42703' THEN
+	WHEN OTHERS THEN
 		UPDATE "DimAuditForeigned" 
 		SET 
-			information = 'Something went wrong with selected columns. HINT: Check on "SELECT" or "INSERT" statement',
+			information = 'ATVSLD Fact: Something went wrong on running statements. 
+							HINT: Check carefully the syntax or selected columns at "SELECT" or "INSERT" clauses',
 			status = 'ERROR',
-            finished_at = NOW()
-		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned");	
--- 		RAISE EXCEPTION  'when wrong with selected columns' USING HINT = 'Check on "SELECT" or "INSERT" statement';
+			finished_at = NOW()
+		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status='ERROR');
 
 END;
 $$;

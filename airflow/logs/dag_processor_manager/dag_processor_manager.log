@@ -20569,3 +20569,1680 @@ File Path                                   PID    Runtime      # DAGs    # Erro
 /opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T11:34:03
 /opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T11:33:39
 ================================================================================
+[2024-08-08T13:43:09.541+0000] {manager.py:470} INFO - Processing files using up to 1 processes at a time 
+[2024-08-08T13:43:09.544+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2024-08-08T13:43:09.545+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-08-08T13:43:09.546+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T13:43:09.731+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T13:43:10.294+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T13:43:10
+/opt/airflow/dags/etl_time_location.dag.py                           0           0
+/opt/airflow/dags/welcome.dag.py                                     0           0
+================================================================================
+[2024-08-08T13:43:41.247+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.63s           2024-08-08T13:43:41
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T13:43:11
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:43:13
+================================================================================
+[2024-08-08T13:44:11.714+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.51s           2024-08-08T13:43:44
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.40s           2024-08-08T13:43:42
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:44:11
+================================================================================
+[2024-08-08T13:44:43.215+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.51s           2024-08-08T13:44:13
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T13:44:43
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:44:15
+================================================================================
+[2024-08-08T13:45:14.412+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T13:45:14
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:44:57
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:44:56
+================================================================================
+[2024-08-08T13:45:45.056+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.40s           2024-08-08T13:45:45
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:45:28
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:45:27
+================================================================================
+[2024-08-08T13:46:24.046+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.51s           2024-08-08T13:46:00
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T13:46:24
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:46:09
+================================================================================
+[2024-08-08T13:46:55.265+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T13:46:33
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:46:55
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:46:40
+================================================================================
+[2024-08-08T13:47:25.957+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:47:11
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:47:03
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:47:25
+================================================================================
+[2024-08-08T13:47:56.657+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:47:42
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:47:34
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:47:56
+================================================================================
+[2024-08-08T13:48:09.579+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T13:48:09.693+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T13:48:27.724+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.51s           2024-08-08T13:48:27
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:48:13
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T13:48:04
+================================================================================
+[2024-08-08T13:48:58.998+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T13:48:35
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:48:58
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:48:43
+================================================================================
+[2024-08-08T13:49:29.793+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T13:49:29
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:49:14
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:49:06
+================================================================================
+[2024-08-08T13:50:00.864+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.41s           2024-08-08T13:49:45
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T13:50:00
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:49:37
+================================================================================
+[2024-08-08T13:50:31.766+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.45s           2024-08-08T13:50:07
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T13:50:31
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:50:16
+================================================================================
+[2024-08-08T13:51:02.409+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.41s           2024-08-08T13:50:47
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T13:50:38
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:51:02
+================================================================================
+[2024-08-08T13:51:33.149+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:51:33
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:51:09
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:51:17
+================================================================================
+[2024-08-08T13:52:03.861+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T13:51:40
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:51:48
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:52:03
+================================================================================
+[2024-08-08T13:52:34.684+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T13:52:34
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:52:19
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:52:10
+================================================================================
+[2024-08-08T13:53:05.410+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T13:53:05
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.33s           2024-08-08T13:52:41
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:52:50
+================================================================================
+[2024-08-08T13:53:09.865+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T13:53:09.989+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T13:53:36.239+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:53:20
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:53:36
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:53:12
+================================================================================
+[2024-08-08T13:54:07.387+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:53:51
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T13:54:07
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:53:42
+================================================================================
+[2024-08-08T13:54:38.033+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T13:54:12
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T13:54:38
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:54:22
+================================================================================
+[2024-08-08T13:55:08.857+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T13:54:43
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:54:53
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:55:08
+================================================================================
+[2024-08-08T13:55:39.715+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:55:14
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:55:39
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:55:24
+================================================================================
+[2024-08-08T13:56:10.671+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:55:55
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:55:44
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:56:10
+================================================================================
+[2024-08-08T13:56:41.102+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T13:56:15
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:56:25
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:56:41
+================================================================================
+[2024-08-08T13:57:11.627+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T13:56:45
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:56:56
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:57:11
+================================================================================
+[2024-08-08T13:57:42.320+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:57:42
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:57:16
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:57:26
+================================================================================
+[2024-08-08T13:58:10.119+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T13:58:10.295+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T13:58:12.956+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T13:57:57
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T13:58:12
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:57:46
+================================================================================
+[2024-08-08T13:58:44.014+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T13:58:17
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T13:58:44
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:58:27
+================================================================================
+[2024-08-08T13:59:15.421+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T13:59:15
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T13:58:47
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:58:58
+================================================================================
+[2024-08-08T13:59:45.970+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T13:59:18
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T13:59:45
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:59:28
+================================================================================
+[2024-08-08T14:00:16.593+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T13:59:59
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T13:59:48
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:00:16
+================================================================================
+[2024-08-08T14:00:47.662+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:00:19
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:00:47
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:00:30
+================================================================================
+[2024-08-08T14:01:18.444+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.41s           2024-08-08T14:01:00
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:00:49
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:01:18
+================================================================================
+[2024-08-08T14:01:49.300+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:01:31
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:01:49
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:01:20
+================================================================================
+[2024-08-08T14:02:20.148+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:02:20
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:01:50
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:02:02
+================================================================================
+[2024-08-08T14:02:51.016+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:02:32
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:02:21
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:02:51
+================================================================================
+[2024-08-08T14:03:10.317+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T14:03:10.419+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T14:03:22.275+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:02:51
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:03:22
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:03:03
+================================================================================
+[2024-08-08T14:03:52.724+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:03:33
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:03:23
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:03:52
+================================================================================
+[2024-08-08T14:04:23.226+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:04:04
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:03:54
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:04:23
+================================================================================
+[2024-08-08T14:04:53.773+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:04:24
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:04:53
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:04:35
+================================================================================
+[2024-08-08T14:05:24.330+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:05:05
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:05:24
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:04:55
+================================================================================
+[2024-08-08T14:05:54.753+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:05:54
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:05:25
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:05:36
+================================================================================
+[2024-08-08T14:06:25.327+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:06:25
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:05:56
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:06:06
+================================================================================
+[2024-08-08T14:06:55.889+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:06:27
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:06:55
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:06:37
+================================================================================
+[2024-08-08T14:07:26.260+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.51s           2024-08-08T14:06:58
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:07:08
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:07:26
+================================================================================
+[2024-08-08T14:07:56.660+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:07:56
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:07:39
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:07:28
+================================================================================
+[2024-08-08T14:08:10.545+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T14:08:10.649+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T14:08:27.240+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:07:59
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.40s           2024-08-08T14:08:10
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:08:27
+================================================================================
+[2024-08-08T14:08:57.760+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:08:40
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:08:30
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:08:57
+================================================================================
+[2024-08-08T14:09:28.314+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.41s           2024-08-08T14:09:11
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:09:28
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:09:01
+================================================================================
+[2024-08-08T14:09:58.965+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T14:09:58
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:09:42
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:09:32
+================================================================================
+[2024-08-08T14:10:29.523+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:10:13
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:10:29
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:10:03
+================================================================================
+[2024-08-08T14:11:00.065+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:10:43
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:10:33
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:11:00
+================================================================================
+[2024-08-08T14:11:30.604+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:11:04
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:11:30
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:11:14
+================================================================================
+[2024-08-08T14:12:01.106+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.52s           2024-08-08T14:11:35
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:12:01
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:11:45
+================================================================================
+[2024-08-08T14:12:31.630+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.41s           2024-08-08T14:12:16
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:12:31
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:12:05
+================================================================================
+[2024-08-08T14:13:02.467+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:13:02
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:12:47
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:12:36
+================================================================================
+[2024-08-08T14:13:10.782+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T14:13:10.920+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T14:13:33.218+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.41s           2024-08-08T14:13:18
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.40s           2024-08-08T14:13:07
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:13:33
+================================================================================
+[2024-08-08T14:14:04.019+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:14:04
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:13:48
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:13:38
+================================================================================
+[2024-08-08T14:14:34.819+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:14:09
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:14:34
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:14:19
+================================================================================
+[2024-08-08T14:15:05.761+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.51s           2024-08-08T14:14:40
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:15:05
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:14:50
+================================================================================
+[2024-08-08T14:15:36.628+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:15:21
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:15:36
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:15:10
+================================================================================
+[2024-08-08T14:16:07.443+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:15:41
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:15:52
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:16:07
+================================================================================
+[2024-08-08T14:16:38.256+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:16:38
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:16:12
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:16:22
+================================================================================
+[2024-08-08T14:17:09.164+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:17:09
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:16:43
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:16:53
+================================================================================
+[2024-08-08T14:17:40.059+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:17:40
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:17:24
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:17:14
+================================================================================
+[2024-08-08T14:18:10.792+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T14:18:10.878+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T14:18:11.229+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:17:55
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:18:11
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:17:45
+================================================================================
+[2024-08-08T14:18:41.929+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:18:26
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:18:41
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:18:16
+================================================================================
+[2024-08-08T14:19:12.976+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.40s           2024-08-08T14:18:57
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:18:47
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:19:12
+================================================================================
+[2024-08-08T14:19:43.642+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:19:43
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:19:18
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:19:28
+================================================================================
+[2024-08-08T14:20:14.643+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.40s           2024-08-08T14:19:59
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:19:48
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:20:14
+================================================================================
+[2024-08-08T14:20:45.158+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:20:45
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:20:29
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:20:19
+================================================================================
+[2024-08-08T14:21:15.744+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:21:15
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:21:00
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:20:50
+================================================================================
+[2024-08-08T14:21:46.655+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:21:31
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:21:21
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:21:46
+================================================================================
+[2024-08-08T14:22:17.426+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:22:17
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:22:02
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:21:51
+================================================================================
+[2024-08-08T14:22:47.906+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:22:22
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:22:47
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:22:32
+================================================================================
+[2024-08-08T14:23:11.361+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T14:23:11.466+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T14:23:18.732+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:23:18
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:23:03
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:22:53
+================================================================================
+[2024-08-08T14:23:49.545+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:23:24
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:23:49
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:23:34
+================================================================================
+[2024-08-08T14:24:20.403+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:24:20
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:24:04
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:23:54
+================================================================================
+[2024-08-08T14:24:50.991+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:24:25
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:24:50
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:24:35
+================================================================================
+[2024-08-08T14:25:21.824+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:25:21
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:24:56
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:25:06
+================================================================================
+[2024-08-08T14:25:53.233+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.51s           2024-08-08T14:25:53
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.32s           2024-08-08T14:25:37
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:25:26
+================================================================================
+[2024-08-08T14:26:23.969+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:26:23
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:26:08
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:25:57
+================================================================================
+[2024-08-08T14:26:54.564+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.40s           2024-08-08T14:26:54
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:26:39
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:26:28
+================================================================================
+[2024-08-08T14:27:25.340+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:26:59
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:27:09
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:27:25
+================================================================================
+[2024-08-08T14:27:55.851+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T14:27:55
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:27:29
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:27:40
+================================================================================
+[2024-08-08T14:28:11.615+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T14:28:11.769+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T14:28:27.162+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.71s           2024-08-08T14:28:27
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.51s           2024-08-08T14:28:00
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:28:11
+================================================================================
+[2024-08-08T14:29:00.224+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T14:29:00
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:28:44
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:28:36
+================================================================================
+[2024-08-08T14:29:31.629+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:29:31
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:29:07
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:29:15
+================================================================================
+[2024-08-08T14:30:02.524+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.51s           2024-08-08T14:30:02
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:29:38
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:29:45
+================================================================================
+[2024-08-08T14:30:33.938+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.51s           2024-08-08T14:30:33
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:30:09
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:30:16
+================================================================================
+[2024-08-08T14:31:04.594+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.40s           2024-08-08T14:31:04
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:30:46
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:30:40
+================================================================================
+[2024-08-08T14:31:46.820+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.82s           2024-08-08T14:31:17
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T14:31:46
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:31:11
+================================================================================
+[2024-08-08T14:32:18.076+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:31:53
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:32:18
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:31:54
+================================================================================
+[2024-08-08T14:32:49.440+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:32:23
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:32:25
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:32:49
+================================================================================
+[2024-08-08T14:33:11.650+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T14:33:11.788+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T14:33:19.772+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.51s           2024-08-08T14:32:55
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:32:56
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.21s           2024-08-08T14:33:19
+================================================================================
+[2024-08-08T14:33:50.338+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:33:25
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:33:27
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:33:50
+================================================================================
+[2024-08-08T14:34:20.879+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:33:56
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:34:20
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:33:58
+================================================================================
+[2024-08-08T14:34:51.453+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:34:27
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:34:28
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:34:51
+================================================================================
+[2024-08-08T14:35:22.098+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:34:59
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:34:57
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:35:22
+================================================================================
+[2024-08-08T14:35:52.791+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.40s           2024-08-08T14:35:52
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:35:30
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:35:28
+================================================================================
+[2024-08-08T14:36:23.779+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T14:36:23
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:35:59
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:36:00
+================================================================================
+[2024-08-08T14:36:55.076+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.40s           2024-08-08T14:36:55
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:36:31
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:36:31
+================================================================================
+[2024-08-08T14:37:26.337+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:37:01
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.40s           2024-08-08T14:37:26
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:37:03
+================================================================================
+[2024-08-08T14:37:57.315+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.41s           2024-08-08T14:37:34
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:37:57
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:37:32
+================================================================================
+[2024-08-08T14:38:12.034+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T14:38:12.167+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T14:38:28.246+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.51s           2024-08-08T14:38:28
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:38:04
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:38:03
+================================================================================
+[2024-08-08T14:38:59.004+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.51s           2024-08-08T14:38:59
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:38:35
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:38:33
+================================================================================
+[2024-08-08T14:39:29.431+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:39:04
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:39:29
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:39:05
+================================================================================
+[2024-08-08T14:40:00.087+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:39:35
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:39:36
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:40:00
+================================================================================
+[2024-08-08T14:40:31.267+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:40:31
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:40:06
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:40:06
+================================================================================
+[2024-08-08T14:41:02.161+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T14:41:02
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:40:38
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:40:36
+================================================================================
+[2024-08-08T14:41:33.100+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.62s           2024-08-08T14:41:09
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T14:41:33
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:41:07
+================================================================================
+[2024-08-08T14:42:03.821+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T14:42:03
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:41:38
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:41:39
+================================================================================
+[2024-08-08T14:42:35.113+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.51s           2024-08-08T14:42:10
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:42:08
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:42:35
+================================================================================
+[2024-08-08T14:43:05.868+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:42:39
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:42:41
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:43:05
+================================================================================
+[2024-08-08T14:43:13.604+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T14:43:13.733+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T14:43:37.085+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.51s           2024-08-08T14:43:12
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:43:37
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:43:09
+================================================================================
+[2024-08-08T14:44:07.437+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:43:40
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:43:42
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:44:07
+================================================================================
+[2024-08-08T14:44:37.992+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:44:10
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:44:13
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.21s           2024-08-08T14:44:37
+================================================================================
+[2024-08-08T14:45:08.925+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:45:08
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:44:43
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:44:41
+================================================================================
+[2024-08-08T14:45:39.980+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:45:39
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:45:15
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:45:11
+================================================================================
+[2024-08-08T14:46:10.831+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:45:42
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:46:10
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:45:46
+================================================================================
+[2024-08-08T14:46:41.879+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.40s           2024-08-08T14:46:41
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:46:12
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:46:17
+================================================================================
+[2024-08-08T14:47:12.710+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:47:12
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:46:48
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:46:43
+================================================================================
+[2024-08-08T14:47:43.872+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:47:18
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:47:13
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:47:43
+================================================================================
+[2024-08-08T14:48:14.037+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T14:48:14.754+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T14:48:15.127+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:48:15
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:47:49
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:47:44
+================================================================================
+[2024-08-08T14:48:45.476+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.41s           2024-08-08T14:48:20
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:48:45
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:48:16
+================================================================================
+[2024-08-08T14:49:16.123+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T14:49:16
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:48:46
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:48:51
+================================================================================
+[2024-08-08T14:49:46.672+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:49:22
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:49:46
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:49:17
+================================================================================
+[2024-08-08T14:50:17.066+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:49:48
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:49:53
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:50:17
+================================================================================
+[2024-08-08T14:50:47.601+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:50:47
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:50:24
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:50:18
+================================================================================
+[2024-08-08T14:51:18.167+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:50:50
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.41s           2024-08-08T14:50:55
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:51:18
+================================================================================
+[2024-08-08T14:51:48.845+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T14:51:48
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:51:20
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:51:25
+================================================================================
+[2024-08-08T14:52:20.456+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.51s           2024-08-08T14:52:20
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:51:56
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:51:51
+================================================================================
+[2024-08-08T14:52:51.104+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:52:27
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:52:21
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:52:51
+================================================================================
+[2024-08-08T14:53:14.139+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T14:53:14.251+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T14:53:21.701+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:52:58
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:52:52
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:53:21
+================================================================================
+[2024-08-08T14:53:52.275+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:53:52
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:53:29
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:53:23
+================================================================================
+[2024-08-08T14:54:22.780+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:53:59
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:54:22
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:53:54
+================================================================================
+[2024-08-08T14:54:54.070+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:54:32
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:54:54
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:54:40
+================================================================================
+[2024-08-08T14:55:24.624+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.41s           2024-08-08T14:55:11
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:55:03
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:55:24
+================================================================================
+[2024-08-08T14:55:55.232+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:55:42
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:55:55
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:55:33
+================================================================================
+[2024-08-08T14:56:25.886+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:56:04
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:56:13
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:56:25
+================================================================================
+[2024-08-08T14:56:56.509+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.41s           2024-08-08T14:56:44
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:56:56
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:56:35
+================================================================================
+[2024-08-08T14:57:27.242+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.51s           2024-08-08T14:57:16
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:57:27
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:57:06
+================================================================================
+[2024-08-08T14:57:57.570+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T14:57:46
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T14:57:57
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:57:37
+================================================================================
+[2024-08-08T14:58:14.573+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T14:58:14.679+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T14:58:28.303+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.40s           2024-08-08T14:58:08
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:58:28
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:58:18
+================================================================================
+[2024-08-08T14:58:59.071+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T14:58:59
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T14:58:38
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:58:48
+================================================================================
+[2024-08-08T14:59:29.920+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.41s           2024-08-08T14:59:19
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.41s           2024-08-08T14:59:29
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T14:59:09
+================================================================================
+[2024-08-08T15:00:01.174+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T14:59:40
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.40s           2024-08-08T15:00:01
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T14:59:49
+================================================================================
+[2024-08-08T15:00:31.895+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.40s           2024-08-08T15:00:11
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T15:00:20
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T15:00:31
+================================================================================
+[2024-08-08T15:01:02.720+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.41s           2024-08-08T15:00:42
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T15:01:02
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T15:00:50
+================================================================================
+[2024-08-08T15:01:33.632+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T15:01:21
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T15:01:33
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T15:01:13
+================================================================================
+[2024-08-08T15:02:04.331+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T15:02:04
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T15:01:51
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T15:01:44
+================================================================================
+[2024-08-08T15:02:35.358+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T15:02:35
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T15:02:14
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T15:02:22
+================================================================================
+[2024-08-08T15:03:06.075+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T15:03:06
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T15:02:45
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T15:02:52
+================================================================================
+[2024-08-08T15:03:15.016+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2024-08-08T15:03:15.119+0000] {manager.py:740} INFO - There are 3 files in /opt/airflow/dags
+[2024-08-08T15:03:37.085+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T15:03:23
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T15:03:16
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T15:03:37
+================================================================================
+[2024-08-08T15:04:08.047+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T15:03:53
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T15:03:47
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T15:04:08
+================================================================================
+[2024-08-08T15:04:39.125+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.51s           2024-08-08T15:04:39
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T15:04:18
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T15:04:24
+================================================================================
+[2024-08-08T15:05:09.861+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.51s           2024-08-08T15:04:50
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.31s           2024-08-08T15:05:09
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T15:04:55
+================================================================================
+[2024-08-08T15:05:40.680+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T15:05:21
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T15:05:40
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T15:05:25
+================================================================================
+[2024-08-08T15:06:11.604+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.30s           2024-08-08T15:05:56
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T15:05:51
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T15:06:11
+================================================================================
+[2024-08-08T15:06:42.433+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T15:06:26
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.30s           2024-08-08T15:06:22
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T15:06:42
+================================================================================
+[2024-08-08T15:07:12.944+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/etl_time_location.dag.py                           1           0  0.31s           2024-08-08T15:06:52
+/opt/airflow/dags/welcome.dag.py                                     1           0  0.31s           2024-08-08T15:06:57
+/opt/airflow/dags/etl_ldtbxh.dag.py                                  1           0  0.30s           2024-08-08T15:07:12
+================================================================================
