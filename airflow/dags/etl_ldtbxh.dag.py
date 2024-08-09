@@ -4,6 +4,9 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.utils.dates import days_ago
 from datetime import datetime
+from gold.hongheo_gold import run_gold_hongheo
+from gold.atvsld_gold import run_gold_atvsld
+
 
 def start():
     print('Starting to Integrate Data Warehouse...')
@@ -17,6 +20,7 @@ with DAG(
     schedule_interval='0 23 * * *',
     catchup=False
 ) as dag:
+    # START
     print_start_task = PythonOperator(
         task_id='print_start',
         python_callable=start,
@@ -30,6 +34,7 @@ with DAG(
         dag=dag
     )
     
+    # Bronze Stage
     bronze_hongheo = SQLExecuteQueryOperator(
         task_id='bronze_hongheo',
         conn_id = 'postgres_ldtbxh_stage',
@@ -44,10 +49,26 @@ with DAG(
         dag=dag
     )
     
+    # Gold Stage
+    gold_hongheo = PythonOperator(
+        task_id='gold_hongheo',
+        python_callable=run_gold_hongheo,
+        dag=dag
+    )
+    
+    gold_atvsld = PythonOperator(
+        task_id='gold_atvsld',
+        python_callable=run_gold_atvsld,
+        dag=dag
+    )
+    
+    #END
     print_end_task = PythonOperator(
         task_id='print_end',
         python_callable=end,
         dag=dag
     )
     
-print_start_task >> refresh >> [bronze_hongheo, bronze_atvsld] >> print_end_task
+    print_start_task >> refresh 
+    refresh >> bronze_hongheo >> gold_hongheo >> print_end_task
+    refresh >> bronze_atvsld >> gold_atvsld >> print_end_task

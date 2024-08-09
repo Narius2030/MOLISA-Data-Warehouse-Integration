@@ -1,0 +1,27 @@
+[2024-08-09T09:53:06.570+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-09T09:53:06.611+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Integrate_Data_Warehouse.gold_hongheo manual__2024-08-09T09:52:32.749103+00:00 [queued]>
+[2024-08-09T09:53:06.630+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Integrate_Data_Warehouse.gold_hongheo manual__2024-08-09T09:52:32.749103+00:00 [queued]>
+[2024-08-09T09:53:06.631+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-09T09:53:06.673+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): gold_hongheo> on 2024-08-09 09:52:32.749103+00:00
+[2024-08-09T09:53:06.679+0000] {standard_task_runner.py:63} INFO - Started process 6874 to run task
+[2024-08-09T09:53:06.683+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'Integrate_Data_Warehouse', 'gold_hongheo', 'manual__2024-08-09T09:52:32.749103+00:00', '--job-id', '463', '--raw', '--subdir', 'DAGS_FOLDER/etl_ldtbxh.dag.py', '--cfg-path', '/tmp/tmpx_bd7mz8']
+[2024-08-09T09:53:06.686+0000] {standard_task_runner.py:91} INFO - Job 463: Subtask gold_hongheo
+[2024-08-09T09:53:06.773+0000] {task_command.py:426} INFO - Running <TaskInstance: Integrate_Data_Warehouse.gold_hongheo manual__2024-08-09T09:52:32.749103+00:00 [running]> on host 45f7764b2bf2
+[2024-08-09T09:53:06.912+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='Integrate_Data_Warehouse' AIRFLOW_CTX_TASK_ID='gold_hongheo' AIRFLOW_CTX_EXECUTION_DATE='2024-08-09T09:52:32.749103+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-09T09:52:32.749103+00:00'
+[2024-08-09T09:53:06.913+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-09T09:53:20.796+0000] {logging_mixin.py:188} INFO - ====================
+[2024-08-09T09:53:27.008+0000] {logging_mixin.py:188} INFO - +--------------------+----+-------------+-------------+-----------+----------+--------------------+--------------------+--------------------+----------+-------+--------+--------+-------+-------+------------+
+|           family_id|year|province_name|district_name|family_code|owner_name|        hard_reasons|        get_policies|       need_policies|member_num|a_grade|b1_grade|b2_grade|b1_diff|b2_diff|final_result|
++--------------------+----+-------------+-------------+-----------+----------+--------------------+--------------------+--------------------+----------+-------+--------+--------+-------+-------+------------+
+|966a5c75-d6f5-48c...|2022|     Đắk Nông|       Cư Jút|       7009|      NULL|[không có đất sản...|[hỗ trợ y tế, hỗ ...|[hỗ trợ nước sạch...|      NULL|   true|      45|      65|   NULL|   NULL|    hộ nghèo|
+|f4773df9-32bc-417...|2023|     Đắk Nông|       Cư Jút|       7003|  Độ A Đạt|[không có đất sản...|[hỗ trợ y tế, hỗ ...|[hỗ trợ nước sạch...|         1|   true|      30|      58|   NULL|   NULL|    hộ nghèo|
+|70321aa9-91b9-465...|2023|     Đắk Nông|       Cư Jút|       7009|Phùng A Sử|[không có đất sản...|[hỗ trợ y tế, hỗ ...|[hỗ trợ nước sạch...|         2|   true|      50|      32|      5|    -33|    hộ nghèo|
++--------------------+----+-------------+-------------+-----------+----------+--------------------+--------------------+--------------------+----------+-------+--------+--------+-------+-------+------------+
+[2024-08-09T09:53:27.009+0000] {logging_mixin.py:188} INFO - None
+[2024-08-09T09:53:27.011+0000] {logging_mixin.py:188} INFO - ====================
+[2024-08-09T09:53:27.111+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-08-09T09:53:27.113+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-09T09:53:27.134+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=Integrate_Data_Warehouse, task_id=gold_hongheo, run_id=manual__2024-08-09T09:52:32.749103+00:00, execution_date=20240809T095232, start_date=20240809T095306, end_date=20240809T095327
+[2024-08-09T09:53:27.218+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-09T09:53:27.249+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-09T09:53:27.251+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

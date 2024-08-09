@@ -1,0 +1,7 @@
+{
+    "URL_BASE_LOCAL": "jdbc:postgresql://localhost",
+    "URL_BASE_DOCKER": "jdbc:postgresql://host.docker.internal",
+    "PORT": "5434",
+    "USER": "postgres",
+    "PASSWORD": "nhanbui"
+}

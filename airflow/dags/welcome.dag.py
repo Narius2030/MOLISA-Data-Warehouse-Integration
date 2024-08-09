@@ -3,8 +3,6 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 
 from count.word_count import spark_wordcount
-from database.conn_postgres import spark_postgres
-
 from airflow.utils.dates import days_ago
 from datetime import datetime
 
@@ -36,11 +34,11 @@ spark_task = PythonOperator(
     dag=dag
 )
 
-connect_postgres = PythonOperator(
-    task_id='connect_postgres',
-    python_callable=spark_postgres,
-    dag=dag
-)
+# connect_postgres = PythonOperator(
+#     task_id='connect_postgres',
+#     python_callable=spark_postgres,
+#     dag=dag
+# )
 
 query_postgres = SQLExecuteQueryOperator(
     task_id='query_postgres_database',
@@ -58,4 +56,4 @@ print_date_task = PythonOperator(
 
 # Set the dependencies between the tasks
 
-print_welcome_task >> spark_task >> [connect_postgres, query_postgres] >> print_date_task
+print_welcome_task >> spark_task >> query_postgres >> print_date_task
