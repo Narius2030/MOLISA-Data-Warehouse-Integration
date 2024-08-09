@@ -4,10 +4,6 @@
 
 DO
 $$
-DECLARE
-	vinformation VARCHAR(255);
-	vfinished_at TIMESTAMP;
-	vstatus VARCHAR(10);
 BEGIN
     /***
         Load Source to stgDimFamily (Bronze)
@@ -137,16 +133,16 @@ BEGIN
     --     finished_at = NOW()
     -- WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status IS NULL);
 
-EXCEPTION
--- 	RAISE EXCEPTION 'Something went wrong with selected columns' USING HINT = 'Check on "SELECT" or "INSERT" statement';
-	WHEN OTHERS THEN
-		UPDATE "DimAuditForeigned" 
-		SET 
-			information = 'Hongheo Dimension: Something went wrong on running statements. 
-							HINT: Check carefully the syntax or selected columns at "SELECT" or "INSERT" clauses',
-			status = 'ERROR',
-			finished_at = NOW()
-		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status='ERROR');
+-- EXCEPTION
+-- -- 	RAISE EXCEPTION 'Something went wrong with selected columns' USING HINT = 'Check on "SELECT" or "INSERT" statement';
+-- 	WHEN OTHERS THEN
+-- 		UPDATE "DimAuditForeigned" 
+-- 		SET 
+-- 			information = 'Hongheo Dimension: Something went wrong on running statements. 
+-- 							HINT: Check carefully the syntax or selected columns at "SELECT" or "INSERT" clauses',
+-- 			status = 'ERROR',
+-- 			finished_at = NOW()
+-- 		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status='ERROR');
 
 END;
 $$;
@@ -232,15 +228,15 @@ BEGIN
     WHERE (member_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'))
         OR (rs_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'));
 
-EXCEPTION
-	WHEN OTHERS THEN
-		UPDATE "DimAuditForeigned" 
-		SET 
-			information = 'Hongheo Fact: Something went wrong on running statements. 
-							HINT: Check carefully the syntax or selected columns at "SELECT" or "INSERT" clauses',
-			status = 'ERROR',
-			finished_at = NOW()
-		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status='ERROR');
+-- EXCEPTION
+-- 	WHEN OTHERS THEN
+-- 		UPDATE "DimAuditForeigned" 
+-- 		SET 
+-- 			information = 'Hongheo Fact: Something went wrong on running statements. 
+-- 							HINT: Check carefully the syntax or selected columns at "SELECT" or "INSERT" clauses',
+-- 			status = 'ERROR',
+-- 			finished_at = NOW()
+-- 		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status='ERROR');
 
 END;
 $$;
