@@ -4,8 +4,8 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.utils.dates import days_ago
 from datetime import datetime
-from gold.hongheo_gold import run_gold_hongheo
-from gold.atvsld_gold import run_gold_atvsld
+from medallion.hongheo.gold import run_gold_hongheo
+from medallion.hongheo.silver import run_silver_hongheo
 
 
 def start():
@@ -56,9 +56,9 @@ with DAG(
         dag=dag
     )
     
-    gold_atvsld = PythonOperator(
-        task_id='gold_atvsld',
-        python_callable=run_gold_atvsld,
+    silver_hongheo = PythonOperator(
+        task_id='silver_hongheo',
+        python_callable=run_silver_hongheo,
         dag=dag
     )
     
@@ -70,5 +70,5 @@ with DAG(
     )
     
     print_start_task >> refresh 
-    refresh >> bronze_hongheo >> gold_hongheo >> print_end_task
-    refresh >> bronze_atvsld >> gold_atvsld >> print_end_task
+    refresh >> bronze_hongheo >> silver_hongheo >> gold_hongheo >> print_end_task
+    refresh >> bronze_atvsld >> print_end_task
