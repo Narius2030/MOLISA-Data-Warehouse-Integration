@@ -1,6 +1,6 @@
-./airflow/airflow.cfg
-./airflow/airflow.db
-./airflow/airflow-webserver.pid
-./.vscode/**
-./airflow/standalone_admin_password.txt
-./airflow/logs/**
+/airflow/airflow.cfg
+/airflow/airflow.db
+/airflow/airflow-webserver.pid
+/.vscode/**
+/airflow/standalone_admin_password.txt
+/airflow/logs/**
