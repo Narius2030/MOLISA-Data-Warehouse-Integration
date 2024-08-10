@@ -20,10 +20,10 @@ def run_silver_hongheo():
         
     memberSurveyFact_df = spark.read.format("jdbc") \
         .option("url", f"{config['URL_BASE_DOCKER']}:{config['PORT']}/LdtbxhStage") \
-        .option("driver", "org.postgresql.Driver") \
+        .option("driver", f"{config['DRIVER']}") \
         .option("dbtable", 'public."stgMemberSurveyFact"') \
-        .option("user", "postgres") \
-        .option("password", "nhanbui") \
+        .option("user", f"{config['USER']}") \
+        .option("password", f"{config['PASSWORD']}") \
         .load()
     
     finalfact_df = find_age_member(memberSurveyFact_df)
@@ -33,11 +33,11 @@ def run_silver_hongheo():
     print("====================")
     
     with psycopg2.connect(
-        database="LdtbxhStage",
-        user="postgres",
-        password="nhanbui",
-        host="host.docker.internal",
-        port="5434"
+        database = "LdtbxhStage",
+        user = f"{config['USER']}",
+        password = f"{config['PASSWORD']}",
+        host = f"{config['HOST_DOCKER']}",
+        port = f"{config['PORT']}"
     ) as conn:
         with conn.cursor() as cur:
             for row in finalfact_df.collect():

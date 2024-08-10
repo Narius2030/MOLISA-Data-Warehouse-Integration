@@ -37,18 +37,18 @@ def run_gold_hongheo():
         
     povertyfact_df = spark.read.format("jdbc") \
         .option("url", f"{config['URL_BASE_DOCKER']}:{config['PORT']}/LdtbxhStage") \
-        .option("driver", "org.postgresql.Driver") \
+        .option("driver", f"{config['DRIVER']}") \
         .option("dbtable", 'public."stgPovertyStatusFact"') \
-        .option("user", "postgres") \
-        .option("password", "nhanbui") \
+        .option("user", f"{config['USER']}") \
+        .option("password", f"{config['PASSWORD']}") \
         .load()
         
     member_df = spark.read.format("jdbc") \
         .option("url", f"{config['URL_BASE_DOCKER']}:{config['PORT']}/hongheovna") \
-        .option("driver", "org.postgresql.Driver") \
+        .option("driver", f"{config['DRIVER']}") \
         .option("dbtable", 'public.family_member_info') \
-        .option("user", "postgres") \
-        .option("password", "nhanbui") \
+        .option("user", f"{config['USER']}") \
+        .option("password", f"{config['PASSWORD']}") \
         .load()
 
     temp_df = grade_difference(povertyfact_df)
@@ -60,10 +60,10 @@ def run_gold_hongheo():
 
     with psycopg2.connect(
         database="LdtbxhStage",
-        user="postgres",
-        password="nhanbui",
-        host="host.docker.internal",
-        port="5434"
+        user=f"{config['USER']}",
+        password=f"{config['PASSWORD']}",
+        host=f"{config['HOST_DOCKER']}",
+        port=f"{config['PORT']}"
     ) as conn:
         with conn.cursor() as cur:
             for row in finalfact_df.collect():
