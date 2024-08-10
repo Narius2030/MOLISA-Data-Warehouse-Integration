@@ -125,13 +125,6 @@ BEGIN
     WHERE (a_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'))
         OR (b1_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'))
         OR (rs_created_date >= (SELECT MAX(finished_at) FROM "DimAuditForeigned" WHERE status='SUCCESS'));
-    
-    -- UPDATE "DimAuditForeigned" 
-    -- SET 
-    --     information = 'Hongheo Dimension: integrating succefully',
-    --     status = 'PENDING',
-    --     finished_at = NOW()
-    -- WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status IS NULL);
 
 -- EXCEPTION
 -- -- 	RAISE EXCEPTION 'Something went wrong with selected columns' USING HINT = 'Check on "SELECT" or "INSERT" statement';
@@ -142,7 +135,7 @@ BEGIN
 -- 							HINT: Check carefully the syntax or selected columns at "SELECT" or "INSERT" clauses',
 -- 			status = 'ERROR',
 -- 			finished_at = NOW()
--- 		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status='ERROR');
+-- 		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned");
 
 END;
 $$;
