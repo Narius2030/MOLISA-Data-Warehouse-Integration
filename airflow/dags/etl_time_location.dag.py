@@ -28,7 +28,7 @@ with DAG(
     refresh = SQLExecuteQueryOperator(
         task_id='refresh_stages',
         conn_id = 'postgres_ldtbxh_stage',
-        sql="./sql/refresh.stage.sql",
+        sql="./sql/refresh_timeloc.stage.sql",
         dag=dag
     )
 

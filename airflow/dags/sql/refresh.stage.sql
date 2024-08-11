@@ -1,5 +1,3 @@
--- TRUNCATE TABLE public."stgDate";
--- TRUNCATE TABLE public."stgDimLocation";
 TRUNCATE TABLE public."stgDimFamily";
 TRUNCATE TABLE public."stgDimFamilyMember";
 TRUNCATE TABLE public."stgDimSurvey";

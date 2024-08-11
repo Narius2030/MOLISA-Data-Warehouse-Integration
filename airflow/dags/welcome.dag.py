@@ -39,12 +39,12 @@ print_welcome_task = PythonOperator(
 #     dag=dag
 # )
 
-query_postgres = SQLExecuteQueryOperator(
-    task_id='query_postgres_database',
-    conn_id = 'postgres_default',
-    sql='./sql/connect-other-db.sql',
-    dag=dag
-)
+# query_postgres = SQLExecuteQueryOperator(
+#     task_id='query_postgres_database',
+#     conn_id = 'postgres_default',
+#     sql='./sql/connect-other-db.sql',
+#     dag=dag
+# )
 
 print_date_task = PythonOperator(
     task_id='print_date',
@@ -55,4 +55,4 @@ print_date_task = PythonOperator(
 
 # Set the dependencies between the tasks
 
-print_welcome_task >> query_postgres >> print_date_task
+print_welcome_task >> print_date_task
