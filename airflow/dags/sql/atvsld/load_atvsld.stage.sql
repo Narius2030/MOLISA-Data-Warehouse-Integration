@@ -12,7 +12,12 @@ BEGIN
                                 total_hard_case, total_not_managed, total_female_not_managed,
                                 total_dead_not_managed, total_hard_not_managed)
     SELECT
-        *
+        accident_id, reason, factor, career,
+        year, from_date, to_date, 
+        period, report_type, has_support,
+        total_people, total_hasdead, total_female,
+        total_hard_case, total_not_managed, total_female_not_managed,
+        total_dead_not_managed, total_hard_not_managed
     FROM dblink('host=host.docker.internal dbname=atvsld password=nhanbui user=postgres port=5434', 
                 'select * from public.vw_stgdimaccident')
     AS (
@@ -49,7 +54,12 @@ BEGIN
                                 email, contact_province, contact_district, 
                                 contact_ward, deputy)
     SELECT
-        *
+        company_id, name, tax_number,
+        unit, business_name, major_name, 
+        ngaycap_GPKD, province_code, district_code, 
+        ward_code, town_code, foreign_name, 
+        email, contact_province, contact_district, 
+        contact_ward, deputy
     FROM dblink('host=host.docker.internal dbname=atvsld password=nhanbui user=postgres port=5434', 
                 'select * from public.vw_stgdimcompany')
     AS (
@@ -86,7 +96,13 @@ BEGIN
                             issuance_organize, issuance_date, issuance_place,
                             profile_code, page_of_co, import_gate, import_date)
     SELECT
-        *
+        device_id, year, month,
+        quality_info_id, company_id,
+        device_name, hs_code, technical_feature, 
+        origin, quantity, unit, contract_number, 
+        contract_date, category, management_cerf,
+        issuance_organize, issuance_date, issuance_place,
+        profile_code, page_of_co, import_gate, import_date
     FROM dblink('host=host.docker.internal dbname=atvsld password=nhanbui user=postgres port=5434', 
                 'select * from public.vw_stgdimequipment')
     AS (

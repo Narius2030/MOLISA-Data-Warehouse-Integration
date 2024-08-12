@@ -6,6 +6,7 @@ from airflow.utils.dates import days_ago
 from datetime import datetime
 from medallion.hongheo.gold import run_gold_hongheo
 from medallion.hongheo.silver import run_silver_hongheo
+from tracking.track import track_transform, track_load
 
 
 def start():
@@ -13,6 +14,9 @@ def start():
 
 def end():
     print('Finish at {}!'.format(datetime.today().date()))
+    
+def log():
+    print('-------------Write logs to DimAudit-------------')
     
 with DAG(
     'Integrate_Data_Warehouse',
@@ -49,6 +53,13 @@ with DAG(
         dag=dag
     )
     
+    # Silver Stage
+    silver_hongheo = PythonOperator(
+        task_id='silver_hongheo',
+        python_callable=run_silver_hongheo,
+        dag=dag
+    )
+    
     # Gold Stage
     gold_hongheo = PythonOperator(
         task_id='gold_hongheo',
@@ -56,9 +67,35 @@ with DAG(
         dag=dag
     )
     
-    silver_hongheo = PythonOperator(
-        task_id='silver_hongheo',
-        python_callable=run_silver_hongheo,
+    # Tracking
+    tracking_transform = PythonOperator(
+        task_id='logging_transform',
+        python_callable=track_transform,
+        dag=dag
+    )
+    
+    # Load to Data Warehouse
+    
+    # TODO: Load to Hongheo DWH
+    load_hongheo = SQLExecuteQueryOperator(
+        task_id='load_hongheo',
+        conn_id = 'postgres_ldtbxh_dwh',
+        sql=Variable.get('hongheo_data_dir')+"/load_hongheo.dwh.sql",
+        dag=dag
+    )
+    
+    # TODO: Load to ATVSLD DWH
+    load_atvsld = SQLExecuteQueryOperator(
+        task_id='load_atvsld',
+        conn_id = 'postgres_ldtbxh_dwh',
+        sql=Variable.get('atvsld_data_dir')+"/load_atvsld.dwh.sql",
+        dag=dag
+    )
+    
+    # Tracking
+    tracking_load = PythonOperator(
+        task_id='logging_load',
+        python_callable=track_load,
         dag=dag
     )
     
@@ -70,5 +107,9 @@ with DAG(
     )
     
     print_start_task >> refresh 
-    refresh >> bronze_hongheo >> silver_hongheo >> gold_hongheo >> print_end_task
-    refresh >> bronze_atvsld >> print_end_task
+
+    refresh >> bronze_hongheo >> silver_hongheo >> gold_hongheo >> tracking_transform
+    refresh >> bronze_atvsld >> tracking_transform
+
+    tracking_transform >> load_hongheo >> tracking_load >> print_end_task
+    tracking_transform >> load_atvsld >> tracking_load >> print_end_task

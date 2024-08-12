@@ -18,7 +18,7 @@ def track_refresh():
                             ('data integration', NOW(), NULL, 'refreshed data', 'PENDING')
                         """)
             
-def track_intergation():
+def track_transform():
     with psycopg2.connect(
         database="LdtbxhStage",
         user=f"{config['USER']}",
@@ -32,7 +32,28 @@ def track_intergation():
                             SET
                                 process_name = 'data integration', 
                                 finished_at = NOW(),
-                                information = 'integrated successfully',
+                                information = 'transformed successfully'
+                            WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned")
+                        """)
+            
+def track_load():
+    with psycopg2.connect(
+        database="LdtbxhStage",
+        user=f"{config['USER']}",
+        password=f"{config['PASSWORD']}",
+        host=f"{config['HOST_DOCKER']}",
+        port=f"{config['PORT']}"
+    ) as conn:
+        with conn.cursor() as cur:
+            cur.execute("""
+                            UPDATE "DimAuditForeigned"
+                            SET
+                                process_name = 'data integration', 
+                                finished_at = NOW(),
+                                information = 'ETL successfully',
                                 status = 'SUCCESS'
                             WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned")
                         """)
+            
+if __name__ == '__main__':
+    print('')
