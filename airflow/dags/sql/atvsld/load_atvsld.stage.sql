@@ -202,7 +202,7 @@ EXCEPTION
 							HINT: Check carefully the syntax or selected columns at "SELECT" or "INSERT" clauses',
 			status = 'ERROR',
 			finished_at = NOW()
-		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned" WHERE status='ERROR');
+		WHERE start_at = (SELECT MAX(start_at) FROM "DimAuditForeigned");
 
 END;
 $$;

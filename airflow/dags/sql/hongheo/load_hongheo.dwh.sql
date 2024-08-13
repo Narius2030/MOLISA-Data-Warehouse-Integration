@@ -28,13 +28,13 @@ BEGIN;
 			family_number VARCHAR(20),
 			nation_in_place BOOL
 		)
-		WHERE ((stgdimfamily.family_id = "DimFamily".family_id)
-			AND ("DimFamily".rowenddate IS NULL)) AND
-			((stgdimfamily.province_code <> "DimFamily".province_code)
-			OR (stgdimfamily.province_name <> "DimFamily".province_name)
-			OR (stgdimfamily.district_code <> "DimFamily".district_name)
-			OR (stgdimfamily.family_number <> "DimFamily".family_number)
-			OR (stgdimfamily.nation_in_place <> "DimFamily".nation_in_place));
+		WHERE (stgdimfamily.family_id = "DimFamily".family_id) AND ("DimFamily".rowenddate IS NULL) 
+			AND	((stgdimfamily.province_code <> "DimFamily".province_code)
+				OR (stgdimfamily.province_name <> "DimFamily".province_name)
+				OR (stgdimfamily.district_code <> "DimFamily".district_code)
+				OR (stgdimfamily.district_name <> "DimFamily".district_name) 
+				OR (stgdimfamily.family_number <> "DimFamily".family_number)
+				OR (stgdimfamily.nation_in_place <> "DimFamily".nation_in_place));
 		
 		/***
 			Insert into DWH with SCD Type 2
@@ -252,5 +252,78 @@ BEGIN;
 		WHERE (family_id, a_grade, b1_grade, b2_grade, final_result) NOT IN (SELECT family_id, a_grade, b1_grade, 
 																			 	b2_grade, final_result
 																			FROM hongheo."DimSurvey");
+	END;
+END;
+
+
+
+----------- FACT -----------
+
+BEGIN;
+	/*** 
+		Load Stage to PovertyStatusFact
+	***/
+	BEGIN;
+		INSERT INTO hongheo."PovertyStatusFact"(familykey, surveykey, family_id, year, province_name, district_name,
+											family_code, owner_name, hard_reasons, get_policies, need_policies, member_num,
+											a_grade, b1_grade, b2_grade, b1_diff, b2_diff, final_result)
+		SELECT
+			(SELECT familykey FROM hongheo."DimFamily" WHERE family_id=stgpovertyfact.family_id AND rowiscurrent='TRUE') AS familykey,
+			(SELECT surveykey FROM hongheo."DimSurvey" WHERE family_id=stgpovertyfact.family_id AND rowiscurrent='TRUE') AS surveykey,
+			*
+		FROM dblink('host=host.docker.internal dbname=LdtbxhStage password=nhanbui user=postgres port=5434', 
+					'select * from public."stgPovertyStatusFact"')
+		AS stgpovertyfact (
+			family_id uuid,
+			year SMALLINT,
+			province_name VARCHAR(35),
+			district_name VARCHAR(35),
+			family_code VARCHAR(10),
+			owner_name VARCHAR(35),
+			hard_reasons VARCHAR(255)[],
+			get_policies VARCHAR(255)[],
+			need_policies VARCHAR(255)[],
+			member_num SMALLINT,
+			a_grade BOOL,
+			b1_grade SMALLINT,
+			b2_grade SMALLINT,
+			b1_diff SMALLINT,
+			b2_diff SMALLINT,
+			final_result hongheo.CLASSIFICATION
+		);
+	END;
+	
+	
+	/*** 
+		Load Stage to MemberSurveyFact
+	***/
+	BEGIN;
+		INSERT INTO hongheo."MemberSurveyFact"(familykey, memberkey, datekey, isdeleted, member_id, family_id, year, month,
+											   province_name, district_name, member_name, owner_relationship, 
+											   year_of_birth, month_of_birth, day_of_birth, age, identity_card_number, nation, final_result)
+		SELECT
+			(SELECT familykey FROM hongheo."DimFamily" WHERE family_id=stgmember.family_id AND rowiscurrent='TRUE') AS familykey,
+			(SELECT memberkey FROM hongheo."DimFamilyMember" WHERE member_id=stgmember.member_id) AS memberkey,
+			(year*100 + month) AS datekey, 'FALSE',
+			*
+		FROM dblink('host=host.docker.internal dbname=LdtbxhStage password=nhanbui user=postgres port=5434', 
+					'select * from public."stgMemberSurveyFact"')
+		AS stgmember (
+			member_id uuid,
+			family_id uuid,
+			year INT,
+			month INT,
+			province_name VARCHAR(35),
+			district_name VARCHAR(35),
+			full_name VARCHAR(35),
+			owner_relationship VARCHAR(15),
+			year_of_birth SMALLINT,
+			month_of_birth SMALLINT,
+			day_of_birth SMALLINT,
+			age SMALLINT,
+			identity_card_number VARCHAR(12),
+			nation VARCHAR(15),
+			final_result hongheo.CLASSIFICATION
+		);
 	END;
 END;

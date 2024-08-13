@@ -149,3 +149,44 @@ BEGIN;
 		WHERE (business_name, major_name, unit, email) NOT IN(SELECT business_name, major_name, unit, email FROM atvsld."DimCompany");
 	END;
 END;
+
+
+
+
+----------- FACT -----------
+
+/***
+	Load Stage to PeriodicalAccidentFact
+***/
+BEGIN;
+	INSERT INTO atvsld."PeriodicalAccidentFact"(accidentkey, companykey, datekey, isdeleted, accident_id, year, month, 
+												company_name, compay_foreign_name, major_name, reason, factor, career, total_people, total_hasdead, total_female,
+												medical_expense, treatment_expense, indemnify_expense, total_expense, day_off, assest_harm)
+	SELECT
+		(SELECT accidentkey FROM atvsld."DimAccident" WHERE accident_id=stgaccident.accident_id AND rowiscurrent='TRUE') AS accidentkey,
+		(SELECT companykey FROM atvsld."DimCompany" WHERE company_name=stgaccident.company_name AND rowiscurrent='TRUE') AS companykey,
+		(year*100 + month) AS datekey, 'FALSE',
+		*
+	FROM dblink('host=host.docker.internal dbname=LdtbxhStage password=nhanbui user=postgres port=5434', 
+				'select * from public."stgPeriodicalAccidentFact"')
+	AS stgaccident(
+		accident_id uuid,
+		year INT,
+		month INT,
+		company_name VARCHAR(35),
+		compay_foreign_name VARCHAR(35),
+		major_name VARCHAR(35),
+		reason VARCHAR(255),
+		factor VARCHAR(255),
+		career VARCHAR(255),
+		total_people INT,
+		total_hasdead INT,
+		total_female INT,
+		medical_expense FLOAT8,
+		treatment_expense FLOAT8,
+		indemnify_expense FLOAT8,
+		total_expense FLOAT8,
+		day_off INT,
+		assest_harm FLOAT8
+	);
+END;

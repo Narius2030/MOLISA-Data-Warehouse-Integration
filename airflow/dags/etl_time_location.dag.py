@@ -44,6 +44,13 @@ with DAG(
         sql=Variable.get('timelocation_data_dir')+"/load_location.stage.sql",
         dag=dag
     )
+    
+    load_timeloc = SQLExecuteQueryOperator(
+        task_id='load_time',
+        conn_id = 'postgres_ldtbxh_dwh',
+        sql=Variable.get('timelocation_data_dir')+"/load_timeloc.dwh.sql",
+        dag=dag
+    )
 
     print_end_task = PythonOperator(
         task_id='print_end',
@@ -51,4 +58,4 @@ with DAG(
         dag=dag
     )
 
-print_start_task >> refresh >> [bronze_time, bronze_location] >> print_end_task
+print_start_task >> refresh >> [bronze_time, bronze_location] >> load_timeloc >> print_end_task
