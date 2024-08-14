@@ -47,7 +47,7 @@ def run_silver_ncc():
                                     recieve_days={row['recieve_days']},
                                     spend_diff={row['spend_diff']}
                                 WHERE profile_code='{row['profile_code']}' 
-                                    AND subsidy_code='{row['subsidy_code']}' 
+                                    AND subsidy_code='{row['subsidy_code']}'
                                     AND year={row['year']}""")
     
     spark.stop()

@@ -8,11 +8,11 @@ BEGIN;
             Load Source to stgDimNccProfile (Bronze)
         ***/
         INSERT INTO "stgDimNCC"(profile_code, ncc_code, full_name, 
-                                    birth_of_date, sex, ethnic, identity_number, 
-                                    identity_place, home_town, province_code, 
-                                    district_code, decided_monthly_date, decided_once_date, 
-                                    decided_monthly_num, decided_once_num, 
-                                    start_subsidize, support_bhyt, status)
+                                birth_of_date, sex, ethnic, identity_number, 
+                                identity_place, home_town, province_code, 
+                                district_code, decided_monthly_date, decided_once_date, 
+                                decided_monthly_num, decided_once_num, 
+                                start_subsidize, support_bhyt, status)
         SELECT
             profile_code, ncc_code, full_name, 
             birth_of_date, sex, ethnic, identity_number, 
