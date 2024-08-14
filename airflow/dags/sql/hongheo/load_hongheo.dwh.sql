@@ -290,7 +290,9 @@ BEGIN;
 			b1_diff SMALLINT,
 			b2_diff SMALLINT,
 			final_result hongheo.CLASSIFICATION
-		);
+		) WHERE ((SELECT familykey FROM hongheo."DimFamily" WHERE family_id=stgpovertyfact.family_id AND rowiscurrent='TRUE'),
+				 (SELECT surveykey FROM hongheo."DimSurvey" WHERE family_id=stgpovertyfact.family_id AND rowiscurrent='TRUE'),
+				 year) NOT IN(SELECT familykey, surveykey, year FROM hongheo."PovertyStatusFact");
 	END;
 	
 	
@@ -324,6 +326,8 @@ BEGIN;
 			identity_card_number VARCHAR(12),
 			nation VARCHAR(15),
 			final_result hongheo.CLASSIFICATION
-		);
+		)  WHERE ((SELECT familykey FROM hongheo."DimFamily" WHERE family_id=stgmember.family_id AND rowiscurrent='TRUE'),
+				 (SELECT memberkey FROM hongheo."DimFamilyMember" WHERE member_id=stgmember.member_id),
+				 (year*100 + month)) NOT IN(SELECT familykey, memberkey, datekey FROM hongheo."MemberSurveyFact");
 	END;
 END;

@@ -6,7 +6,6 @@ import psycopg2
 
 def find_age_member(memberSurveyFact_df):
     final_df = memberSurveyFact_df.withColumn('age', date.today().year - col('year_of_birth'))
-    
     return final_df
 
 

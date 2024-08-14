@@ -45,11 +45,16 @@ with DAG(
         sql=Variable.get('hongheo_data_dir')+"/load_hongheo.stage.sql",
         dag=dag
     )
-    
     bronze_atvsld = SQLExecuteQueryOperator(
         task_id='bronze_atvsld',
         conn_id = 'postgres_ldtbxh_stage',
         sql=Variable.get('atvsld_data_dir')+"/load_atvsld.stage.sql",
+        dag=dag
+    )
+    bronze_ncc =  SQLExecuteQueryOperator(
+        task_id='bronze_ncc',
+        conn_id = 'postgres_ldtbxh_stage',
+        sql=Variable.get('ncc_data_dir')+"/load_ncc.stage.sql",
         dag=dag
     )
     
@@ -110,6 +115,7 @@ with DAG(
 
     refresh >> bronze_hongheo >> silver_hongheo >> gold_hongheo >> tracking_transform
     refresh >> bronze_atvsld >> tracking_transform
-
+    refresh >> bronze_ncc >> tracking_transform
+    
     tracking_transform >> load_hongheo >> tracking_load >> print_end_task
     tracking_transform >> load_atvsld >> tracking_load >> print_end_task
