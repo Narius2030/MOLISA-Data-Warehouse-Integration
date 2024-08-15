@@ -11,5 +11,15 @@
 
 All of the step in this project was design to a data pipeline which can be automated to load raw data from source that then go in medallion procedure for ensuring the quality of information. Finally, it was passed into warehouse and data marts.
 - **Scheduler:** leveraging Apache Airflow to automate end-to-end integration process
-- **Environment:** this process was deployed on Docker containers including *Database Server* and *Airflow*
 - **Transformation:** using Apache Spark engine which was Pyspark package in Python to process and aggregate information
+- **Environment:** this process was deployed on Docker containers including *Database Server* and *Airflow*
+
+DAGs of data warehouse integration
+
+![image](https://github.com/user-attachments/assets/867c6461-adf9-48e1-acc4-8ef79bca7c4d)
+
+
+DAGs of time and location integration
+
+![image](https://github.com/user-attachments/assets/425abd9d-3a63-461b-aa0a-ef3570e80955)
+
