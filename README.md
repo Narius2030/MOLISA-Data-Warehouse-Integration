@@ -17,32 +17,39 @@ All of the step in this project was design to a data pipeline which can be autom
 
 ### Docker setup
 
-Docker for Spark and Airflow
-```cmd
-FROM datamechanics/spark:3.2.1-hadoop-3.3.1-java-11-scala-2.12-python-3.8-dm18
-
-USER root
-
-WORKDIR /opt/spark
-RUN pip install --upgrade pip
-
-COPY  requirements.txt .
-RUN pip3 install -r requirements.txt
-
-CMD jupyter-lab --allow-root --no-browser --ip=0.0.0.0
-```
-
 Docker for Airflow
 ```cmd
+FROM apache/airflow:2.9.1-python3.11
+
+USER root
+
+# Install OpenJDK-17
+RUN apt update && \
+    apt-get install -y openjdk-17-jdk && \
+    apt-get install -y ant && \
+    apt-get clean;
+
+# Set JAVA_HOME
+ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64/
+RUN export JAVA_HOME
+
+USER airflow
+
+COPY ./airflow/dags /opt/airflow/dags
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+RUN rm requirements.txt
+```
+
+Docker for Spark
+```cmd
 FROM datamechanics/spark:3.2.1-hadoop-3.3.1-java-11-scala-2.12-python-3.8-dm18
 
 USER root
 
 WORKDIR /opt/spark
 RUN pip install --upgrade pip
-
-COPY  requirements.txt .
-RUN pip3 install -r requirements.txt
 
 CMD jupyter-lab --allow-root --no-browser --ip=0.0.0.0
 ```
