@@ -17,8 +17,8 @@ All of the step in this project was design to a data pipeline which can be autom
 
 ### Docker setup
 
-Docker for Airflow
-```cmd
+Dockerfile for Airflow
+```dockerfile
 FROM apache/airflow:2.9.1-python3.11
 
 USER root
@@ -42,8 +42,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN rm requirements.txt
 ```
 
-Docker for Spark
-```cmd
+Dockerfile for Spark
+```dockerfile
 FROM datamechanics/spark:3.2.1-hadoop-3.3.1-java-11-scala-2.12-python-3.8-dm18
 
 USER root
