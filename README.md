@@ -14,9 +14,43 @@ All of the step in this project was design to a data pipeline which can be autom
 - **Transformation:** using Apache Spark engine which was Pyspark package in Python to process and aggregate information
 - **Environment:** this process was deployed on Docker containers including *Database Server* and *Airflow*
 
+
+### Docker setup
+
+Docker for Spark and Airflow
+```cmd
+FROM datamechanics/spark:3.2.1-hadoop-3.3.1-java-11-scala-2.12-python-3.8-dm18
+
+USER root
+
+WORKDIR /opt/spark
+RUN pip install --upgrade pip
+
+COPY  requirements.txt .
+RUN pip3 install -r requirements.txt
+
+CMD jupyter-lab --allow-root --no-browser --ip=0.0.0.0
+```
+
+Docker for Airflow
+```cmd
+FROM datamechanics/spark:3.2.1-hadoop-3.3.1-java-11-scala-2.12-python-3.8-dm18
+
+USER root
+
+WORKDIR /opt/spark
+RUN pip install --upgrade pip
+
+COPY  requirements.txt .
+RUN pip3 install -r requirements.txt
+
+CMD jupyter-lab --allow-root --no-browser --ip=0.0.0.0
+```
+
+
 DAGs of data warehouse integration
 
-![image](https://github.com/user-attachments/assets/867c6461-adf9-48e1-acc4-8ef79bca7c4d)
+![image](https://github.com/user-attachments/assets/69a80035-38ba-4ca2-8025-b66efa5b551d)
 
 
 DAGs of time and location integration
