@@ -132,15 +132,13 @@ BEGIN;
 			Insert DWH to DimSubsidy Mart (SCD Type 2)
 		***/
 		INSERT INTO public."DimSubsidy"(province_code, district_code, profile_code,
-                                    subsidy_code, year, ncc_code, full_name,
-                                    birth_of_date, sex, ethnic, decided_monthly_date,
+                                    subsidy_code, year, ncc_code, decided_monthly_date,
                                     decided_once_date, spend_type, subsidy_name, 
                                     subsidy_money, submoney, recieve_date,
 									rowiscurrent, rowstartdate, rowenddate)
 		SELECT
 			province_code, district_code, profile_code,
-			subsidy_code, year, ncc_code, full_name,
-			birth_of_date, sex, ethnic, decided_monthly_date,
+			subsidy_code, year, ncc_code, decided_monthly_date,
 			decided_once_date, spend_type, subsidy_name, 
 			subsidy_money, submoney, recieve_date,
 			'TRUE' AS rowiscurrent, CURRENT_TIMESTAMP AS rowstartdate, NULL AS rowenddate
