@@ -4,7 +4,7 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.utils.dates import days_ago
 from datetime import datetime
-from timelocation.load_date import readTimeExcel
+from timelocation.load_date import read_time_excel
 
 def start():
     print('Starting to Integrate Time-Location data...')
@@ -34,7 +34,7 @@ with DAG(
 
     bronze_time = PythonOperator(
         task_id='bronze_time',
-        python_callable=readTimeExcel,
+        python_callable=read_time_excel,
         dag=dag
     )
 

@@ -38,7 +38,8 @@ BEGIN;
 		WHERE (stgdimncc.profile_code = "DimNCC".profile_code) AND ("DimNCC".rowenddate IS NULL)
 			AND((stgdimncc.start_subsidize <> "DimNCC".start_subsidize)
 			   OR (stgdimncc.support_bhyt <> "DimNCC".support_bhyt)
-			   OR (stgdimncc.home_town <> "DimNCC".home_town));
+			   OR (stgdimncc.home_town <> "DimNCC".home_town)
+			   OR (stgdimncc.ncc_code <> "DimNCC".ncc_code));
 			   
 		/***
 			Insert Stage to DimNCC (SCD Type 2)
@@ -74,8 +75,8 @@ BEGIN;
 			support_bhyt BOOL,
 			status BOOL
 		) 
-		WHERE (profile_code, start_subsidize, support_bhyt, home_town) NOT IN(SELECT profile_code, start_subsidize, support_bhyt, home_town 
-																			  FROM ncc."DimNCC");
+		WHERE (profile_code, ncc_code, start_subsidize, support_bhyt, home_town) NOT IN(SELECT profile_code, ncc_code, start_subsidize, support_bhyt, home_town 
+																			  			FROM ncc."DimNCC");
 	END;
 	
 	/***

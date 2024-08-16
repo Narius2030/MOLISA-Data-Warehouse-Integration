@@ -6,7 +6,7 @@ from airflow.utils.dates import days_ago
 from datetime import datetime
 
 from medallion.datamart.gold_nd_mart import run_gold_nd
-from medallion.datamart.bronze_nd_mart import run_time
+from timelocation.load_date import load_nd_mart
 
 def start():
     print('Starting to Integrate Data Warehouse...')
@@ -35,9 +35,9 @@ with DAG(
         dag=dag
     )
     
-    load_time = PythonOperator(
-        task_id='load_time',
-        python_callable=run_time,
+    load_date = PythonOperator(
+        task_id='load_date',
+        python_callable=load_nd_mart,
         dag=dag
     )
     
@@ -62,4 +62,4 @@ with DAG(
         dag=dag
     )
     
-    print_start_task >> refresh_data >> load_time >> bronze_nd_mart >> gold_ngdan_mart >> print_end_task
+    print_start_task >> refresh_data >> load_date >> bronze_nd_mart >> gold_ngdan_mart >> print_end_task
