@@ -19,6 +19,19 @@ services:
 
         command: airflow standalone
 
+    postgres-db:
+        image: postgres:16
+        ports:
+            - 5434:5432
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: nhanbui
+            POSTGRES_DB: postgres
+        networks:
+            - vnainternship
+
     # spark-master:
     #     <<: *spark-common
     #     command: bin/spark-class org.apache.spark.deploy.master.Master
@@ -36,19 +49,6 @@ services:
     #         SPARK_WORKER_CORES: 2
     #         SPARK_WORKER_MEMORY: 1g
     #         SPARK_MASTER_URL: spark://spark-master:7077
-
-    postgres-db:
-        image: postgres:16
-        ports:
-            - 5434:5432
-        volumes:
-            - postgres_data:/var/lib/postgresql/data
-        environment:
-            POSTGRES_USER: postgres
-            POSTGRES_PASSWORD: nhanbui
-            POSTGRES_DB: postgres
-        networks:
-            - vnainternship
 
 networks:
     vnainternship:
