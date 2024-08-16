@@ -57,10 +57,12 @@ CMD jupyter-lab --allow-root --no-browser --ip=0.0.0.0
 
 DAGs of data warehouse integration
 
-![image](https://github.com/user-attachments/assets/69a80035-38ba-4ca2-8025-b66efa5b551d)
+![image](https://github.com/user-attachments/assets/91cd725b-35f7-49f8-a173-f086a9024a22)
 
 
-DAGs of time and location integration
 
-![image](https://github.com/user-attachments/assets/425abd9d-3a63-461b-aa0a-ef3570e80955)
+DAGs of Resident data mart integration
+
+![image](https://github.com/user-attachments/assets/0fbc0c9e-b7b3-4492-bac7-89d4dbd3aa57)
+
 
