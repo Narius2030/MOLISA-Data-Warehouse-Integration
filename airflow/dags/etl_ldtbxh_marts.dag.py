@@ -4,9 +4,7 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.utils.dates import days_ago
 from datetime import datetime
-
 from medallion.datamart.gold_nd_mart import run_gold_nd
-from timelocation.load_date import load_nd_mart
 
 def start():
     print('Starting to Integrate Data Warehouse...')
@@ -25,19 +23,6 @@ with DAG(
     print_start_task = PythonOperator(
         task_id='print_start',
         python_callable=start,
-        dag=dag
-    )
-    
-    refresh_data = SQLExecuteQueryOperator(
-        task_id='refresh_data',
-        conn_id = 'postgres_ngdan_datamart',
-        sql="./sql/refresh_nd.mart.sql",
-        dag=dag
-    )
-    
-    load_date = PythonOperator(
-        task_id='load_date',
-        python_callable=load_nd_mart,
         dag=dag
     )
     
@@ -62,4 +47,4 @@ with DAG(
         dag=dag
     )
     
-    print_start_task >> refresh_data >> load_date >> bronze_nd_mart >> gold_ngdan_mart >> print_end_task
+    print_start_task >> bronze_nd_mart >> gold_ngdan_mart >> print_end_task

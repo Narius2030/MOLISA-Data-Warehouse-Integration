@@ -4,7 +4,7 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.utils.dates import days_ago
 from datetime import datetime
-from timelocation.load_date import read_time_excel
+from timelocation.load_date import read_time_excel, load_nd_mart
 
 def start():
     print('Starting to Integrate Time-Location data...')
@@ -45,17 +45,23 @@ with DAG(
         dag=dag
     )
     
-    load_timeloc = SQLExecuteQueryOperator(
+    load_timeloc_dwh = SQLExecuteQueryOperator(
         task_id='load_time',
         conn_id = 'postgres_ldtbxh_dwh',
         sql=Variable.get('timelocation_data_dir')+"/load_timeloc.dwh.sql",
         dag=dag
     )
 
+    load_time_ngdan_mart =  PythonOperator(
+        task_id='load_time_ngdan_mart',
+        python_callable=load_nd_mart,
+        dag=dag
+    )
+    
     print_end_task = PythonOperator(
         task_id='print_end',
         python_callable=end,
         dag=dag
     )
 
-print_start_task >> refresh >> [bronze_time, bronze_location] >> load_timeloc >> print_end_task
+    print_start_task >> refresh >> [bronze_time, bronze_location] >> load_timeloc_dwh >> load_time_ngdan_mart >> print_end_task

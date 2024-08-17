@@ -23,14 +23,18 @@ def read_time_excel():
         cur = conn.cursor()
         # Insert data into PostgreSQL
         print('start to insert...')
-        for row in time_df.to_numpy():
-                cols = ','.join(list(time_df.columns))
-                # print(type(row[1]))
-                for idx, val in enumerate(row):
-                        if isinstance(val, pd.Timestamp):
-                                row[idx] = str(val)
-                cur.execute(f'''INSERT INTO "stgDate"({cols}) VALUES {tuple(row)}''')
-        print('inserted sucessfully!')
+        try:
+                for row in time_df.to_numpy():
+                        cols = ','.join(list(time_df.columns))
+                        # print(type(row[1]))
+                        for idx, val in enumerate(row):
+                                if isinstance(val, pd.Timestamp):
+                                        row[idx] = str(val)
+                        cur.execute(f'''INSERT INTO "stgDate"({cols}) VALUES {tuple(row)}''')
+                print('inserted sucessfully!')
+        except Exception as exc:
+                print(str(exc))
+                
         conn.commit()
         cur.close()
         conn.close()
@@ -52,11 +56,16 @@ def load_nd_mart():
                 .option("password", f"{config['PASSWORD']}") \
                 .load()
 
-        dimdate.write.format("jdbc") \
-                .option("url", f"{config['URL_BASE_DOCKER']}:{config['PORT']}/NguoiDanDM") \
-                .option("driver", f"{config['DRIVER']}") \
-                .option("dbtable", 'public."DimDate"') \
-                .option("user", f"{config['USER']}") \
-                .option("password", f"{config['PASSWORD']}") \
-                .mode('append') \
-                .save()
+        try:
+                dimdate.write.format("jdbc") \
+                        .option("url", f"{config['URL_BASE_DOCKER']}:{config['PORT']}/NguoiDanDM") \
+                        .option("driver", f"{config['DRIVER']}") \
+                        .option("dbtable", 'public."DimDate"') \
+                        .option("user", f"{config['USER']}") \
+                        .option("password", f"{config['PASSWORD']}") \
+                        .mode('append') \
+                        .save()
+        except Exception as exc:
+                print(str(exc))
+        
+        spark.stop()

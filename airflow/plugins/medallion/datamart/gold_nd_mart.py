@@ -18,7 +18,18 @@ def join_ncc_hongheo(dimSurvey, dimFamilyMember, dimNCC, dimSubsidy):
                      .select('profile_code','ncc_code',ncc_df.full_name,'identity_number',
                              'subsidy_code','year','subsidy_money','recieve_date',
                              'member_id','family_id','a_grade','b1_grade','b2_grade','final_result')
-    return final_df
+                     
+    businesskeys = {
+        'ncc': list(final_df.select('profile_code').toPandas()['profile_code']),
+        'survey': list(final_df.select('family_id').toPandas()['family_id']),
+        'member': list(final_df.select('member_id').toPandas()['member_id']),
+        'subsidy': {
+            'year': final_df.year,
+            'code': final_df.subsidy_code
+        }
+    }
+    
+    return (final_df, businesskeys)
 
 
 def find_keys(spark, config, finalfact_df, businesskeys:dict): 
@@ -93,10 +104,46 @@ def value_of_subsidy(fact_df):
     return final_df.distinct()
 
 
+def insert_mart(fact_df, config, spark):
+    nccPovertyFact = spark.read.format("jdbc") \
+        .option("url", f"{config['URL_BASE_DOCKER']}:{config['PORT']}/NguoiDanDM") \
+        .option("driver", f"{config['DRIVER']}") \
+        .option("dbtable", 'public."NccPovertyFact"') \
+        .option("user", f"{config['USER']}") \
+        .option("password", f"{config['PASSWORD']}") \
+        .load()
+    
+    existedKeys = [(row['profilekey'], row['surveykey'], row['memberkey'], row['datekey']) for row in nccPovertyFact.collect()]
+    
+    with psycopg2.connect(
+        database="NguoiDanDM",
+        user=f"{config['USER']}",
+        password=f"{config['PASSWORD']}",
+        host=f"{config['HOST_DOCKER']}",
+        port=f"{config['PORT']}"
+    ) as conn:
+        with conn.cursor() as cur:
+            for row in fact_df.collect():
+                if (row['profilekey'], row['surveykey'], row['memberkey'], row['datekey']) not in existedKeys:
+                    cur.execute(f"""
+                                    INSERT INTO "NccPovertyFact"(profilekey,memberkey,surveykey,datekey,year,month,
+                                                            profile_code,ncc_code,full_name,identity_card,
+                                                            member_id,family_id,a_grade,b1_grade,b2_grade,final_result,
+                                                            total_subsidy,total_money)
+                                    VALUES('{row['profilekey']}','{row['memberkey']}','{row['surveykey']}',{row['datekey']},{row['year']},{row['month']},
+                                            '{row['profile_code']}','{row['ncc_code']}','{row['full_name']}','{row['identity_number']}','{row['member_id']}',
+                                            '{row['family_id']}',{row['a_grade']},{row['b1_grade']},{row['b2_grade']},'{row['final_result']}',
+                                            {row['total_subsidy']},{row['total_money']})
+                                """)
+                else:
+                    print('ROW IS ALREADY EXISTED')
+
+
 def run_gold_nd():
     with open("/opt/airflow/config.json", "r") as file:
             config = json.load(file)
         
+    # Connect to tables
     spark = SparkSession.builder.appName("Test connect to Postgresql") \
             .config('spark.jars.packages', 'org.postgresql:postgresql:42.7.3') \
             .getOrCreate()
@@ -133,21 +180,12 @@ def run_gold_nd():
             .option("password", f"{config['PASSWORD']}") \
             .load()
 
-    finalfact_df = join_ncc_hongheo(dimSurvey, dimFamilyMember, dimNCC, dimSubsidy)
-
-    businesskeys = {
-        'ncc': list(finalfact_df.select('profile_code').toPandas()['profile_code']),
-        'survey': list(finalfact_df.select('family_id').toPandas()['family_id']),
-        'member': list(finalfact_df.select('member_id').toPandas()['member_id']),
-        'subsidy': {
-            'year': finalfact_df.year,
-            'code': finalfact_df.subsidy_code
-        }
-    }
-
+    # Aggregate data from many table sources and find suggorate keys
+    finalfact_df, businesskeys = join_ncc_hongheo(dimSurvey, dimFamilyMember, dimNCC, dimSubsidy)
     finalfact_df = find_keys(spark, config, finalfact_df, businesskeys=businesskeys)
     finalfact_df = value_of_subsidy(finalfact_df)
 
+    # Insert default value for NULL which is referenced to dimensions
     for col in finalfact_df.dtypes:
         if col[0] in ['profilekey','memberkey','surveykey','member_id','family_id']:
             finalfact_df = finalfact_df.fillna('00000000-0000-0000-0000-000000000000', subset=[col[0]])
@@ -163,22 +201,6 @@ def run_gold_nd():
     print(finalfact_df.dtypes)
     print("====================")
 
-    with psycopg2.connect(
-        database="NguoiDanDM",
-        user=f"{config['USER']}",
-        password=f"{config['PASSWORD']}",
-        host=f"{config['HOST_DOCKER']}",
-        port=f"{config['PORT']}"
-    ) as conn:
-        with conn.cursor() as cur:
-            for row in finalfact_df.collect():
-                cur.execute(f"""
-                                INSERT INTO "NccPovertyFact"(profilekey,memberkey,surveykey,datekey,year,month,
-                                                        profile_code,ncc_code,full_name,identity_card,
-                                                        member_id,family_id,a_grade,b1_grade,b2_grade,final_result,
-                                                        total_subsidy,total_money)
-                                VALUES('{row['profilekey']}','{row['memberkey']}','{row['surveykey']}',{row['datekey']},{row['year']},{row['month']},
-                                        '{row['profile_code']}','{row['ncc_code']}','{row['full_name']}','{row['identity_number']}','{row['member_id']}',
-                                        '{row['family_id']}',{row['a_grade']},{row['b1_grade']},{row['b2_grade']},'{row['final_result']}',
-                                        {row['total_subsidy']},{row['total_money']})
-                            """)
+    insert_mart(finalfact_df, config, spark)
+
+    spark.stop()

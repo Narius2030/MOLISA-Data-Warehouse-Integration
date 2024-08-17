@@ -36,7 +36,8 @@ BEGIN;
         WHERE (stgdimncc.profile_code = "DimNCC".profile_code AND stgdimncc.RowIsCurrent='t') AND ("DimNCC".RowIsCurrent='t')
             AND((stgdimncc.start_subsidize <> "DimNCC".start_subsidize)
             OR (stgdimncc.support_bhyt <> "DimNCC".support_bhyt)
-            OR (stgdimncc.home_town <> "DimNCC".home_town));
+            OR (stgdimncc.home_town <> "DimNCC".home_town)
+            OR (stgdimncc.ncc_code <> "DimNCC".ncc_code));
 
 
         /***
@@ -83,8 +84,9 @@ BEGIN;
             RowStartDate TIMESTAMP,
             RowEndDate TIMESTAMP
         ) 
-        WHERE RowIsCurrent='t' AND (profile_code, start_subsidize, support_bhyt, home_town) NOT IN(SELECT profile_code, start_subsidize, support_bhyt, home_town 
-                                                                                            FROM public."DimNCC");
+        WHERE RowIsCurrent='t' AND (profile_code, ncc_code, start_subsidize, support_bhyt, home_town) NOT IN(SELECT profile_code, ncc_code, 
+                                                                                                                    start_subsidize, support_bhyt, home_town 
+                                                                                                            FROM public."DimNCC");
     END;
 
     BEGIN;
