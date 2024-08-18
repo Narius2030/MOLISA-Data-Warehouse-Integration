@@ -1,6 +1,6 @@
 # Integration Strategy
 
-![image](https://github.com/user-attachments/assets/d3b2631d-c580-4d56-8473-25ceef29559e)
+![image](https://github.com/user-attachments/assets/4d76bfb0-aff3-4520-9972-8ab6ce76008e)
 
 
 **Description:** this data warehouse was designed follow `Inmon approach` that integrated all of data into a single warehouse and it created several data marts associating sectors in government system
