@@ -1,6 +1,8 @@
 /airflow/airflow.cfg
 /airflow/airflow.db
 /airflow/airflow-webserver.pid
+/airflow/webserver_config.py
 /.vscode/**
 /airflow/standalone_admin_password.txt
 /airflow/logs/**
+/airflow/config.json
