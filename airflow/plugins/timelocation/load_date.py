@@ -45,7 +45,10 @@ def load_nd_mart():
                 config = json.load(file)
         
         spark = SparkSession.builder.appName("Test connect to Postgresql") \
+                .master("spark://host.docker.internal:7077") \
                 .config('spark.jars.packages', 'org.postgresql:postgresql:42.7.3') \
+                .config("spark.shuffle.service.enabled", "false") \
+                .config("spark.dynamicAllocation.enabled", "false") \
                 .getOrCreate()
                 
         dimdate = spark.read.format("jdbc") \

@@ -3,7 +3,7 @@ version: "3"
 x-spark-common: &spark-common
     image: bitnami/spark:latest
     volumes:
-        - ./jobs:/opt/bitnami/spark/jobs
+        - ./airflow/plugins:/opt/bitnami/spark/jobs
     networks:
         - vnainternship
 
@@ -23,8 +23,6 @@ services:
         image: postgres:16
         ports:
             - 5434:5432
-        volumes:
-            - postgres_data:/var/lib/postgresql/data
         environment:
             POSTGRES_USER: postgres
             POSTGRES_PASSWORD: nhanbui
@@ -32,23 +30,33 @@ services:
         networks:
             - vnainternship
 
-    # spark-master:
-    #     <<: *spark-common
-    #     command: bin/spark-class org.apache.spark.deploy.master.Master
-    #     ports:
-    #         - "9090:8080"
-    #         - "7077:7077"
+    spark-master:
+        image: bitnami/spark:latest
+        environment:
+            - SPARK_MODE=master
+            - SPARK_RPC_AUTHENTICATION_ENABLED=no
+            - SPARK_RPC_ENCRYPTION_ENABLED=no
+            - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+            - SPARK_SSL_ENABLED=no
+            - SPARK_USER=spark
+        ports:
+            - '9090:8080'
+            - '7077:7077'
 
-    # spark-worker:
-    #     <<: *spark-common
-    #     command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
-    #     depends_on:
-    #         - spark-master
-    #     environment:
-    #         SPARK_MODE: worker
-    #         SPARK_WORKER_CORES: 2
-    #         SPARK_WORKER_MEMORY: 1g
-    #         SPARK_MASTER_URL: spark://spark-master:7077
+    spark-worker:
+        image: bitnami/spark:latest
+        depends_on:
+            - spark-master
+        environment:
+            - SPARK_MODE=worker
+            - SPARK_MASTER_URL=spark://spark-master:7077
+            - SPARK_WORKER_MEMORY=2G      #<--- adjust accordingly
+            - SPARK_WORKER_CORES=1
+            - SPARK_RPC_AUTHENTICATION_ENABLED=no
+            - SPARK_RPC_ENCRYPTION_ENABLED=no
+            - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+            - SPARK_SSL_ENABLED=no
+            - SPARK_USER=spark
 
 networks:
     vnainternship:

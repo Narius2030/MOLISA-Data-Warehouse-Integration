@@ -145,6 +145,9 @@ def run_gold_nd():
         
     # Connect to tables
     spark = SparkSession.builder.appName("Test connect to Postgresql") \
+            .master("spark://host.docker.internal:7077") \
+            .config("spark.shuffle.service.enabled", "false") \
+            .config("spark.dynamicAllocation.enabled", "false") \
             .config('spark.jars.packages', 'org.postgresql:postgresql:42.7.3') \
             .getOrCreate()
             

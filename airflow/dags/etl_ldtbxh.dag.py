@@ -5,6 +5,7 @@ from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.utils.dates import days_ago
 from datetime import datetime
 
+from medallion.hongheo.bronze import run_bronze_hongheo
 from medallion.hongheo.gold import run_gold_hongheo
 from medallion.hongheo.silver import run_silver_hongheo
 from medallion.ncc.silver import run_silver_ncc
@@ -39,10 +40,15 @@ with DAG(
     )
     
     # Bronze Stage
-    bronze_hongheo = SQLExecuteQueryOperator(
+    # bronze_hongheo = SQLExecuteQueryOperator(
+    #     task_id='bronze_hongheo',
+    #     conn_id = 'postgres_ldtbxh_stage',
+    #     sql=Variable.get('hongheo_data_dir')+"/load_hongheo.stage.sql",
+    #     dag=dag
+    # )
+    bronze_hongheo = PythonOperator(
         task_id='bronze_hongheo',
-        conn_id = 'postgres_ldtbxh_stage',
-        sql=Variable.get('hongheo_data_dir')+"/load_hongheo.stage.sql",
+        python_callable=run_bronze_hongheo,
         dag=dag
     )
     bronze_atvsld = SQLExecuteQueryOperator(

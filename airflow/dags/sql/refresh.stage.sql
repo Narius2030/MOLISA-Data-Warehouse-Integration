@@ -6,9 +6,9 @@ TRUNCATE TABLE public."stgDimSubsidy";
 TRUNCATE TABLE public."stgPovertyStatusFact";
 TRUNCATE TABLE public."stgMemberSurveyFact";
 TRUNCATE TABLE public."stgSubsidyReportFact";
--- TRUNCATE TABLE public."stgDimCompany";
--- TRUNCATE TABLE public."stgDimAccident";
--- TRUNCATE TABLE public."stgDimEquipment";
+TRUNCATE TABLE public."stgDimCompany";
+TRUNCATE TABLE public."stgDimAccident";
+TRUNCATE TABLE public."stgEquipment";
 
 BEGIN TRANSACTION;
     INSERT INTO "DimAuditForeigned"(process_name, start_at, finished_at, information, status) VALUES
