@@ -1,6 +1,7 @@
 # Integration Strategy
 
-![image](https://github.com/user-attachments/assets/5fa92044-9d5a-4d62-b1f8-c0b9bab200ae)
+![image](https://github.com/user-attachments/assets/4d76bfb0-aff3-4520-9972-8ab6ce76008e)
+
 
 **Description:** this data warehouse was designed follow `Inmon approach` that integrated all of data into a single warehouse and it created several data marts associating sectors in government system
 - **Data Source:** Multi-databases from different systems in governmental sector
@@ -50,9 +51,15 @@ DAGs of data warehouse integration
 ![image](https://github.com/user-attachments/assets/91cd725b-35f7-49f8-a173-f086a9024a22)
 
 
-
 DAGs of Resident data mart integration
 
-![image](https://github.com/user-attachments/assets/0fbc0c9e-b7b3-4492-bac7-89d4dbd3aa57)
+![image](https://github.com/user-attachments/assets/517eaa0d-5013-4325-9b48-f9a574010f26)
+
+
+DAGs of Time and Location integration
+
+![image](https://github.com/user-attachments/assets/3a854528-70d3-4dbf-8961-c6eae03502b4)
+
+
 
 
