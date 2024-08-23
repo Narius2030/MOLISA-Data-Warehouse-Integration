@@ -1,6 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, lag, datediff, lit, year, month, count
-from datetime import date
+from pyspark.sql.functions import lit, year, month
 import json
 import psycopg2 
 
@@ -145,9 +144,6 @@ def run_gold_nd():
         
     # Connect to tables
     spark = SparkSession.builder.appName("Test connect to Postgresql") \
-            .master("spark://host.docker.internal:7077") \
-            .config("spark.shuffle.service.enabled", "false") \
-            .config("spark.dynamicAllocation.enabled", "false") \
             .config('spark.jars.packages', 'org.postgresql:postgresql:42.7.3') \
             .getOrCreate()
             

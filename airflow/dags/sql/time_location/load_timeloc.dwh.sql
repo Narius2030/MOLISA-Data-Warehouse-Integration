@@ -5,7 +5,7 @@ DECLARE
 BEGIN
 	SELECT COUNT(*) INTO count FROM public."DimDate";
 
-	IF count < 0 THEN
+	IF count < 0 THEN	-- ???
 		INSERT INTO "DimDate"(datekey, month, month_num_overall, month_name,
 							month_abbrev, quarter, year, fiscal_month,
 							fiscal_quarter, fiscal_year)

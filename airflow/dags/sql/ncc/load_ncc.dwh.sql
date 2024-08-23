@@ -194,11 +194,11 @@ BEGIN;
         subsidy_name VARCHAR(255),
         subsidy_money FLOAT8,
         submoney FLOAT8,
-        recieve_days INT,
-        recieve_date DATE,
         start_subsidize DATE,
-        spend_diff FLOAT8,
-        actual_spending FLOAT8
+		recieve_date DATE,
+		actual_spending FLOAT8,
+		recieve_days INT,
+		spend_diff FLOAT8
     ) WHERE ((SELECT profilekey FROM ncc."DimNCC" WHERE profile_code=stgsubsidyfact.profile_code AND rowiscurrent='TRUE'),
             (SELECT subsidykey FROM ncc."DimSubsidy" WHERE profile_code=stgsubsidyfact.profile_code 
                                                         AND subsidy_code=stgsubsidyfact.subsidy_code 

@@ -1,11 +1,24 @@
-FROM datamechanics/spark:3.2.1-hadoop-3.3.1-java-11-scala-2.12-python-3.8-dm18
+FROM bitnami/spark:latest
 
 USER root
 
-WORKDIR /opt/spark
-RUN pip install --upgrade pip
+# Install OpenJDK
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+      sudo \
+      curl \
+      vim \
+      openjdk-17-jdk \
+      ssh && \
+    apt-get clean
 
-COPY  requirements.txt .
-RUN pip3 install -r requirements.txt
+# Set path related pyspark
+ENV PYSPARK_PYTHON python3
 
-CMD jupyter-lab --allow-root --no-browser --ip=0.0.0.0
+# Set JAVA_HOME
+ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64/
+RUN export JAVA_HOME
+
+# Set PYTHON_PATH
+ENV PYTHONPATH /opt/bitnami/spark/python/:$PYTHONPATH
+RUN export PYTHONPATH
