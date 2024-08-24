@@ -188,6 +188,8 @@ BEGIN;
 		AS stgsurvey(
 			surveykey uuid,
 			family_id uuid,
+            year INT,
+			month INT,
 			a_id uuid,
 			fast_classify_person VARCHAR(35),
 			condition_codes CHAR(5)[],
@@ -206,9 +208,7 @@ BEGIN;
 			classify_person VARCHAR(35),
 			RowIsCurrent BOOL,
 			RowStartDate TIMESTAMP,
-			RowEndDate TIMESTAMP,
-			year INT,
-			month INT
+			RowEndDate TIMESTAMP
 		)
 		WHERE ((stgsurvey.family_id = "DimSurvey".family_id AND stgsurvey.RowIsCurrent='t')
 			AND ("DimSurvey".RowIsCurrent='t')) AND
@@ -238,6 +238,8 @@ BEGIN;
 		AS stgsurvey (
 			surveykey uuid,
 			family_id uuid,
+            year INT,
+			month INT,
 			a_id uuid,
 			fast_classify_person VARCHAR(35),
 			condition_codes CHAR(5)[],
@@ -256,9 +258,7 @@ BEGIN;
 			classify_person VARCHAR(35),
 			RowIsCurrent BOOL,
 			RowStartDate TIMESTAMP,
-			RowEndDate TIMESTAMP,
-			year INT,
-			month INT
+			RowEndDate TIMESTAMP
 		)
 		WHERE RowIsCurrent='t' AND (family_id, a_grade, b1_grade, b2_grade, final_result) NOT IN (SELECT family_id, a_grade, b1_grade, 
 																					b2_grade, final_result
