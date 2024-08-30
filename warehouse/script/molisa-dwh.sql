@@ -11,9 +11,11 @@
 -- DELETE FROM ncc."SubsidyReportFact"
 -- DELETE FROM "DimAudit" WHERE information='ETL successfully'
 
+SELECT * FROM hongheo."DimFamilyMember"
+SELECT * FROM ncc."DimNCC"
 
-CREATE SCHEMA public;
-GRANT ALL ON SCHEMA public TO postgres;
+-- CREATE SCHEMA public;
+-- GRANT ALL ON SCHEMA public TO postgres;
 
 
 /****** Tạo các Tablespace chỉ định nơi lưu trữ các database object ******/
@@ -179,7 +181,7 @@ CREATE TABLE IF NOT EXISTS hongheo."DimFamily" (
 	RowStartDate TIMESTAMP NOT NULL,
 	RowEndDate TIMESTAMP,
 	PRIMARY KEY(FamilyKey)
-) TABLESPACE ts_datahongheo;
+);
 
 
 
@@ -216,7 +218,7 @@ CREATE TABLE IF NOT EXISTS hongheo."DimFamilyMember" (
 	RowStartDate TIMESTAMP NOT NULL,
 	RowEndDate TIMESTAMP,
 	PRIMARY KEY(MemberKey)
-) TABLESPACE ts_datahongheo;
+);
 
 
 
@@ -252,7 +254,7 @@ CREATE TABLE IF NOT EXISTS hongheo."DimSurvey"
 	RowStartDate TIMESTAMP NOT NULL,
 	RowEndDate TIMESTAMP,
 	PRIMARY KEY(SurveyKey)
-) TABLESPACE ts_datahongheo;
+);
 
 
 
@@ -306,7 +308,7 @@ CREATE TABLE IF NOT EXISTS atvsld."DimCompany"
 	RowStartDate TIMESTAMP NOT NULL,
 	RowEndDate TIMESTAMP,
     PRIMARY KEY(CompanyKey)
-) TABLESPACE ts_dataatvsld;
+);
 
 
 
@@ -345,7 +347,7 @@ CREATE TABLE IF NOT EXISTS atvsld."DimEquipment"
 	RowStartDate TIMESTAMP NOT NULL,
 	RowEndDate TIMESTAMP,
 	PRIMARY KEY(DeviceKey)
-) TABLESPACE ts_dataatvsld;
+);
 
 
 
@@ -380,7 +382,7 @@ CREATE TABLE IF NOT EXISTS atvsld."DimAccident"
 	RowStartDate TIMESTAMP NOT NULL,
 	RowEndDate TIMESTAMP,
 	PRIMARY KEY(AccidentKey)
-) TABLESPACE ts_dataatvsld;
+);
 
 
 
@@ -591,14 +593,17 @@ CREATE TABLE IF NOT EXISTS hongheo."PovertyStatusFact"
 	hard_reasons VARCHAR(255)[],
 	get_policies VARCHAR(255)[],
 	need_policies VARCHAR(255)[],
+	member_num SMALLINT,
 	a_grade BOOL,
 	b1_grade SMALLINT,
 	b2_grade SMALLINT,
+	b1_diff SMALLINT,
+	b2_diff SMALLINT,
 	final_result hongheo.CLASSIFICATION,
-    PRIMARY KEY(FamilyKey, SurveyKey, DateKey),
+    PRIMARY KEY(FamilyKey, SurveyKey),
 	CONSTRAINT FK_PovertyStatusFact_DimFamily FOREIGN KEY(FamilyKey) REFERENCES hongheo."DimFamily"(FamilyKey),
 	CONSTRAINT FK_PovertyStatusFact_DimSurvey FOREIGN KEY(SurveyKey) REFERENCES hongheo."DimSurvey"(SurveyKey)
-) TABLESPACE ts_datahongheo;
+);
 
 CREATE INDEX ownername_idx ON hongheo."PovertyStatusFact" USING SPGIST(owner_name);
 CREATE INDEX provincename_PovertyStatusFact_idx ON hongheo."PovertyStatusFact" USING SPGIST(province_name);
@@ -639,7 +644,7 @@ CREATE TABLE IF NOT EXISTS hongheo."MemberSurveyFact"
 	CONSTRAINT FK_MemberSurveyFact_DimFamily FOREIGN KEY(FamilyKey) REFERENCES hongheo."DimFamily"(FamilyKey),
 	CONSTRAINT FK_MemberSurveyFact_DimFamilyMember FOREIGN KEY(MemberKey) REFERENCES hongheo."DimFamilyMember"(MemberKey),
 	CONSTRAINT FK_MemberSurveyFact_DimDate FOREIGN KEY(DateKey) REFERENCES public."DimDate"(DateKey)
-) TABLESPACE ts_datahongheo;
+);
 
 CREATE INDEX membername_idx ON hongheo."MemberSurveyFact" USING SPGIST(member_name);
 CREATE INDEX ownerrelationship_idx ON hongheo."MemberSurveyFact" USING SPGIST(owner_relationship);
@@ -679,11 +684,11 @@ CREATE TABLE IF NOT EXISTS atvsld."PeriodicalAccidentFact"
 	total_expense FLOAT8,
 	day_off INT,
 	assest_harm FLOAT8,
-    PRIMARY KEY(AccidentKey, CompanyKey, DateKey, LocationKey),
+    PRIMARY KEY(AccidentKey, CompanyKey, DateKey),
 	CONSTRAINT FK_PeriodicalAccidentFact_DimAccident FOREIGN KEY(AccidentKey) REFERENCES atvsld."DimAccident"(AccidentKey),
 	CONSTRAINT FK_PeriodicalAccidentFact_DimCompany FOREIGN KEY(CompanyKey) REFERENCES atvsld."DimCompany"(CompanyKey),
 	CONSTRAINT FK_PeriodicalAccidentFact_DimDate FOREIGN KEY(DateKey) REFERENCES public."DimDate"(DateKey)
-) TABLESPACE ts_dataatvsld;
+);
 
 CREATE INDEX companyname_idx ON atvsld."PeriodicalAccidentFact" USING SPGIST(company_name);
 CREATE INDEX factor_idx ON atvsld."PeriodicalAccidentFact" USING SPGIST(factor);

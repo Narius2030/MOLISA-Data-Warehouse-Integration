@@ -58,10 +58,9 @@ def loadStageMemberSurvey(insert_stmt, endpoint, headers:str=None):
         insert_postgres(insert_stmt, values)
 
 
-def run_bronze_hongheo():
-        bearer_token = config['BEARER_TOKEN']
+def run_bronze_hongheo(params):
         headers = {
-            "Authorization": f"Bearer {bearer_token}"
+            "Authorization": f"Bearer {params['bearer_token']}"
         }
         
         # StgDimFamily

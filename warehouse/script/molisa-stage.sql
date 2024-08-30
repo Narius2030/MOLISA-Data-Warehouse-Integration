@@ -1,7 +1,7 @@
 -- CREATE DATABASE "LdtbxhStage" WITH ENCODING 'UTF8' TEMPLATE template0;
 
-CREATE SCHEMA public;
-GRANT ALL ON SCHEMA public TO postgres;
+-- CREATE SCHEMA public;
+-- GRANT ALL ON SCHEMA public TO postgres;
 
 /****** --- DIMENSION --- ******/
 
@@ -281,7 +281,6 @@ CREATE TABLE IF NOT EXISTS "stgDimCompany"
     deputy VARCHAR(255),
     PRIMARY KEY(company_id)
 );
-SELECT * FROM "stgDimCompany"
 
 
 
@@ -608,7 +607,8 @@ CREATE TABLE IF NOT EXISTS public."stgSubsidyReportFact"
 	recieve_days INT,
 	PRIMARY KEY(profile_code, subsidy_code, year)
 );
-SELECT * FROM "stgSubsidyReportFact"
+
+
 
 /*** 
 	Tạo các Dimension tham chiếu từ DimAudit trong Data warehouse
@@ -631,6 +631,4 @@ CREATE FOREIGN TABLE "DimAuditForeigned" (
 
 CREATE USER MAPPING FOR postgres SERVER ldtbxh_dwh_server OPTIONS (user 'postgres', password 'nhanbui');
 
-
-SELECT * FROM "stgDimSubsidy"
 

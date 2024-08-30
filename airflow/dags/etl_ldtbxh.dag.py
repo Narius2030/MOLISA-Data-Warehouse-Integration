@@ -40,14 +40,9 @@ with DAG(
     )
     
     # Bronze Stage
-    # bronze_hongheo = SQLExecuteQueryOperator(
-    #     task_id='bronze_hongheo',
-    #     conn_id = 'postgres_ldtbxh_stage',
-    #     sql=Variable.get('hongheo_data_dir')+"/load_hongheo.stage.sql",
-    #     dag=dag
-    # )
     bronze_hongheo = PythonOperator(
         task_id='bronze_hongheo',
+        params={'bearer_token': Variable.get('bearer_token')},
         python_callable=run_bronze_hongheo,
         dag=dag
     )

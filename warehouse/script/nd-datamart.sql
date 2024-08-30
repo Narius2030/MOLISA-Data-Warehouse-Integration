@@ -173,11 +173,11 @@ CREATE TABLE IF NOT EXISTS public."DimLocation"
 CREATE TABLE IF NOT EXISTS public."DimNCC"
 (
 	ProfileKey uuid DEFAULT gen_random_uuid(),
-	profile_code CHAR(10) NOT NULL,
-	ncc_code CHAR(10) NOT NULL,
+	profile_code CHAR(10),
+	ncc_code CHAR(10),
 	-- Common
-	full_name VARCHAR(35) NOT NULL,
-	birth_of_date DATE NOT NULL,
+	full_name VARCHAR(35),
+	birth_of_date DATE,
 	sex BOOL,
 	ethnic VARCHAR(15),
 	identity_number VARCHAR(12),
@@ -192,9 +192,9 @@ CREATE TABLE IF NOT EXISTS public."DimNCC"
 	start_subsidize DATE,
 	support_bhyt BOOL,
 	status BOOL,
-	RowIsCurrent BOOL NOT NULL,
-	RowStartDate TIMESTAMP NOT NULL,
-	RowEndDate TIMESTAMP NOT NULL,
+	RowIsCurrent BOOL,
+	RowStartDate TIMESTAMP,
+	RowEndDate TIMESTAMP,
 	PRIMARY KEY(ProfileKey)
 );
 INSERT INTO "DimNCC"(profilekey,profile_code, start_subsidize, support_bhyt, home_town) VALUES('00000000-0000-0000-0000-000000000000','N/A','2020-01-01','FALSE','N/A');
@@ -211,24 +211,24 @@ CREATE TABLE IF NOT EXISTS public."DimSubsidy"
 	SubsidyKey uuid DEFAULT gen_random_uuid(),
 	province_code CHAR(5),
 	district_code CHAR(5),
-	profile_code CHAR(10) NOT NULL,
-	ncc_code CHAR(10) NOT NULL,
-	full_name VARCHAR(35) NOT NULL,
+	profile_code CHAR(10),
+	ncc_code CHAR(10),
+	full_name VARCHAR(35),
 	birth_of_date DATE,
 	sex BOOL,
 	ethnic VARCHAR(15),
 	decided_monthly_date DATE,
 	decided_once_date DATE,
-	subsidy_code CHAR(10) NOT NULL,
-	year INT NOT NULL,
+	subsidy_code CHAR(10),
+	year INT,
 	spend_type public.spendtype,
 	subsidy_name VARCHAR(255),
 	subsidy_money FLOAT8,
 	submoney FLOAT8,
-	recieve_date DATE NOT NULL,
-	RowIsCurrent BOOL NOT NULL,
-	RowStartDate TIMESTAMP NOT NULL,
-	RowEndDate TIMESTAMP NOT NULL,
+	recieve_date DATE,
+	RowIsCurrent BOOL,
+	RowStartDate TIMESTAMP,
+	RowEndDate TIMESTAMP,
 	PRIMARY KEY(SubsidyKey)
 );
 
@@ -237,29 +237,28 @@ CREATE TABLE IF NOT EXISTS public."DimSubsidy"
 CREATE TABLE IF NOT EXISTS public."DimSurvey" 
 (
 	SurveyKey uuid DEFAULT gen_random_uuid(),
-	family_id uuid NOT NULL,
--- 	family_code VARCHAR(10) UNIQUE NOT NULL,
-	years SMALLINT NOT NULL,
-	a_id uuid NOT NULL,
+	family_id uuid,
+	years SMALLINT,
+	a_id uuid,
 	fast_classify_person VARCHAR(35),
-	condition_codes CHAR(5)[] NOT NULL,
-	condition_names VARCHAR(255)[] NOT NULL,
-	b1_id uuid NOT NULL,
+	condition_codes CHAR(5)[],
+	condition_names VARCHAR(255)[],
+	b1_id uuid,
 	is_aquaculture BOOL,
 	electricity_source CHAR(5),
 	water_source CHAR(5),
-	reason_codes CHAR(10)[] NOT NULL,
-	reason_names VARCHAR(255)[] NOT NULL,
-	get_policy_names VARCHAR(255)[] NOT NULL,
-	need_policy_names VARCHAR(255)[] NOT NULL,
-	a_grade BOOL NOT NULL,
-	b1_grade SMALLINT NOT NULL,
-	b2_grade SMALLINT NOT NULL,
+	reason_codes CHAR(10)[],
+	reason_names VARCHAR(255)[],
+	get_policy_names VARCHAR(255)[],
+	need_policy_names VARCHAR(255)[],
+	a_grade BOOL,
+	b1_grade SMALLINT,
+	b2_grade SMALLINT,
 	final_result public.CLASSIFICATION,
 	classify_person VARCHAR(35),
-	RowIsCurrent BOOL NOT NULL,
-	RowStartDate TIMESTAMP NOT NULL,
-	RowEndDate TIMESTAMP NOT NULL,
+	RowIsCurrent BOOL,
+	RowStartDate TIMESTAMP,
+	RowEndDate TIMESTAMP,
 	PRIMARY KEY(SurveyKey)
 );
 INSERT INTO "DimSurvey"(surveykey,family_id, a_grade, b1_grade, b2_grade, final_result) VALUES('00000000-0000-0000-0000-000000000000','00000000-0000-0000-0000-000000000000','FALSE',-1,-1,'N/A');
@@ -273,10 +272,10 @@ INSERT INTO "DimSurvey"(surveykey,family_id, a_grade, b1_grade, b2_grade, final_
 -- NOTE: Là phân cấp của bảng DimFamily
 
 CREATE TABLE IF NOT EXISTS public."DimFamilyMember" (
-	MemberKey uuid DEFAULT gen_random_uuid(),	--PK
-	member_id uuid NOT NULL,	-- BK
-	family_id uuid NOT NULL,	-- FK
-	full_name VARCHAR(35) NOT NULL,
+	MemberKey uuid DEFAULT gen_random_uuid(),
+	member_id uuid,
+	family_id uuid,
+	full_name VARCHAR(35),
 	owner_relationship VARCHAR(15),
 	year_of_birth SMALLINT,
 	month_of_birth SMALLINT,
@@ -296,9 +295,9 @@ CREATE TABLE IF NOT EXISTS public."DimFamilyMember" (
 	job_type public.JOB_CATE,
 	has_contract public.CONTRACT_TYPE,
 	has_pension public.PENSION_TYPE,
-	RowIsCurrent BOOL NOT NULL,
-	RowStartDate TIMESTAMP NOT NULL,
-	RowEndDate TIMESTAMP NOT NULL,
+	RowIsCurrent BOOL,
+	RowStartDate TIMESTAMP,
+	RowEndDate TIMESTAMP,
 	PRIMARY KEY(MemberKey)
 );
 INSERT INTO "DimFamilyMember"(memberkey,member_id) VALUES('00000000-0000-0000-0000-000000000000','00000000-0000-0000-0000-000000000000');
@@ -325,18 +324,18 @@ CREATE TABLE IF NOT EXISTS public."NccPovertyFact"
 	year INT,
 	month INT,
 	-- family member
-	member_id uuid NOT NULL,
-	full_name VARCHAR(35) NOT NULL,
-	identity_card VARCHAR(12) NOT NULL,
+	member_id uuid,
+	full_name VARCHAR(35),
+	identity_card VARCHAR(12),
 	-- family survey info
-	family_id uuid NOT NULL,
+	family_id uuid,
 	a_grade BOOL,
 	b1_grade SMALLINT,
 	b2_grade SMALLINT,
 	final_result public.CLASSIFICATION,
 	-- ncc profile
-	profile_code CHAR(10) NOT NULL,
-	ncc_code CHAR(10) NOT NULL,
+	profile_code CHAR(10),
+	ncc_code CHAR(10),
 	-- measures
 	total_subsidy INT,
 	total_money FLOAT8,
