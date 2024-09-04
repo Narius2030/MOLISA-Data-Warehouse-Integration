@@ -19,22 +19,21 @@ class GenerateSamplesNCC():
     def generate_cmnd_number(self):
         return ''.join(str(random.randint(0, 9)) for _ in range(12))
 
-    def generate_ncc_category(self):
-        data = {
-            'LS': 'Liệt sĩ',
-            'BMVNAH': 'Bà mẹ Việt Nam anh hùng',
-            'AHLLVTND': 'Anh hùng lực lượng vũ trang nhân dân',
-            'AHLD': 'Anh hùng lao động'
-        }
-        key = random.choice(list(data.keys()))
-        return key, data[key]
+    def generate_ncc_category(self, profile_code):
+        cates = ""
+        for c in profile_code:
+            if c.isnumeric():
+                break
+            cates += c
+        return cates
 
     def fake_ncc_profile(self, num_rows=10):
         data = []
         for _ in range(num_rows):
+            profile_code = f'AHLD{random.randint(100, 999)}'
             data.append((
-                f'AHLD{random.randint(100, 999)}',  # Profile code
-                self.generate_ncc_category()[0],  # Contributor category code
+                profile_code,  # Profile code
+                self.generate_ncc_category(profile_code),  # Contributor category code
                 self.fake.name(),  # Họ tên
                 self.fake.date_of_birth(minimum_age=40, maximum_age=80),  # Date of birth
                 random.choice([True, False]),  # Sex
@@ -79,11 +78,11 @@ if __name__=='__main__':
     fake_data = generator.fake_ncc_profile(10)
     print(fake_data[:5])
             
-    # insert to postgresql
-    insert_stmt = '''INSERT INTO profile."nccProfile"(profile_code, ncc_code, full_name, 
-                                birth_of_date, sex, ethnic, identity_number, 
-                                province_code, district_code, decided_monthly_date, decided_once_date, 
-                                decided_monthly_num, decided_once_num, start_subsidize, support_bhyt, created_date)
-                    VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
-    generator.insert_postgres(config, insert_stmt, fake_data)
+    # # insert to postgresql
+    # insert_stmt = '''INSERT INTO profile."nccProfile"(profile_code, ncc_code, full_name, 
+    #                             birth_of_date, sex, ethnic, identity_number, 
+    #                             province_code, district_code, decided_monthly_date, decided_once_date, 
+    #                             decided_monthly_num, decided_once_num, start_subsidize, support_bhyt, created_date)
+    #                 VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
+    # generator.insert_postgres(config, insert_stmt, fake_data)
     

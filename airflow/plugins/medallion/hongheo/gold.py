@@ -23,7 +23,7 @@ def count_member(povertyfact_df, member_df):
     joined_df = povertyfact_df.join(count_df, on="family_id", how="left")
     updated_df = joined_df.withColumn("member_num", joined_df["count"])
     # fill None values with -1
-    updated_df = updated_df.na.fill(value=-1)
+    # updated_df = updated_df.na.fill(value=-1)
     final_df = updated_df.drop("count")
     return final_df
 
@@ -67,12 +67,13 @@ def run_gold_hongheo():
     ) as conn:
         with conn.cursor() as cur:
             for row in finalfact_df.collect():
-                cur.execute(f"""UPDATE public."stgPovertyStatusFact"
-                                SET
-                                    member_num={row['member_num']},
-                                    b1_diff={row['b1_diff']},
-                                    b2_diff={row['b2_diff']}
-                                WHERE family_id='{row['family_id']}'""")
+                query = """UPDATE public."stgPovertyStatusFact"
+                        SET
+                            member_num=%s,
+                            b1_diff=%s,
+                            b2_diff=%s
+                        WHERE family_id=%s"""
+                cur.execute(query, (row['member_num'], row['b1_diff'], row['b2_diff'], row['family_id']))
     
 if __name__ == "__main__":
     print("")
